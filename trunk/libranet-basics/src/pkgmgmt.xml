@@ -1,4 +1,4 @@
-<!-- $Id: pkgmgmt.xml,v 1.10 2004/08/02 10:01:04 danieldk Exp $ -->
+<!-- $Id: pkgmgmt.xml,v 1.11 2004/09/07 16:20:17 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="pkgmgmt.html"?>
 <title>Package management</title>
@@ -194,7 +194,7 @@ packages</quote> option from the <quote>Actions</quote> menu.
 <title>The sources.list file</title>
 
 <para>
-The <filename>/etc/sources.list</filename> is used to configure which
+The <filename>/etc/apt/sources.list</filename> is used to configure which
 package repositories should be used by APT. Each uncommented line specifies
 a repository, in the following form:
 </para>

@@ -38,7 +38,7 @@ read the
 
 <para>
 On January 23, 2004 Libra Computer Systems Ltd. announced the <quote>Libranet
-update-safe archive</quote>. This special archive was introduced provide
+update-safe archive</quote>. This special archive was introduced to provide
 a safe upgrade method which is well-tested. Usage of the safe archive is
 free. Please note that somebody can still use the plain Debian archives
 if he or she wants. The Libranet archive just provides more safety,

@@ -1,4 +1,4 @@
-<!-- $Id: filesystem.xml,v 1.3 2004/07/10 08:28:47 danieldk Exp $ -->
+<!-- $Id: filesystem.xml,v 1.4 2004/07/10 09:08:38 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="filesystem.html"?>
 <title>Files and directories</title>
@@ -365,6 +365,125 @@ this directory and other users:
 <screen>
 $ <command>chmod -R go-r geheim/</command>
 </screen>
+</sect1>
+
+<sect1><title>Extended attributes</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+Extended attributes (EAs) are relatively new on GNU/Linux.  Extended
+attributes are a special kind of values that are associated with a
+file or directory. EAs provide the means to add extra attributes
+besides the common attributes (modification time, traditional file
+permissions, etc.). For example, one could add the attribute
+"Photographer" to a collection of JPEG files. Extended attributes 
+are not physically stored in the file, but as meta-data in the filesystem.
+</para>
+
+<para>
+Extended attributes are only supported by 2.6.x and newer 2.4.x kernels. 
+Besides that they are not supported on all filesystems, the commonly used
+Ext2, Ext3 and XFS filesystems do support extended attributes.
+</para>
+</sect2>
+
+<sect2>
+<title>Installing the necessary utilities</title>
+
+<para>
+The extended attribute software is available from the the Debian archives as
+the <emphasis>attr</emphasis> package. You can install it through your
+favorite package manager, or APT: 
+</para>
+
+<screen>
+# <command>apt-get install attr</command>
+</screen>
+</sect2>
+
+<sect2>
+<title>Showing extended attributes</title>
+
+<para>
+Extended attributes can be queried using the <command>getfattr</command>
+command. Just using getfattr with a file as a parameter will show the 
+attributes that are known for that particular file, without the values 
+set for the attributes. For example:
+</para>
+
+<screen>
+$ <command>getfattr note.txt</command> 
+# file: note.txt
+user.Author
+</screen>
+
+<para>
+This file has one extended attribute, <quote>user.Author</quote>. An attribute 
+has the following form: <quote>namespace.attribute</quote>. There are four 
+defined namespaces: <quote>security</quote>, <quote>system</quote>, 
+<quote>trusted</quote>, and <quote>user</quote>. The role of these namespaces 
+are described in the attr(5) manual page. The "user" namespace is of 
+particular interest to us, because this namespace is used to assign arbitrary 
+attributes to files.
+</para>
+
+<para>
+The values associated with an attribute can be shown using the 
+<quote>-d</quote> (dump) parameter. For example:
+</para>
+
+<screen>
+$ <command>getfattr -d note.txt</command> 
+# file: note.txt
+user.Author="Daniel"
+</screen>
+
+<para>
+In this example the attribute <quote>user.Author</quote> has the value 
+<quote>Daniel</quote> for the file <filename>note.txt</filename>.
+</para>
+</sect2>
+
+<sect2>
+<title>Setting extended attributes</title>
+
+<para>
+Attributes are set with the <command>setfattr</command> command. An attribute 
+can be added to a file using the <quote>-n</quote> (name) parameter, be sure 
+to specify the namespace and the attribute name, for example:
+</para>
+
+<screen>
+$ <command>setfattr -n user.Author note2.txt</command>
+</screen>
+
+<para>
+The value of the attribute can be set using the <quote>-v</quote> (value) 
+parameter:
+</para>
+
+<screen>
+$ <command>setfattr -n user.Author -v Mike note2.txt</command>
+</screen>
+
+<para>
+But it is also possible to add an attribute and setting its value in one run, 
+by specifying both the <quote>-n</quote> and <quote>-v</quote> parameters. For 
+example, the following command adds the MD5 sum of the file as an extended 
+attribute:
+</para>
+
+<screen>
+$ <command>setfattr -n user.MD5 -v `md5sum note2.txt` note2.txt</command>
+$ <command>getfattr -d note2.txt</command>
+# file: note2.txt
+user.Author="Mike"
+user.MD5="78be7a3148027ae7a897aad95e7d9c58"
+</screen>
+</sect2>
+
 </sect1>
 
 <sect1><title>Mounting filesystems</title>

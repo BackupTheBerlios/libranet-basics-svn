@@ -1,4 +1,4 @@
-<!-- $Id: pkgmgmt.xml,v 1.6 2004/05/05 15:10:22 danieldk Exp $ -->
+<!-- $Id: pkgmgmt.xml,v 1.7 2004/05/05 15:14:59 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="pkgmgmt.html"?>
 <title>Package management</title>
@@ -415,7 +415,7 @@ the package. Another useful choice is <quote>p</quote>, which will remove
 the package, and any dependencies that are not needed for other packages.
 </para>
 
-</para>
+<para>
 Be sure to read the <command>debfoster</command>(8) manual page before
 you start using debfoster. It is a very powerful tool, but you can remove
 important packages if you do not understand its behavior.

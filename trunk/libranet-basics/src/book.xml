@@ -1,4 +1,4 @@
-<!-- $Id: book.xml,v 1.1 2004/04/22 05:34:01 danieldk Exp $ -->
+<!-- $Id: book.xml,v 1.2 2004/07/02 17:14:53 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="book.html"?>
 <title>About this book</title>
@@ -43,6 +43,15 @@ this book is useful for you.
 <para>
 Dani&euml;l coordinates the <quote>Libranet Basics</quote> book project,
 and wrote a large share of the chapters.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">Robert K. Naylor</emphasis>
+</para>
+<para>
+Robert contributed to the <quote>Running Windows programs on Libranet</quote>
+chapter.
 </para>
 </listitem>
 </itemizedlist>

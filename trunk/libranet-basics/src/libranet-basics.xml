@@ -1,7 +1,8 @@
-<!-- $Id: libranet-basics.xml,v 1.2 2004/05/13 07:35:50 danieldk Exp $ -->
+<!-- $Id: libranet-basics.xml,v 1.3 2004/07/02 17:14:53 danieldk Exp $ -->
 
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd" [
 
+<!-- Chapters -->
 <!ENTITY Book SYSTEM "book.xml">
 <!ENTITY Introduction SYSTEM "introduction.xml">
 <!ENTITY Help SYSTEM "help.xml">
@@ -27,6 +28,8 @@
 <!ENTITY XFree86 SYSTEM "xfree86.xml">
 <!ENTITY Vi SYSTEM "vi.xml">
 
+<!-- Apendices -->
+<!ENTITY WinOnLin SYSTEM "winonlin.xml">
 <!ENTITY Gfdl SYSTEM "gfdl.xml">
 ]>
 
@@ -80,6 +83,7 @@ Free Documentation License".
 &Printing;
 &XFree86;
 
+&WinOnLin;
 &Gfdl;
 
 </book>

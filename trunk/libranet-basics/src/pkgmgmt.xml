@@ -1,4 +1,4 @@
-<!-- $Id: pkgmgmt.xml,v 1.5 2004/05/02 15:04:43 danieldk Exp $ -->
+<!-- $Id: pkgmgmt.xml,v 1.6 2004/05/05 15:10:22 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="pkgmgmt.html"?>
 <title>Package management</title>
@@ -380,7 +380,47 @@ Description: a science fiction adventure game
  and to seek vengeance for the killing of his tribe.
 </screen>
 </sect2>
+</sect1>
 
+<sect1>
+<title>Useful tools</title>
+
+<sect2>
+<title>debfoster</title>
+
+<para>
+Debfoster is a useful tool that helps you to keep your system clean. After
+starting the <command>debfoster</command> it will ask you for each package
+that is not a dependency for another package whether you would like to keep
+it or not. For example:
+</para>
+
+<screen>
+# <command>debfoster</command> 
+
+gdm2 is keeping the following 25 packages installed:
+  bonobo-activation gconf2 gnome-mime-data libbonobo-activation4 libbonobo2-0
+  libbonobo2-common libbonoboui2-0 libbonoboui2-common libfam0c102
+  libgconf2-4 libgnome2-0 libgnome2-common libgnomecanvas2-0
+  libgnomecanvas2-common libgnomeui-0 libgnomeui-common libgnomevfs2-0
+  libgnomevfs2-common libgnutls5 libgsf-1 libidl0 liblinc1 libopencdk4
+  liborbit2 librsvg2-2
+Keep gdm2? [Ynpsiuqx?], [H]elp:
+</screen>
+
+<para>
+As you can see there are several option. <quote>y</quote> is the default
+option, and will keep a package installed. <quote>n</quote> will remove
+the package. Another useful choice is <quote>p</quote>, which will remove
+the package, and any dependencies that are not needed for other packages.
+</para>
+
+</para>
+Be sure to read the <command>debfoster</command>(8) manual page before
+you start using debfoster. It is a very powerful tool, but you can remove
+important packages if you do not understand its behavior.
+</para>
+</sect2>
 </sect1>
 
 </chapter>

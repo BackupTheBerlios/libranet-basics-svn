@@ -1,0 +1,47 @@
+body {
+  color: black;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #990000
+}
+
+img {
+  border: 0;
+}
+
+a {
+  color: #0000ff;
+}
+
+td {
+  text-align: center;
+}
+
+#header {
+  text-align: center;
+}
+
+#menu {
+  padding: 1%;
+  border: 1px dashed #000000;
+  text-align: center;
+  width: 90%;
+  align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main {
+}
+
+
+#donate {
+  text-align: center;
+}
+
+#footer {
+  text-align: center;
+}

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+<head>
+  <title>Libranet GNU/Linux Basics: Using SVN</title>
+  <link rel="stylesheet" href="default.css" type="text/css" />
+</head>
+
+<body>
+
+<h1>Using SVN</h1>
+
+<h2>Introduction</h2>
+
+<p>
+Subversion (SVN) is the version management system the Libranet Basics
+project uses. With SVN multiple authors can work on the same source tree.
+This page gives a short introduction to Subversion. Please be aware that
+you will need a developer account to be able to use these instructions,
+frequent contributors will be offered an account.
+</p>
+
+<p>
+The libranet-basics repository consists of a few directories. For normal
+usage only the <i>trunk</i> and <i>branches</i> directories are important.
+<i>Trunk</i> is used for the current development version of the book
+(at this moment <i>trunk</i> holds the book for Libranet 2.8.1).
+<i>Branches</i> will hold sources for versions of the book that are
+written for older Libranet versions. The 2.8.1 book will go here when
+Libranet 3.0 is released. If you are contributing to the cutting-edge
+of the book <i>trunk/libranet-basics</i> is the most important directory,
+it holds the sources of the current version of the book.
+</p>
+
+<p>
+To use Subversion, you have to install the <i>subversion</i> package
+with <b>apt-get install subversion</b>.
+</p>
+
+<p>
+Please, send a question to the lb-devel list if something is not completely
+clear to you after reading this page. The source repository is the heart
+of this project, and we'd like to keep the amount of screw-ups to the 
+minimum ;).
+</p>
+
+<h2>Checking out the sources</h2>
+
+<p>
+The first thing you have to do is to get a source snapshot of the book. You
+only have to do this once, you can update this snapshot infinitely ;).
+Checking out the sources is really easy with the following two commands:
+</p>
+
+<p>
+<tt>
+export SVN_SSH="ssh -l yourloginname"
+svn checkout svn+ssh://svn.berlios.de/svnroot/repos/libranet-basics
+</tt>
+</p>
+
+<p>
+After executing these commands the sources will be available in
+<i>libranet-basics/</i>.
+</p>
+
+<h2>Updating your checkout</h2>
+
+<p>
+You will have to update your local checkout regularly to get the changes
+other people made. This can be done easily by entering the following command
+in the top-level directory (<i>libranet-basics</i>) of your checkout:
+</p>
+
+<p>
+<tt>
+svn update
+</tt>
+</p>
+
+<h2>Committing changes</h2>
+
+<p>
+The most fun part is, of course, committing your own changes ;). Please
+make sure that:
+</p>
+
+<ul>
+<li>you do a <b>svn update</b> before committing to make sure nobody else
+has worked on the same file,</li>
+<li>you explicitly specify the files you want to commit, because SVN will
+commit all changed files when you don't!</li>
+</ul>
+
+<p>
+Now, on to the commit command:
+</p>
+
+<p>
+<tt>
+svn commit -m "Description of the commit." file1 file2 ... filen
+</tt>
+</p>
+
+<p>
+Be sure to use a short, but useful description of the commit. For example:
+</p>
+
+<p>
+<tt>
+svn commit -m "Added a section about changing process priorities." proc.xml
+</tt>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   id="svg1"
+   sodipodi:version="0.32"
+   inkscape:version="0.39"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   width="210mm"
+   height="297mm"
+   sodipodi:docbase="/home/daniel"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0000000"
+     inkscape:cx="491.01469"
+     inkscape:cy="487.57892"
+     inkscape:window-width="874"
+     inkscape:window-height="693"
+     inkscape:window-x="208"
+     inkscape:window-y="93" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF
+       id="RDF5">
+      <cc:Work
+         rdf:about=""
+         id="Work6">
+        <dc:format
+           id="format7">image/svg+xml</dc:format>
+        <dc:type
+           id="type9"
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <text
+     xml:space="preserve"
+     style="font-size:72.000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr;"
+     x="-1.3927355"
+     y="342.92548"
+     id="text908"
+     sodipodi:linespacing="100%"
+     transform="scale(1.247833,1.354669)"><tspan
+       x="-1.3927355"
+       y="342.92548"
+       sodipodi:role="line"
+       id="tspan911">Libranet Basics</tspan></text>
+  <rect
+     style="fill:#ffffff;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;"
+     id="rect1535"
+     width="36.250000"
+     height="30.000000"
+     x="51.250000"
+     y="378.61218" />
+  <path
+     style="fill:#e80000;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:0.64093218pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;"
+     d="M 71.789808,380.76881 L 59.914047,392.06492 L 70.710192,403.95556 L 82.585953,392.65945 L 71.789808,380.76881 z "
+     id="path913"
+     sodipodi:nodetypes="ccccc" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;"
+     id="rect1537"
+     width="26.250000"
+     height="26.250000"
+     x="641.25000"
+     y="382.36218" />
+  <path
+     style="fill:#e80000;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:0.64093218pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;"
+     d="M 654.28981,380.76881 L 642.41405,392.06492 L 653.21019,403.95556 L 665.08595,392.65945 L 654.28981,380.76881 z "
+     id="path1538"
+     sodipodi:nodetypes="ccccc" />
+</svg>

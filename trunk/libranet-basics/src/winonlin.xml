@@ -1,4 +1,4 @@
-<!-- $Id: winonlin.xml,v 1.1 2004/07/02 17:14:53 danieldk Exp $ -->
+<!-- $Id: winonlin.xml,v 1.2 2004/09/08 20:46:30 danieldk Exp $ -->
 
 <appendix> <?dbhtml filename="winonlin.html"?>
 <title>Running Windows programs on Libranet</title>
@@ -208,19 +208,19 @@ cost and custom configuration.
 </sect1>
 
 <sect1>
-<title>WineX</title>
+<title>Cedega</title>
 
 <sect2>
 <title>Introduction</title>
 
 <para>
-WineX is a commercial version of WINE from Transgaming that implement 
+Cedega is a commercial version of WINE from Transgaming that implement 
 parts of the DirectX API. This makes it possible to run a selection of 
-Windows(tm) games on GNU/Linux. A slightly impaired version of WineX is 
+Windows(tm) games on GNU/Linux. A slightly impaired version of Cedega is 
 available through the Transgaming CVS tree, this version misses some 
-crucial code to run some Windows games. WineX is offered a 
+crucial code to run some Windows games. Cedega is offered a 
 subscription, during the subscription period a subscriber can download 
-the latest version of WineX, and subscribers can vote which games have 
+the latest version of Cedega, and subscribers can vote which games have 
 the highest priority to be supported in future versions.
 </para>
 </sect2>

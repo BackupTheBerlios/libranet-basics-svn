@@ -1,4 +1,4 @@
-<!-- $Id: filesystem.xml,v 1.5 2004/07/19 18:41:45 danieldk Exp $ -->
+<!-- $Id: filesystem.xml,v 1.6 2004/07/19 22:15:13 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="filesystem.html"?>
 <title>Files and directories</title>
@@ -52,7 +52,7 @@ contents of the current directory:
 
 <screen>
 $ <command>ls</command>
-slackware-beginselen  slackware-beginselen-20december2002.tar.gz
+COPYING  CVS  Makefile  README  html  images  pdf  src  tex
 </screen>
 
 <para>
@@ -63,8 +63,8 @@ You can do this by specifying the path as a parameter tot the
 
 <screen>
 $ <command>ls /</command>
-bin   dev  home  lost+found  opt   root  tmp  var
-boot  etc  lib   mnt         proc  sbin  usr
+bin   cdrom   dev  floppy  initrd  lost+found  opt   root  sys  usr  windows
+boot  cdrom1  etc  home    lib     mnt         proc  sbin  tmp  var
 </screen>
 
 <para>
@@ -77,9 +77,16 @@ more information:
 
 <screen>
 $ <command>ls -l</command>
-total 20
-drwxr-xr-x    7 danieldk users        4096 Dec 21 09:24 slackware-beginselen
--rw-r--r--    1 danieldk users       14317 Dec 21 08:35 slackware-beginselen-20december2002.tar.gz
+total 52
+-rw-r--r--    1 daniel   daniel      20398 Jul 16 14:28 COPYING
+drwxr-xr-x    2 daniel   daniel       4096 Jul 16 14:28 CVS
+-rw-r--r--    1 daniel   daniel        768 Jul 16 14:28 Makefile
+-rw-r--r--    1 daniel   daniel        408 Jul 16 14:28 README
+drwxr-xr-x    3 daniel   daniel       4096 Jul 16 14:28 html
+drwxr-xr-x    3 daniel   daniel       4096 Jul 16 14:28 images
+drwxr-xr-x    3 daniel   daniel       4096 Jul 16 14:28 pdf
+drwxr-xr-x    3 daniel   daniel       4096 Jul 20 00:11 src
+drwxr-xr-x    3 daniel   daniel       4096 Jul 16 14:28 tex
 </screen>
 
 <bridgehead>cd</bridgehead>
@@ -347,10 +354,10 @@ for the file owner and group:
 </para>
 
 <screen>
-$ <command>ls -l notities</command> 
+$ <command>ls -l notes</command> 
 -r--r--r--    1 daniel   users          12 Mar  9 16:28 memo 
 bash-2.05b$ <command>chmod ug+w memo</command>
-bash-2.05b$ <command>ls -l notities</command> 
+bash-2.05b$ <command>ls -l notes</command> 
 -rw-rw-r--    1 daniel   users          12 Mar  9 16:28 momo 
 </screen>
 
@@ -363,7 +370,7 @@ this directory and other users:
 </para>
 
 <screen>
-$ <command>chmod -R go-r geheim/</command>
+$ <command>chmod -R go-r secret/</command>
 </screen>
 </sect1>
 

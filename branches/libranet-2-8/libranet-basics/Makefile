@@ -7,6 +7,9 @@ CURRENTDIR=`pwd`
 
 all:	fmt-html fmt-pdf
 
+lint:
+	xmllint --noout --valid src/libranet-basics.xml
+
 fmt-html:
 	jade -t sgml -d src/libranet-basics.dsl#html \
 		/usr/share/sgml/declaration/xml.dcl \

@@ -1,4 +1,4 @@
-<!-- $Id: proc.xml,v 1.1 2004/04/22 05:34:03 danieldk Exp $ -->
+<!-- $Id: proc.xml,v 1.2 2004/08/02 17:35:21 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="proc.html"?>
 <title>Process management</title>
@@ -161,7 +161,7 @@ to the <command>inetd</command> to restart it:
 </sect1>
 
 <sect1>
-<!-- Come up with something better -->
+<!-- XXX - Come up with something better -->
 <title>Advanced process management</title>
 
 <sect2>
@@ -180,17 +180,52 @@ $ <command>rm -rf ~/bunch/of/files &amp;</command>
 </screen>
 
 <para>
-It is also possible to move running processes to the background by pressing
-the &lt;Control&gt; and &lt;z&gt; keys simultaneously. Background processes
-can be moved to the foreground with the <command>fg</command> command. Running
-<command>fg</command> without any parameters moves the last process that was
-moved to the background to the foreground. Other processes can be moved
-to the foreground by specifying the process ID as a parameter to
-<command>fg</command>.
+A process that runs in the background can be brought to the foreground using
+the <command>fg %&lt;job ID&gt;</command> command. You can see which
+jobs are running, with their job numbers, using the <command>jobs</command>
+command. For example:
+</para>
+
+<screen>
+$ <command>sleep 1000 &</command>
+[1] 947
+$ <command>jobs</command>
+[1]+  Running                 sleep 1000 &
+$ <command>fg %1</command>
+sleep 1000
+</screen>
+
+<para>
+The first command, <command>sleep 1000 &</command>, starts sleep in the 
+background. <command>sleep</command> is a command does nothing but waiting
+the number of seconds that are specified as a parameter. The output of
+the <command>jobs</command> command shows that <command>sleep</command>
+is indeed running, with Job ID <emphasis>1</emphasis>. Finally we move
+<command>sleep</command> to the foreground. As you can see, the shell will
+print which command is moved to the foreground.
 </para>
 
 </sect2>
 
+<sect2>
+<title>Stopping processes</title>
+<para>
+A process that is running can be stopped by pressing
+the &lt;Control&gt; and &lt;z&gt; keys simultaneously. Stopped processes
+can be moved to the foreground with the <command>fg</command> command. Running
+<command>fg</command> without any parameters moves the last process that was
+stopped to the foreground. Other processes can be moved
+to the foreground by specifying the job ID as a parameter to
+<command>fg</command>.
+</para>
+
+<para>
+A stopped process can also be told to continue as a background process,
+by executing <command>bg &lt;job ID&gt;</command>. Executing 
+<command>fg</command> without any parameter will move the last stopped process 
+to the background.
+</para>
+</sect2>
 </sect1>
 
 

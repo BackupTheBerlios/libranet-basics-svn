@@ -1,4 +1,4 @@
-<!-- $Id: filesystem.xml,v 1.7 2004/08/02 07:42:15 danieldk Exp $ -->
+<!-- $Id: filesystem.xml,v 1.8 2004/09/09 07:22:10 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="filesystem.html"?>
 <title>Files and directories</title>
@@ -427,13 +427,15 @@ user.Author
 </screen>
 
 <para>
-This file has one extended attribute, <quote>user.Author</quote>. An attribute 
-has the following form: <quote>namespace.attribute</quote>. There are four 
-defined namespaces: <quote>security</quote>, <quote>system</quote>, 
-<quote>trusted</quote>, and <quote>user</quote>. The role of these namespaces 
-are described in the attr(5) manual page. The "user" namespace is of 
-particular interest to us, because this namespace is used to assign arbitrary 
-attributes to files.
+This file has one extended attribute,
+<emphasis>user.Author</emphasis>. An attribute  has the following
+form: <emphasis>namespace.attribute</emphasis>. There are four
+defined namespaces: <emphasis>security</emphasis>,
+<emphasis>system</emphasis>, <emphasis>trusted</emphasis>, and
+<emphasis>user</emphasis>. The role of these namespaces  are described
+in the <emphasis>attr</emphasis>(5) manual page. The <emphasis>user</emphasis>
+namespace is of particular interest to us, because this namespace is used to
+assign arbitrary attributes to files.
 </para>
 
 <para>
@@ -448,8 +450,8 @@ user.Author="Daniel"
 </screen>
 
 <para>
-In this example the attribute <quote>user.Author</quote> has the value 
-<quote>Daniel</quote> for the file <filename>note.txt</filename>.
+In this example the attribute <emphasis>user.Author</emphasis> has the value 
+<emphasis>Daniel</emphasis> for the file <filename>note.txt</filename>.
 </para>
 </sect2>
 
@@ -516,7 +518,7 @@ explains how filesystems can be mounted and unmounted.
 
 <para>
 The <command>mount</command>(8) is used to mount filesystems. The basic
-syntax is: <quote>mount /dev/devname /mountpoint</quote>. The device name
+syntax is: <command>mount /dev/devname /mountpoint</command>. The device name
 can be any block device, like hard disks or CD-ROM drives. The mount point
 can be an arbitrary point in the root filesystem. Let's look at an example:
 </para>
@@ -601,10 +603,11 @@ We are now going to look at each entry.
 
 <para>
 The fs_spec option specifies the block device, or remote filesystem that
-should be mounted. As you can see in the example several /dev/hda partitions
-are specified, as well as the CD-ROM drive and floppy drive. When NFS
-volumes are mounted an IP address and directory can be specified, for
-example: <filename>192.168.1.10:/exports/data</filename>.
+should be mounted. As you can see in the example several 
+<filename>/dev/hda</filename> partitions are specified, as well as the CD-ROM 
+drive and floppy drive. When NFS volumes are mounted an IP address and 
+directory can be specified, for example: 
+<filename>192.168.1.10:/exports/data</filename>.
 </para>
 </sect3>
 
@@ -657,7 +660,7 @@ is allowed to mount filesystems).
 </listitem>
 <listitem>
 <para>
-<emphasis>owner</emphasis>: the <quote>owner</quote> option will allow
+<emphasis>owner</emphasis>: the <emphasis>owner</emphasis> option will allow
 the owner of the specified device to mount the specified device. You can
 see the owner of a device using <command>ls</command>, e.g. 
 <command>ls -l /dev/cdrom</command>.
@@ -673,8 +676,8 @@ more security.
 <listitem>
 <para>
 <emphasis>nosuid</emphasis>: this option is comparable to the 
-<quote>noexec</quote> option. With <quote>nosuid</quote> enabled SUID
-bits on files on the filesystem will not be allowed. SUID is used
+<emphasis>noexec</emphasis> option. With <emphasis>nosuid</emphasis> enabled 
+SUID bits on files on the filesystem will not be allowed. SUID is used
 for certain binaries to provide a normal user to do something privileged.
 This is certainly a security threat, so this option should really be
 used for removable media, etc. A normal user mount will force the
@@ -684,8 +687,8 @@ nosuid option, but a mount by the superuser will not!
 <listitem>
 <para>
 <emphasis>unhide</emphasis>: this option is only relevant for normal
-CD-ROMs with the ISO9660 filesystem. If <quote>unhide</quote> is specified
-hidden files will also be visible.
+CD-ROMs with the ISO9660 filesystem. If <emphasis>unhide</emphasis> is 
+specified hidden files will also be visible.
 </para>
 </listitem>
 </itemizedlist>
@@ -696,7 +699,7 @@ hidden files will also be visible.
 <title>fs_freq</title>
 
 <para>
-If the <quote>fs_freq</quote> is set to 1 or higher, it specifies after
+If the <emphasis>fs_freq</emphasis> is set to 1 or higher, it specifies after
 how many days a filesystem dump (backup) has to be made. This option is
 only used when <command>dump</command>(8) is set up correctly to handle this.
 </para>

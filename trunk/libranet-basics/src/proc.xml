@@ -1,4 +1,4 @@
-<!-- $Id: proc.xml,v 1.3 2004/08/11 21:08:21 danieldk Exp $ -->
+<!-- $Id: proc.xml,v 1.4 2004/09/09 07:25:47 danieldk Exp $ -->
 
 <chapter id="chap-proc"> <?dbhtml filename="proc.html"?>
 <title>Process management</title>
@@ -27,8 +27,8 @@ and CPU time.
 
 <para>
 A user can control a process by sending signals to the process. For example,
-the SIGTERM command is used to terminate a process, and the SIGHUP signal
-to restart a process.
+the <emphasis>SIGTERM</emphasis> signal is used to terminate a process, and 
+the <emphasis>SIGHUP</emphasis> signal to restart a process.
 </para>
 
 </sect1>
@@ -98,8 +98,8 @@ of available parameters.
 
 <para>
 The <command>kill</command>(1) sends a signal to a process. If no signal is
-specified the TERM signal is send, which asks a process to exit gracefully.
-Let's have a look at the normal mode of execution:
+specified the <emphasis>TERM</emphasis> signal is send, which asks a process 
+to exit gracefully. Let's have a look at the normal mode of execution:
 </para>
 
 <screen>
@@ -135,10 +135,10 @@ that can be sent:
 </screen>
 
 <para>
-The SIGKILL signal is often used to kill processes that refuse to terminate
-with the default SIGTERM signal. The signal can be specified by using the
-number as a parameter, for example, the following command would send a SIGKILL
-signal to PID 1045:
+The <emphasis>SIGKILL</emphasis> signal is often used to kill processes that 
+refuse to terminate with the default <emphasis>SIGTERM</emphasis> signal. The
+signal can be specified by using the number as a parameter, for example, the
+following command would send a <emphasis>SIGKILL</emphasis> signal to PID 1045:
 </para>
 
 <screen>
@@ -147,8 +147,9 @@ $ <command>kill -9 1045</command>
 
 <para>
 It is also possible to specify the signal without the <quote>SIG</quote>
-letters as a parameter. In the following example the SIGHUP signal is sent
-to the <command>inetd</command> to restart it:
+letters as a parameter. In the following example the 
+<emphasis>SIGHUP</emphasis> signal is sent to the <command>inetd</command> to 
+restart it:
 </para>
 
 <screen>

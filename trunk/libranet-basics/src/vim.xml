@@ -1,0 +1,121 @@
+<chapter> <?dbhtml filename="vim.html"?>
+<title>Vim</title>
+
+<sect1>
+<title>Introduction</title>
+
+<para>
+Vi is the first full screen editor for computers. Vi is the standard
+editor that is installed by default on any UNIX system. Because it uses
+very little resources, it is very fast even on old computers and slow
+network connections.  Vi is very powerful, with  almost unlimited
+features.  You can use vi as an file editor by learning a few basic
+commands. Sooner or later, you may find yourself editing a file with vi.
+</para>
+
+<para>
+Libranet uses <ulink url="http://www.vim.org/">vim</ulink>, an extended version
+of vi, as the default vi editor.
+</para>
+</sect1>
+
+<sect1>
+<title>The basics</title>
+
+<para>
+Vi runs in two modes: command mode, and insert (edit) mode.
+When vi starts, it is running in command mode.
+</para>
+
+<sect2>
+<title>Starting vi</title>
+
+<para>
+You can start vi from the console using the <command>vi</command> command:
+</para>
+
+<screen>
+$ <command>vi</command>
+</screen>
+
+<para>
+or to use vi to edit an existing file:
+</para>
+
+<screen>
+$ <command>vi filename</command>
+</screen>
+</sect2>
+
+<sect2>
+<title>Inserting text</title>
+
+<para>
+To begin inserting text in the command mode, press the &lt;i&gt; key, for 
+insert. Once you have pressed &lt;i&gt; you will see the cursor change and 
+you will see <emphasis>--INSERT--</emphasis> in the lower left corner of the 
+screen. You now can start inserting text.
+</para>
+</sect2>
+
+<sect2>
+<title>Saving (writing) changes</title>
+
+<para>
+To save changes you made to a file, you need to be in command mode.  To
+leave insert mode and enter command mode, you press the &lt;Esc&gt; key. The
+cursor will change again, indicating that you have now switched to
+command mode.  You can write (save changes) to the file that you were
+working on with:
+</para>
+
+<screen>
+<command>:w</command>
+</screen>
+
+<para>
+or to save the changes to a file name:
+</para>
+
+<screen>
+<command>:w filename</command>
+</screen>
+</sect2>
+
+<sect2>
+<title>Quitting vi</title>
+
+<para>
+To quit vi, you need to be in command mode. To leave insert mode and
+enter command mode, you press the &lt;Esc&gt; key. The cursor will change
+again, indicating that you have now switched to command mode. You can quit vi
+with:
+</para>
+
+<screen>
+<command>:q</command>
+</screen>
+
+<para>
+or You can quit without saving any changes with:
+</para>
+
+<screen>
+<command>:q!</command>
+</screen>
+</sect2>
+
+<sect2>
+<title>Help</title>
+
+<para>
+To get when running vi, press the &lt;Esc&gt; key to enter command mode and
+then:
+</para>
+
+<screen>
+<command>:help</command>
+</screen>
+</sect2>
+</sect1>
+</chapter>

@@ -1,4 +1,4 @@
-<!-- $Id: security.xml,v 1.7 2004/08/03 07:22:53 danieldk Exp $ -->
+<!-- $Id: security.xml,v 1.8 2004/09/09 07:28:19 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="security.html"?>
 <title>Security</title>
@@ -150,7 +150,7 @@ RSA keys. This section describers how this can be done.
 
 <note>
 <para>
-1024-bit keys were believed to be secure for a long time. But Bernstein's
+1024-bit keys were believed to be secure for a long time. But D.J. Bernstein's
 paper "Circuits for Integer Factorization: a Proposal" contests this, the
 bottom line is that it is quite feasible for national security agencies to
 produce hardware that can break keys in a relatively short amount of time.

@@ -13,6 +13,8 @@
 <!ENTITY OpenOffice SYSTEM "openoffice.xml">
 
 <!ENTITY Shell SYSTEM "shell.xml">
+<!ENTITY Filesystem SYSTEM "filesystem.xml">
+<!ENTITY Textutils SYSTEM "textutils.xml">
 <!ENTITY Proc SYSTEM "proc.xml">
 <!ENTITY UserMgmt SYSTEM "usermgmt.xml">
 <!ENTITY Vim SYSTEM "vim.xml">
@@ -22,7 +24,6 @@
 <!ENTITY Netconfig SYSTEM "netconfig.xml">
 <!ENTITY Services SYSTEM "services.xml">
 
-<!ENTITY Filesystem SYSTEM "filesystem.xml">
 <!ENTITY Networking SYSTEM "networking.xml">
 
 <!ENTITY Printing SYSTEM "printing.xml">
@@ -88,6 +89,7 @@ Free Documentation License".
 <title>Linux Basics</title>
 &Shell;
 &Filesystem;
+&Textutils;
 &Proc;
 &UserMgmt;
 &Vim;

@@ -1,4 +1,4 @@
-<!-- $Id: openoffice.xml,v 1.1 2004/08/03 12:14:44 danieldk Exp $ -->
+<!-- $Id: openoffice.xml,v 1.2 2004/08/03 15:32:51 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="openoffice.html"?>
 <title>The OpenOffice suite</title>
@@ -41,6 +41,9 @@ and spreadsheet formats. OpenOffice features the following functionality:
 
 <sect1>
 <title>OpenOffice Writer</title>
+
+<sect2>
+<title>The Writer interface</title>
 
 <figure id="openoffice-writer">
 <title>The OpenOffice writer</title>
@@ -101,13 +104,44 @@ The page zoom indicator shows the zooming percentage of the document you
 are currently using. If you have trouble reading smaller fonts, you can zoom
 in to be able to read these fonts more comfortably. You can also zoom out
 to get a better overview of a page or multiple pages. Select the
-<emphasis>View -> Zoom...</emphasis> option to change the zooming percentage.
-There are also three special options, most notably 
+<emphasis>View -> Zoom...</emphasis> menu item to change the zooming 
+percentage. There are also three special options, most notably 
 <emphasis>Optimal</emphasis>, which will zoom to an ideal percentage for
 editing. 
 </para>
 </listitem>
+<listitem>
+<para>
+<emphasis>Page style</emphasis>
+</para>
+<para>
+Each page can have a page style. Page styles define options for a page, such
+as page size and margins. Page styles can be changed through the
+<emphasis>Format -> Page</emphasis> menu item.
+</para>
+</listitem>
 </itemizedlist>
+</sect2>
+
+<sect2>
+<title>Creating PDF files</title>
+
+<para>
+The PDF format is currently a very popular format for sharing documents
+for printing or viewing. Since version 1.1 has integrated support for
+creating PDF files. To make a PDF of the document you are currently
+editing, select the <emphasis>File -> Export as PDF</emphasis> menu
+option. This will open a file dialog, select the directory you would
+like to safe the PDF to, and enter the filename of the document that
+should be created (e.g. <filename>document.pdf</filename>). Finally,
+press the <emphasis>Export...</emphasis> button. Another dialog will
+appear that allows you to refine some options, and the range of pages
+you would like to save to the PDF file. Select <emphasis>Export</emphasis>
+to create the PDF file.
+</para>
+
+</sect2>
+
 </sect1>
 
 </chapter>

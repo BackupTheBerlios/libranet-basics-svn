@@ -1,0 +1,145 @@
+<!-- $Id: shell.xml,v 1.1 2004/04/22 05:34:03 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="shell.html"?>
+<title>The Bash shell</title>
+
+<sect1>
+<title>Introduction</title>
+
+<para>
+The shell is the traditional interface used by UNIX and GNU/Linux. In contrast
+to the X Window System it is an interface that works with commands. In the
+beginning this can be a bit awkward, but the shell is very powerful. Even
+in these days the shell is almost unavoidable ;).
+</para>
+
+<para>
+The default shell on Libranet GNU/Linux is Bash. Bash means <quote>Bourne-Again
+SHell</quote>, which is a pun on the name of one of the traditional UNIX shells,
+the <quote>Bourne Shell</quote>. Libranet provides some other shells, but
+Bash is the main topic of this chapter.
+</para>
+</sect1>
+
+<sect1>
+<title>Starting the shell</title>
+
+<para>
+The procedure for starting the shell depends on whether you use a graphical
+or text-mode login. If you are logging on in text-mode the shell is 
+immediately started after entering the (correct) password. If you are using
+a graphical login manager like gdm, log on as you would normally, and look in 
+your window manager or desktop environment menu for an entry named "XTerm".
+XTerm is a terminal emulator, after the terminal emulator is started the
+shell comes up.
+</para>
+
+<para>
+The shell might remind some people of MS-DOS. Be happy, it has nothing to
+do with DOS, the only similarity is that you can enter command ;).
+</para>
+</sect1>
+
+<sect1>
+<title>Shell basics</title>
+
+<para>
+This chapter might be a difficult to read for the first time, because
+you might not know any shell commands. Many important commands are
+described in the next chapters, but those chapters are not really useful
+without any knowledge of the shell. So, it is not a bad idea to
+browse quickly through this chapter, and the next few chapters, to get
+an idea what this shell thing is all about. After that quick overview
+you should be able to understand this chapter.
+</para>
+
+<sect2>
+<title>Executing commands</title>
+
+<para>
+The most important job for the shell is to execute your commands. Let's
+look at a simple example. Most UNIX variants have a command named
+<command>whoami</command>, which shows as which user you are logged in.
+Try typing <command>whoami</command>, and press the &lt;Enter&gt;
+after that. The &lt;Enter&gt; tells the shell that it should execute
+the command that you have typed on the current line. The output looks
+like this:
+</para>
+
+<screen>
+daniel@tazzy:~$ <command>whoami</command>
+daniel
+daniel@tazzy:~$
+</screen>
+
+<para>
+As you can see the control is handed back to the shell after the command
+is finished.
+</para>
+</sect2>
+
+<sect2>
+<title>Browsing through shell commands</title>
+
+<para>
+It often happens that you have to execute commands that you executed earlier.
+Fortunately, you do not have to type them all over again. You can browse
+through the history of executed commands with the up and down arrows. Besides
+that it is also possible to search for a command. Press &lt;Control&gt; +
+&lt;r&gt; and start typing the command you want to execute. You will notice
+that bash will display the first match it can find. If this is not the
+match you were looking for you can continue typing the command (till it
+is unique and a match appears), or press &lt;Control&gt; + &lt;r&gt;
+once more to get the next match. When you have found the command you were
+looking for, you can execute it by pressing &lt;Enter&gt;.
+</para>
+</sect2>
+
+<sect2>
+<title>Completion</title>
+
+<para>
+Completion is one of the most useful functionalities of Unix-like shells.
+Suppose that you have a directory with two files named 
+<filename>websites</filename> and <filename>recipe</filename>. And suppose
+you want to <command>cat</command> the file <filename>websites</filename>
+(<command>cat</command> shows the contents of a file), by specifying
+<filename>websites</filename> as a parameter to cat. Normally you would
+type <quote>cat websites</quote>, and execute the command. Try typing
+<quote>cat w</quote>, and hit the &lt;Tab&gt; key. Bash will automatically
+expand what you typed to <quote>cat websites</quote>.
+</para>
+
+<para>
+But what happens if you have files that start with the same letter? Suppose
+that you have the <filename>recipe1.txt</filename> and 
+<filename>recipe2.txt</filename> files. Type <quote>cat r</quote> 
+and hit &lt;Tab&gt;, Bash will complete the filename as far as it can. It 
+would leave you with <quote>cat recipe</quote>. Try hitting &lt;Tab&gt;
+again, and Bash will show you a list of filenames that start with
+<quote>recipe</quote>, in this case both recipe files. At this point you
+have to help Bash by typing the next character of the file you need.
+Suppose you want to <command>cat</command> <filename>recipe2</filename>,
+you can push the &lt;2&gt; key. After that there are no problems completing
+the filename, and hitting &lt;Tab&gt; completes the command to
+<quote>cat recipe2.txt</quote>.
+</para>
+
+<para>
+It is worth noting that completion also works with commands. Most GNU/Linux
+commands are quite short, so it will not be of much use most of the time.
+</para>
+
+<para>
+It is a good idea to practice a bit with completion, it can safe alot
+of keystrokes if you can handle completion well. You can make some
+empty files to practive with using the <command>touch</command> command.
+For example, to make a file named <filename>recipe3.txt</filename>,
+execute <command>touch recipe3.txt</command>.
+</para>
+
+</sect2>
+
+</sect1>
+
+</chapter>

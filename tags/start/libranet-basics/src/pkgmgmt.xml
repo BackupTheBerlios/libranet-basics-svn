@@ -1,0 +1,270 @@
+<!-- $Id: pkgmgmt.xml,v 1.1 2004/04/22 05:34:01 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="apt.html"?>
+<title>APT</title>
+
+<sect1>
+<title>Introduction</title>
+
+<para>
+The Debian distribution has a package manager since the early day of the
+distribution. This made software easily distributable and manageable. However,
+one part was still missing, a tool that could fetch packages from different
+locations (e.g. from CD-ROM and FTP), and that could automatically solve and
+get dependencies. APT, the Advanced Packaging Tool, was written to fill
+this gap.
+</para>
+
+<para>
+Libranet has the advantage that it is based on Debian, so it inherited the
+APT tool. APT can be used on Libranet to get software from the Debian archives,
+or Libranet's own <quote>safe update archive</quote>, a special archive with
+the goal of preventing breaking the system during updates or installation
+of new programs. This chapter will give a short explanation about the 
+configuration and usage of APT. For an extensive introduction to APT, read
+the <ulink url="http://www.debian.org/doc/manuals/apt-howto/index.en.html">APT HOWTO</ulink>.
+</para>
+</sect1>
+
+<sect1>
+<title>Basic APT usage</title>
+
+<sect2>
+<title>Updating the package index files</title>
+
+<para>
+APT uses package index files to know which packages are available. These
+indexes are fetched from the locations specified in the 
+<filename>/etc/apt/sources.list</filename> file. It is a good idea
+to update the package indexes regularly. This will allow you to upgrade
+installed packages and to install the latest available packages. Updating
+the package cache is very simple, the following command will do the job:
+</para>
+
+<screen>
+# <command>apt-get update</command>
+</screen>
+</sect2>
+
+<sect2>
+<title>Upgrading installed packages</title>
+
+<para>
+There are two methods for upgrading installed packages: the 
+<emphasis>upgrade</emphasis> and <emphasis>dist-upgrade</emphasis>
+methods. The <emphasis>upgrade</emphasis> will never remove installed
+packages, and it will not install packages that are not installed yet.
+This means that if an upgrade package is found for an installed package,
+but this upgrade depends on an package that is not installed, the package
+will not be upgraded. The <emphasis>dist-upgrade</emphasis> method
+removes and installs packages if necessary. This means it sometimes
+upgrades a package at the expense of a less important package. If you
+want to be on the safe side, use <emphasis>upgrade</emphasis>:
+</para>
+
+<screen>
+# <command>apt-get upgrade</command>
+</screen>
+
+<para>
+If you would rather like to upgrade your software as much as possible, use
+<emphasis>dist-upgrade</emphasis>:
+</para>
+
+<screen>
+# <command>apt-get dist-upgrade</command>
+</screen>
+</sect2>
+
+<sect2>
+<title>Installing packages</title>
+
+<para>
+Packages can be installed with the <emphasis>install</emphasis> parameter
+of <command>apt-get</command>. You can just specify the packages you
+would like to install after the <command>apt-get install</command>
+command. For example:
+</para>
+
+<screen>
+# <command>apt-get install gimp</command>           
+Reading Package Lists... Done
+Building Dependency Tree... Done
+The following extra packages will be installed:
+  aalib1 libgimp1.2 libgimpprint1 libgtkxmhtml1 libmpeg1
+Suggested packages:
+  gimp-nonfree freefont gimp-data-extras gimp-perl gimpprint-locales
+The following NEW packages will be installed:
+  aalib1 gimp libgimp1.2 libgimpprint1 libgtkxmhtml1 libmpeg1
+0 upgraded, 6 newly installed, 0 to remove and 1 not upgraded.
+Need to get 9204kB of archives.
+After unpacking 29.2MB of additional disk space will be used.
+Do you want to continue? [Y/n]
+</screen>
+
+<para>
+As you can see in this example, we are requesting APT to install the GIMP.
+If there are other dependencies that have to be installed (like in the
+example above) APT will ask you for a confirmation.
+</para>
+</sect2>
+
+<sect2>
+<title>Removing packages</title>
+
+<para>
+Removing packages is as easy as installing packages. The packages specified
+after the <command>apt-get remove</command> command will be removed. For
+example:
+</para>
+
+<screen>
+# <command>apt-get remove pppoe</command>
+Reading Package Lists... Done
+Building Dependency Tree... Done
+The following packages will be REMOVED:
+  pppoe pppoeconf
+0 upgraded, 0 newly installed, 2 to remove and 1 not upgraded.
+Need to get 0B of archives.
+After unpacking 367kB disk space will be freed.
+Do you want to continue? [Y/n]
+</screen>
+
+<para>
+Removing packages this way will remove the software, but will leave the
+configuration files around. Add the <emphasis>--purge</emphasis> 
+parameter to remove the configuration files too. For example:
+</para>
+
+<screen>
+# <command>apt-get --purge remove pppoe</command>
+Reading Package Lists... Done
+Building Dependency Tree... Done
+The following packages will be REMOVED:
+  pppoe* pppoeconf*
+0 upgraded, 0 newly installed, 2 to remove and 1 not upgraded.
+Need to get 0B of archives.
+After unpacking 367kB disk space will be freed.
+Do you want to continue? [Y/n]
+</screen>
+
+<para>
+As you can see a <quote>*</quote> is added to the package names, which
+means that the configuration files will be removed for these packages.
+</para>
+</sect2>
+
+<sect2>
+<title>Searching for packages</title>
+
+<para>
+Sometimes you might be looking for a program to do a certain task, but
+you do not know which programs can do the job. In this situation the
+<emphasis>search</emphasis> option of the <command>apt-cache</command> program
+can be of great help. The <command>apt-cache</command> utility can look
+for search terms in package descriptions. For example, suppose that
+you are looking for a program which can fetch mail for you from a HotMail
+account. Decide which keywords might be useful for the search, and
+add these keywords to the <command>apt-cache search</command> command.
+In this example the <quote>hotmail</quote> keyword might be specific enough.
+Let us have a look what results <command>apt-cache</command> gives: 
+</para>
+
+<screen>
+$ <command>apt-cache search hotmail</command>
+gotmail - Utility to download email from a Hotmail or MSN account
+hotway - POP3 to Hotmail (HTTPmail) gateway
+</screen>
+
+<para>
+Two packages are found with the keyword <quote>hotmail</quote>, and as
+you probably guessed the <quote>gotmail</quote> package will do the
+job.
+</para>
+</sect2>
+
+<sect2>
+<title>Showing information about a package</title>
+
+<para>
+The <command>apt-cache</command> can also be used to show information about
+a package. The <emphasis>show</emphasis> parameter will show the package 
+description, dependencies and other useful information. For example:
+</para>
+
+<screen>
+$ <command>apt-cache show beneath-a-steel-sky</command>
+Package: beneath-a-steel-sky
+Priority: optional
+Section: games
+Installed-Size: 70912
+Maintainer: Tore Anderson &lt;tore@debian.org&gt;
+Architecture: all
+Version: 0.0368-2
+Depends: scummvm (>= 0.5.1-1)
+Filename: pool/main/b/beneath-a-steel-sky/beneath-a-steel-sky_0.0368-2_all.deb
+Size: 69314378
+MD5sum: 675257f6721d8b2f172a82dca01b45ed
+Description: a science fiction adventure game
+ A science-fiction thriller set in a bleak post-apocalyptic vision
+ of the future, Beneath a Steel Sky revolves around "Union City",
+ where selfishness, rivalry, and corruption by its citizens seems to
+ be all too common, those who can afford it live underground, away
+ from the pollution and social problems which are plaguing the city.
+ .
+ You take on the role of Robert Foster, an outcast of sorts from the
+ city since a boy who was raised in a remote environment outside of
+ Union City simply termed "the gap".  Robert's mother took him away
+ from Union City as a child on their way to "Hobart" but the helicopter
+ crashed on its way, unfortunately Robert's mother dies, but he
+ survives and is left to be raised by a local tribe from the gap.
+ .
+ Years later, Union City security drops by and abducts Robert, killing
+ his tribe in the process; upon reaching the city the helicopter taking
+ him there crashes with him escaping, high upon a tower block in the
+ middle of the city he sets out to discover the truth about his past,
+ and to seek vengeance for the killing of his tribe.
+</screen>
+</sect2>
+
+</sect1>
+
+<sect1>
+<title>The Libranet update-safe archive</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+On January 23, 2004 Libra Computer Systems Ltd. announced the <quote>Libranet
+update-safe archive</quote>. This special archive was introduced provide
+a safe upgrade method which is well-tested. Usage of the safe archive is
+free. Please note that somebody can still use the plain Debian archives
+if he or she wants. The Libranet archive just provides more safety,
+because it is a carefully selected collection of packages from all three
+Debian branches (plus some custom Libranet packages).
+</para>
+</sect2>
+
+<sect2>
+<title>Using the archive</title>
+
+<para>
+The update-safe archive was introduced after Libranet 2.8 and 2.8.1, so it
+is not used by default. Fortunately it is very easy to set up. Click 
+<quote>Update Adminmenu from the Internet</quote> on the 
+<quote>Packages</quote> tab in Libranet. This will update adminmenu.
+After updating adminmenu you will be asked whether you would like to use
+the update-safe archive or not. Choose <quote>yes</quote>, after that the
+update procedure installs a new <filename>source.list</filename> file
+which uses the archive. After re-launching adminmenu the 
+<quote>Packages</quote> menu will show a new item, <quote>Upgrade system from 
+the Libranet Archive</quote>, which can be used to upgrade your system using 
+the update-safe archive.
+</para>
+
+</sect2>
+
+</sect1>
+
+</chapter>

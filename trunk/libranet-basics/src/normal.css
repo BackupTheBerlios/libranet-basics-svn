@@ -9,7 +9,7 @@ tt {
 .screen {
 	width: 90%;
 	border: 1px dashed #b0c4de;
-	background-color: f0f8ff;
+	background-color: #f0f8ff;
 	color: #000000;
 	padding: 0.5em;
 	margin-bottom: 0.5em;
@@ -19,7 +19,7 @@ table.note {
         width: 90%;
 	font-family: helvetica, arial, sans-serif;
         border: 1px dashed #a0c0a0;
-        background-color: f0f8f0;
+        background-color: #f0f8f0;
         color: #000000;
         padding: 0.5em;
 }

@@ -1,4 +1,4 @@
-<!-- $Id: pkgmgmt.xml,v 1.3 2004/04/22 07:28:07 danieldk Exp $ -->
+<!-- $Id: pkgmgmt.xml,v 1.4 2004/04/23 11:16:50 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="pkgmgmt.html"?>
 <title>Package management</title>
@@ -29,11 +29,48 @@ read the
 </para>
 </sect1>
 
+
+<sect1 id="safe-archive">
+<title>The Libranet update-safe archive</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+On January 23, 2004 Libra Computer Systems Ltd. announced the <quote>Libranet
+update-safe archive</quote>. This special archive was introduced provide
+a safe upgrade method which is well-tested. Usage of the safe archive is
+free. Please note that somebody can still use the plain Debian archives
+if he or she wants. The Libranet archive just provides more safety,
+because it is a carefully selected collection of packages from all three
+Debian branches (plus some custom Libranet packages).
+</para>
+</sect2>
+
+<sect2>
+<title>Using the archive</title>
+
+<para>
+The update-safe archive was introduced after Libranet 2.8 and 2.8.1, so it
+is not used by default. Fortunately it is very easy to set up. Click 
+<quote>Update Adminmenu from the Internet</quote> on the 
+<quote>Packages</quote> tab in Libranet. This will update adminmenu.
+After updating adminmenu you will be asked whether you would like to use
+the update-safe archive or not. Choose <quote>yes</quote>, after that the
+update procedure installs a new <filename>sources.list</filename> file
+which uses the archive. After re-launching adminmenu the 
+<quote>Packages</quote> menu will show a new item, <quote>Upgrade system from 
+the Libranet Archive</quote>, which can be used to upgrade your system using 
+the update-safe archive.
+</para>
+</sect2>
+</sect1>
+
 <sect1>
 <title>Synaptic</title>
 
 <para>
-Synaptic is a graphical frontend for APT. It is included in Libranet,
+Synaptic is a graphical front-end for APT. It is included in Libranet,
 which can be launched using the Synaptic button which can be found
 on the <quote>Packages</quote> tab in Xadminmenu. It is very easy
 to use, and allows you to view detailed information about packages.
@@ -68,6 +105,32 @@ the <quote>Upgrade System</quote> button. Synaptic will ask you whether
 you would like to upgrade the system with <quote>dist-upgrade</quote>
 or not. The difference between an <quote>upgrade</quote> and an
 <quote>dist-upgrade</quote> is explained in <xref linkend="apt" />.
+</para>
+</sect2>
+
+<sect2>
+<title>Installing packages</title>
+
+<para>
+By default the main screen lists all available packages in categories. 
+You can install packages by double clicking on a package. You can execute
+the installation by clicking the <quote>Execute</quote> button.
+</para>
+</sect2>
+
+<sect2>
+<title>Removing packages</title>
+
+<para>
+To remove packages it is a good idea to limit the listed packages
+to packages that are installed. This can be done by selecting
+<quote>Installed</quote> from the <quote>Show:</quote> drop-list.
+A package can be queued for removal by clicking on the package with
+the right mouse button, and selecting <quote>remove</quote>. This
+will not delete the configuration files of a program. You can remove
+these too, by selecting <quote>Remove Including Configuration</quote>
+instead. You can execute the removal of packages by clicking on
+the <quote>Execute</quote> button.
 </para>
 </sect2>
 </sect1>
@@ -271,44 +334,6 @@ Description: a science fiction adventure game
  middle of the city he sets out to discover the truth about his past,
  and to seek vengeance for the killing of his tribe.
 </screen>
-</sect2>
-
-</sect1>
-
-<sect1 id="safe-archive">
-<title>The Libranet update-safe archive</title>
-
-<sect2>
-<title>Introduction</title>
-
-<para>
-On January 23, 2004 Libra Computer Systems Ltd. announced the <quote>Libranet
-update-safe archive</quote>. This special archive was introduced provide
-a safe upgrade method which is well-tested. Usage of the safe archive is
-free. Please note that somebody can still use the plain Debian archives
-if he or she wants. The Libranet archive just provides more safety,
-because it is a carefully selected collection of packages from all three
-Debian branches (plus some custom Libranet packages).
-</para>
-</sect2>
-
-<sect2>
-<title>Using the archive</title>
-
-<para>
-The update-safe archive was introduced after Libranet 2.8 and 2.8.1, so it
-is not used by default. Fortunately it is very easy to set up. Click 
-<quote>Update Adminmenu from the Internet</quote> on the 
-<quote>Packages</quote> tab in Libranet. This will update adminmenu.
-After updating adminmenu you will be asked whether you would like to use
-the update-safe archive or not. Choose <quote>yes</quote>, after that the
-update procedure installs a new <filename>source.list</filename> file
-which uses the archive. After re-launching adminmenu the 
-<quote>Packages</quote> menu will show a new item, <quote>Upgrade system from 
-the Libranet Archive</quote>, which can be used to upgrade your system using 
-the update-safe archive.
-</para>
-
 </sect2>
 
 </sect1>

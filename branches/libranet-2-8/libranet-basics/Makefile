@@ -8,7 +8,7 @@ CURRENTDIR=`pwd`
 all:	fmt-html fmt-pdf
 
 fmt-html:
-	jade -t sgml -d src/myhtml.dsl \
+	jade -t sgml -d src/libranet-basics.dsl#html \
 		/usr/share/sgml/declaration/xml.dcl \
 		src/libranet-basics.xml
 	mv *.html html/
@@ -17,7 +17,7 @@ fmt-html:
 
 fmt-tex:
 	jade -t tex -o tex/libranet-basics.tex \
-		-d /usr/share/sgml/docbook/stylesheet/dsssl/modular/print/docbook.dsl \
+		-d src/libranet-basics.dsl#print \
 		/usr/share/sgml/declaration/xml.dcl \
 		src/libranet-basics.xml
 	rm -f tex/*.log tex/*.aux tex/*.out

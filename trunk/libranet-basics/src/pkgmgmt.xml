@@ -1,4 +1,4 @@
-<!-- $Id: pkgmgmt.xml,v 1.8 2004/07/20 20:19:45 danieldk Exp $ -->
+<!-- $Id: pkgmgmt.xml,v 1.9 2004/08/02 09:46:03 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="pkgmgmt.html"?>
 <title>Package management</title>
@@ -146,7 +146,7 @@ powerful. Aptitude can be launched using Adminmenu, or the
 </para>
 
 <figure id="aptitude">
-<title>Synaptic</title>
+<title>Aptitude</title>
 <mediaobject>
 <imageobject>
 <imagedata fileref="../images/aptitude.jpg" format="JPG" scale="60"/>

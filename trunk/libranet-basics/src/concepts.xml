@@ -1,4 +1,4 @@
-<!-- $Id: concepts.xml,v 1.1 2004/08/02 07:42:15 danieldk Exp $ -->
+<!-- $Id: concepts.xml,v 1.2 2004/08/02 08:21:52 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="concepts.html"?>
 <title>General concepts</title>
@@ -175,9 +175,100 @@ binaries.
 </para>
 </listitem>
 </itemizedlist>
+</sect2>
+</sect1>
 
+<sect1>
+<title>Devices</title>
+
+<sect2>
+<title>Introduction</title>
+<para>
+In UNIX and Linux almost everything is represented as a file, including
+devices. Each GNU/Linux system has a a directory with special files, named
+<filename>/dev</filename>. Each file in the <filename>/dev</filename>
+directory represents a device. You might wonder how this is done; a
+device file is a special file because it has two special numbers, the
+<emphasis>major</emphasis> and the <emphasis>minor</emphasis> number.
+The kernel knows which device a device file represents by these numbers.
+The following example shows these numbers for a device:
+</para>
+
+<screen>
+$ <command>ls -l /dev/zero</command> 
+crw-rw-rw-    1 root     root       1,   5 Apr 22  2003 /dev/zero
+</screen>
+
+<para>
+The <command>ls</command> lists files and information about files. In this
+example information about the <filename>/dev/zero</filename> device is
+listed. This particular device has <emphasis>1</emphasis> as the major
+device number, and <emphasis>5</emphasis> as the minor device number.
+</para>
+
+<para>
+For the Linux kernel there are two types of devices: 
+<emphasis>character</emphasis> and <emphasis>block</emphasis> devices.
+Character devices can be read byte by byte, block devices can not. Block
+devices are read per block (for example 4096 bytes at a time). Whether
+a device is a character or block device is determined by the nature of
+the device. For example, most storage media are block devices, and most
+input devices are character devices. Block devices have one distinctive
+advantage, namely that they can be cached. This means that commonly read
+or written blocks are stored in a special area of the system memory, named
+the cache. Memory is much faster than most storage media, so it is a
+huge performance benefit to perform read and write operations on commonly
+used blocks in memory. Of course, eventually changes have to be written to 
+the storage medium.
+</para>
 </sect2>
 
+<sect2>
+<title>ATA and SCSI devices</title>
+
+<para>
+There are two categories of devices that we are going to look into in detail, 
+because understanding the naming of these devices can be crucial for 
+partitioning a hard disk, or for mounting. Almost all modern computers use
+ATA hard disks and CD-ROMs. Under Linux these devices are named in the 
+following way:
+</para>
+
+<screen>
+/dev/hda - master device on the first ATA channel
+/dev/hdb - slave device on the first ATA channel
+/dev/hdc - master device on the second ATA channel
+/dev/hdd - slave device on the second ATA channel
+</screen>
+
+<para>
+On most computers the hard disk is the master device on the first ATA
+channel (<filename>/dev/hda</filename>), and the CD-ROM the master
+device on the second ATA channel. Hard disk partitions have the device
+name plus a number. For example, <filename>/dev/hda1</filename> is the
+first partition on the <filename>/dev/hda</filename> disk. 
+</para>
+
+<para>
+Most average PCs do not have SCSI hard disks or CD-ROM drives, but SCSI is 
+often used for USB drives. For SCSI drives the following notation is used:
+</para>
+
+<screen>
+/dev/sda - First SCSI disk
+/dev/sdb - Second SCSI disk
+/dev/sdc - Third SCSI disk
+/dev/scd0 - First CD-ROM
+/dev/scd1 - Second CD-ROM
+/dev/scd2 - Third CD-ROM
+</screen>
+
+<para>
+Partitions are notated in the same way as ATA disks; 
+<filename>/dev/sda1</filename> is the first partition on the first SCSI
+disk.
+</para>
+</sect2>
 </sect1>
 
 </chapter>

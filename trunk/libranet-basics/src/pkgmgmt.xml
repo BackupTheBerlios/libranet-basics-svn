@@ -1,4 +1,4 @@
-<!-- $Id: pkgmgmt.xml,v 1.7 2004/05/05 15:14:59 danieldk Exp $ -->
+<!-- $Id: pkgmgmt.xml,v 1.8 2004/07/20 20:19:45 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="pkgmgmt.html"?>
 <title>Package management</title>
@@ -133,6 +133,58 @@ instead. You can execute the removal of packages by clicking on
 the <quote>Execute</quote> button.
 </para>
 </sect2>
+</sect1>
+
+<sect1>
+<title>Aptitude</title>
+
+<para>
+Aptitude is a popular APT front-end with a textual interface. It can
+be a bit more difficult to use than Synaptic, but Aptitude is really
+powerful. Aptitude can be launched using Adminmenu, or the 
+<command>aptitude</command> command.
+</para>
+
+<figure id="aptitude">
+<title>Synaptic</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/aptitude.jpg" format="JPG" scale="60"/>
+</imageobject>
+</mediaobject>
+</figure>
+
+<sect2>
+<title>Updating the package indexes</title>
+
+<para>
+The package indexes can be updated by pressing the <quote>u</quote> key, or
+by opening the menu with the F10 key, and selecting <quote>Update
+package lists</quote> from the <quote>Actions</quote> menu.
+</para>
+</sect2>
+
+<sect2>
+<title>Upgrading the system</title>
+
+<para>
+The system can be upgraded by selecting the <quote>Install/remove
+packages</quote> option from the <quote>Actions</quote> menu, after updating
+the package lists.
+</para>
+</sect2>
+
+<sect2>
+<title>Installing and removing packages</title>
+
+<para>
+Packages can be marked to be installed with the <quote>+</quote> key,
+the <quote>-</quote> key deselects a package, or selects it for removal.
+You can confirm your selection by using the <quote>Install/remove
+packages</quote> option from the <quote>Actions</quote> menu.
+</para>
+</sect2>
+
 </sect1>
 
 <sect1 id="apt">

@@ -1,0 +1,36 @@
+<!-- $Id: netconfig.xml,v 1.1 2004/05/13 07:35:50 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="netconfig.html"?>
+<title>Network configuration</title>
+
+<sect1>
+<title>Adminmenu</title>
+
+<sect2>
+<title>Configuring DNS</title>
+
+<para>
+DNS servers have a very special task in networking. They translate hostnames
+(for instance www.libranet.com) to IP addresses. To be able to use hostnames
+the system needs access to one or more DNS servers. Alsmost all internet
+service providers provide DNS servers. DNS can be configured by selecting
+<quote>expert</quote> and then <quote>nameserver</quote> in the adminmenu
+network configuration. Adminmenu will then ask for the nameservers
+(<xref linkend="adminmenu-dns" />). You can enter the IP adresses in the
+input field, seperating them with a space.
+</para>
+
+<figure id="adminmenu-dns">
+<title>Configuring DNS</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-dns.jpg" format="JPG" scale="60" />
+</imageobject>
+</mediaobject>
+</figure>
+
+</sect2>
+
+</sect1>
+
+</chapter>

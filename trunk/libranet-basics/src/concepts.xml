@@ -1,4 +1,4 @@
-<!-- $Id: concepts.xml,v 1.3 2004/08/02 22:01:23 danieldk Exp $ -->
+<!-- $Id: concepts.xml,v 1.4 2004/08/11 21:08:21 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="concepts.html"?>
 <title>General concepts</title>
@@ -6,9 +6,42 @@
 <para>
 This chapter gives an introduction to some general Unix and GNU/Linux
 concepts. It is a good idea to read this chapter thoroughly if you
-do not have UNIX or GNU/Linux experience. Many concepts covered in this
+do not have any UNIX or GNU/Linux experience. Many concepts covered in this
 chapter are used in this book and in GNU/Linux.
 </para>
+
+<sect1>
+<title>Multitasking</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+one of Linux' strengths is multi-tasking. Multi-tasking means that multiple
+processes can run at the same time. You might wonder why this is important
+to you, because most people are using one application at a time. Besides
+the more obvious reason that it is just handy to browse while you have a
+word processor running in the background, multi-tasking is a bare necessity
+for Unix-like systems. Even if you have launched no applications there are
+a bunch of processes running in the background. Some processes might provide
+network services, others sit there showing a login prompt on other consoles,
+and there is even a process that executes scheduled tasks. These processes
+that are running in the background are often called <emphasis>daemon</emphasis>
+(not to be confused with the word demon, a daemon is a protective angel).
+At a later stage we are going to look at how you can move processes to the
+background yourself (see <xref linkend="chap-proc" />).
+</para>
+
+<note>
+Note that on single-processor systems processes are not really running
+simultaneously. In reality a smart scheduler in the kernel is dividing
+CPU time between processes, giving the illusion that processes are
+running simultaneously.
+</note>
+
+</sect2>
+
+</sect1>
 
 <sect1>
 <title>Filesystem hierarchy</title>

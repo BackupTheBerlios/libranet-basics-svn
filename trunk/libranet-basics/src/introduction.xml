@@ -1,4 +1,4 @@
-<!-- $Id: introduction.xml,v 1.1 2004/04/22 05:34:03 danieldk Exp $ -->
+<!-- $Id: introduction.xml,v 1.2 2004/08/05 14:00:34 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="introduction.html"?>
 <title>An introduction to Libranet GNU/Linux</title>
@@ -8,9 +8,9 @@
 
 <para>
 Linux is a Unix-like kernel which is written by Linus Torvalds
-and other developers, who communicate using the internet. Linux
+and other developers, who communicate using the Internet. Linux
 runs on many different architectures, for example on many IA32, IA64,
-Alpha, m68k, SPARC and PowerPC machines. The latest kernel and
+AMD64, Alpha, m68k, SPARC and PowerPC machines. The latest kernel and
 more information can be found at:
 <ulink url="http://www.kernel.org">http://www.kernel.org</ulink>
 </para>
@@ -34,7 +34,7 @@ name of this system is GNU (GNU is Not Unix). At the beginning of the
 nineties most important components of the GNU operating system were
 written, except for the kernel, which is still under development under
 the name HURD. HURD consists of some servers which provide Unix-like
-kernel functionality. In turn these servers run under the Mach microkernel.
+kernel functionality. In turn these servers run under the Mach micro-kernel.
 At the beginning at the nineties the HURD team still had to wait till
 the Mach sources were released as free software. In the meanwhile Linus
 started filling the gap with the Linux kernel. GNU/Linux thus refers
@@ -58,21 +58,55 @@ Debian provides a huge package collection and an excellent package
 management tool named APT. Libranet builds on the reliable Debian base
 and adds an excellent installation program and a configuration tool
 named AdminMenu. Besides that Libranet includes a carefully selected
-collection of software.
+collection of software. Distinguishing features that are often mentioned
+are:
 </para>
 
+<itemizedlist>
+<listitem>
+<para>
+A user friendly installer.
+</para>
+</listitem>
+<listitem>
+<para>
+The AdminMenu configuration tool.
+</para>
+</listitem>
+<listitem>
+<para>
+A wide selection of packages.
+</para>
+</listitem>
+<listitem>
+<para>
+Good support.
+</para>
+</listitem>
+<listitem>
+<para>
+A friendly and helpful community.
+</para>
+</listitem>
+</itemizedlist>
 </sect1>
 
 <sect1>
 <title>Getting Libranet GNU/Linux</title>
 <para>
 Libranet can be purchased on the Libranet site as a download, or on
-CD-ROM. Besides that there are software and Linux vendors around the
+CD-ROM. Besides that there are many software and Linux vendors around the
 world that provide Libranet on CD-ROM. The official Libranet site can
 be found at 
 <ulink url="http://www.libranet.com/">http://www.libranet.com/</ulink>
 </para>
 
+<para>
+Besides offering the latest Libranet version on CD-ROM or as a paid
+download, Libranet Computer Systems Ltd. also offers an older downloadable
+version for evaluating Libranet. Have a look at the Libranet site for
+more information.
+</para>
 </sect1>
 
 </chapter>

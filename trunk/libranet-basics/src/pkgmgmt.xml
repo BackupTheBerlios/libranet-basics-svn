@@ -1,4 +1,4 @@
-<!-- $Id: pkgmgmt.xml,v 1.4 2004/04/23 11:16:50 danieldk Exp $ -->
+<!-- $Id: pkgmgmt.xml,v 1.5 2004/05/02 15:04:43 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="pkgmgmt.html"?>
 <title>Package management</title>
@@ -137,6 +137,51 @@ the <quote>Execute</quote> button.
 
 <sect1 id="apt">
 <title>Basic APT usage</title>
+
+<sect2>
+<title>The sources.list file</title>
+
+<para>
+The <filename>/etc/sources.list</filename> is used to configure which
+package repositories should be used by APT. Each uncommented line specifies
+a repository, in the following form:
+</para>
+
+<screen>
+&lt;Archive type&gt; &lt;Archive URL&gt; &lt;Distribution&gt; &lt;Component&gt;
+</screen>
+
+<para>
+The archive type is either <emphasis>deb</emphasis> or 
+<emphasis>deb-src</emphasis>. The first type (<emphasis>deb</emphasis>) 
+specifies that the archive contains binary packages, the second type
+(<emphasis>deb-src</emphasis>) specifies that the archive contains
+sources. You will probably use <emphasis>deb</emphasis> most of the time,
+because it is rarely necessary to recompile packages. The archive URL
+(Universal Resource Locator, the standard which is also used in web
+browsers)
+specifies where the archive is located. The distribution parameter
+tells APT which distribution should be used from the archive, often
+this is one of the Debian distributions (for example 
+<emphasis>stable</emphasis>. The last parameter specifies which component
+should be used, for example <emphasis>main</emphasis> or 
+<emphasis>non-free</emphasis>. The naming conventions for distribution
+and component are fairly standard for most APT archives. Let's have
+a look at an example line:
+</para>
+
+<screen>
+deb ftp://ftp.nl.debian.org/debian woody main contrib non-free
+</screen>
+
+<para>
+This line specifies that APT may use the archive located at
+<emphasis>ftp://ftp.nl.debian.org/debian</emphasis> to get
+binary <emphasis>woody</emphasis> distribution packages from the
+<emphasis>main</emphasis>, <emphasis>contrib</emphasis> and
+<emphasis>non-free</emphasis> components.
+</para>
+</sect2>
 
 <sect2>
 <title>Updating the package index files</title>

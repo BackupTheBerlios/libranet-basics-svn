@@ -294,7 +294,7 @@ cannot set negative priority values:
 </para>
 
 <screen>
-renice -5 5811
+$ <command>renice -5 5811</command>
 renice: 5811: setpriority: Permission denied
 </screen>
 

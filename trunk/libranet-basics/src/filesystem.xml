@@ -458,7 +458,7 @@ redirect our tar archive to tar:
 </para>
 
 <screen>
-$ <command>tar t < test.tar</command>
+$ <command>tar t &lt; test.tar</command>
 test/
 test/test2
 test/test1

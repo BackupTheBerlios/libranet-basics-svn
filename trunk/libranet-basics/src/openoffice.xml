@@ -1,4 +1,4 @@
-<!-- $Id: openoffice.xml,v 1.3 2004/08/06 07:44:05 danieldk Exp $ -->
+<!-- $Id: openoffice.xml,v 1.4 2004/08/06 09:24:46 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="openoffice.html"?>
 <title>The OpenOffice suite</title>
@@ -209,6 +209,62 @@ available sheets.
 </listitem>
 </itemizedlist>
 </sect2>
+
+<sect2>
+<title>Using formulas</title>
+
+<para>
+One of the main tasks for a spreadsheet is making calculations. Besides
+holding data a cell can contain a formula. When cells that are used in
+a formula are changed, the result of a formula will automatically be
+updated. A formula starts with the <quote>=</quote> character, followed
+by the formula. The formula can contain cell names as variables, and
+common mathematical operators. Besides that the spreadsheet also offers
+some functions, like SUM. These are some common math operators:
+</para>
+
+<table><title>Mathematical operators</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+<thead>
+<row>
+  <entry>Operator</entry>
+  <entry>Meaning</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>+</entry>
+<entry>Addition</entry>
+</row>
+<row>
+<entry>-</entry>
+<entry>Subtraction</entry>
+</row>
+<row>
+<entry>*</entry>
+<entry>Multiplication</entry>
+</row>
+<row>
+<entry>/</entry>
+<entry>Division</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+<para>
+You can also add parentheses to structure formula. For example, in
+<emphasis>= A1 + (A2 / A3)</emphasis>, the expression between the
+parentheses, <emphasis>A2 / A3</emphasis> will be processed first,
+and then <emphasis>A1 + result of (A2 / A3)</emphasis>.
+</para>
+
+<para>
+The result of the calculation will be displayed in the cell, but
+the formula bar will display the formula.
+</para>
+</sect2>
+
 </sect1>
 
 </chapter>

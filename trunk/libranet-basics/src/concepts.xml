@@ -1,4 +1,4 @@
-<!-- $Id: concepts.xml,v 1.4 2004/08/11 21:08:21 danieldk Exp $ -->
+<!-- $Id: concepts.xml,v 1.5 2004/08/11 21:12:36 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="concepts.html"?>
 <title>General concepts</title>
@@ -33,10 +33,12 @@ background yourself (see <xref linkend="chap-proc" />).
 </para>
 
 <note>
+<para>
 Note that on single-processor systems processes are not really running
 simultaneously. In reality a smart scheduler in the kernel is dividing
 CPU time between processes, giving the illusion that processes are
 running simultaneously.
+</para>
 </note>
 
 </sect2>

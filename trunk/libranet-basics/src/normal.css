@@ -17,8 +17,9 @@ tt {
 
 table.note {
         width: 90%;
-        border: 1px dashed #b0c4de;
-        background-color: f0f8ff;
+	font-family: helvetica, arial, sans-serif;
+        border: 1px dashed #a0c0a0;
+        background-color: f0f8f0;
         color: #000000;
         padding: 0.5em;
 }

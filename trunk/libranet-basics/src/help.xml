@@ -1,4 +1,4 @@
-<!-- $Id: help.xml,v 1.1 2004/04/22 05:34:02 danieldk Exp $ -->
+<!-- $Id: help.xml,v 1.2 2004/08/11 20:51:32 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="help.html"?>
 <title>Sources of help</title>
@@ -6,7 +6,8 @@
 <sect1>
 <title>On your system</title>
 
-<bridgehead>Linux HOWTO's</bridgehead>
+<sect2>
+<title>Linux HOWTO's</title>
 
 <para>
 The famous Linux HOWTOs are a collection of documents which
@@ -14,7 +15,58 @@ cover specific parts of a GNU/Linux system. Most HOWTOs are
 distribution independent, and therefore very useful for using
 them with Libranet GNU/Linux. 
 </para>
+</sect2>
 
+<sect2>
+<title>Manual pages</title>
+
+<para>
+Most Unix-like commands are covered by the a traditional *nix
+help system called the manual pages. You can read the manual
+page of a program by using the <command>man</command> command.
+Executing <command>man</command> with the name of the command
+as a parameter shows the manual page for that command. For example:
+</para>
+
+<screen>
+$ <command>man ls</command>
+</screen>
+
+<para>
+If you do not know the exact name of a manual page or command, you can
+search a page using the keyword (<emphasis>-k</emphasis>) parameter:
+</para>
+
+<screen>
+$ <command>man -k routing</command>
+NETLINK_ROUTE (7)    - Linux IPv4 routing socket
+netstat (8)          - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+route (8)            - show / manipulate the IP routing table
+rtnetlink (7)        - Linux IPv4 routing socket
+NETLINK_ROUTE (7)    - Linux IPv4 routing socket
+netstat (8)          - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+route (8)            - show / manipulate the IP routing table
+rtnetlink (7)        - Linux IPv4 routing socket
+</screen>
+
+<para>
+We have to add that there are also manual pages that cover other things
+than commands. These sections of manual pages are available:
+</para>
+
+<screen>
+1   Executable programs or shell commands
+2   System calls (functions provided by the kernel)
+3   Library calls (functions within program libraries)
+4   Special files (usually found in /dev)
+5   File formats and conventions eg /etc/passwd
+6   Games
+7   Miscellaneous  (including  macro  packages and conven-
+    tions), e.g. man(7), groff(7)
+8   System administration commands (usually only for root)
+9   Kernel routines [Non standard]
+</screen>
+</sect2>
 </sect1>
 
 <sect1>
@@ -64,7 +116,6 @@ connect to the irc.debian.org server and enter "/join #libranet" to join
 the Libranet channel.
 </para>
 </sect2>
-
 </sect1>
 
 </chapter>

@@ -1,4 +1,4 @@
-<!-- $Id: openoffice.xml,v 1.2 2004/08/03 15:32:51 danieldk Exp $ -->
+<!-- $Id: openoffice.xml,v 1.3 2004/08/06 07:44:05 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="openoffice.html"?>
 <title>The OpenOffice suite</title>
@@ -139,9 +139,76 @@ appear that allows you to refine some options, and the range of pages
 you would like to save to the PDF file. Select <emphasis>Export</emphasis>
 to create the PDF file.
 </para>
-
 </sect2>
+</sect1>
 
+<sect1>
+<title>OpenOffice Calc</title>
+
+<sect2>
+<title>The Calc interface</title>
+
+<figure id="openoffice-calc">
+<title>OpenOffice Calc</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/openoffice-calc.png" format="PNG" scale="60"/>
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+OpenOffice Calc is the OpenOffice spreadsheet. 
+<xref linkend="openoffice-calc" /> shows what Calc looks like after launching
+it. These are the basic interface elements:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis>Working area</emphasis>
+</para>
+<para>
+The working area is divided in columns (vertical), and rows (horizontal).
+Columns are referenced by letters of the alphabet (A, B, C, ...), rows
+are referenced by number (1, 2, 3, ...). You can reference to a particular
+cell by the column letter and row number, like A1 or C3. The contents of
+a cell can be changed by selecting the cell and starting to type a number
+or word.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Format bar</emphasis>
+</para>
+<para>
+The formatting and appearance of information in cells can be changed. You 
+can, for example change the appearance of a font or align the contents
+in a cell another way. You can get a description of each icon on the format
+bar by slowly moving the mouse over each icon.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Formula bar</emphasis>
+</para>
+<para>
+You can see the contents or formula of a selected cell in the formula bar.
+This bar can also be used to alter the contents of a cell.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Sheets</emphasis>
+</para>
+<para>
+You can have multiple sheets open at one time, the sheet tabs helps you
+to switch quickly between sheets. The arrow keys can be used to browse
+available sheets. 
+</para>
+</listitem>
+</itemizedlist>
+</sect2>
 </sect1>
 
 </chapter>

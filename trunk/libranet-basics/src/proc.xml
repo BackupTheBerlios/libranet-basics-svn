@@ -1,4 +1,4 @@
-<!-- $Id: proc.xml,v 1.4 2004/09/09 07:25:47 danieldk Exp $ -->
+<!-- $Id: proc.xml,v 1.5 2004/09/10 19:45:06 danieldk Exp $ -->
 
 <chapter id="chap-proc"> <?dbhtml filename="proc.html"?>
 <title>Process management</title>
@@ -227,7 +227,86 @@ by executing <command>bg &lt;job ID&gt;</command>. Executing
 to the background.
 </para>
 </sect2>
+
+<sect2>
+<title>Altering priorities</title>
+
+<para>
+The Linux kernel allows a user to change the priority of a program. For
+example, suppose that you want to run a process that requires a lot of CPU
+time, but you do not want to hinder other users. In this
+case you can start the process with a low priority, the process will
+only get CPU time when there are not many other processes demanding
+CPU time. Or you can give processes that are important a higher priority.
+</para>
+
+<para>
+GNU/Linux provides two commands to alter the priority of a process. The
+<command>nice</command>(1) command can be used to specify the priority when
+you are launching a process. With the <command>renice</command>(1) command
+you can alter the priority of a process that is already running. The priority
+is a numerical value from -20 (highest priority) to 19 (lowest priority).
+Let's start with an example of <command>nice</command> in action:
+</para>
+
+<screen>
+$ <command>nice -n 19 ./setiathome</command>
+</screen>
+
+<para>
+As you can see the <emphasis>-n</emphasis> parameter is used to specify
+the priority value. In this case the <command>./setiathome</command> will
+have a very low priority. Be aware that only the superuser can use negative
+priority values. Thus, a normal user cannot give a process a higher priority,
+as illustrated by this example:
+</para>
+
+<screen>
+$ <command>nice -n -1 nice</command>
+nice: cannot set priority: Permission denied
+</screen>
+
+<para>
+But it will work as the <emphasis>root</emphasis> user:
+</para>
+
+<screen>
+$ <command>su -c "nice -n -1 nice"</command>
+Password: 
+-1
+</screen>
+
+<para>
+The <command>renice</command> command has a somewhat different syntax.
+The easiest way to use it is to specify the new priority and the process
+ID as parameters to the <command>renice</command> command, as is 
+shown in the following example:
+</para>
+
+<screen>
+$ <command>renice +5 5811</command>
+5811: old priority 0, new priority 5
+</screen>
+
+<para>
+As with <command>nice</command> a non-<emphasis>root</emphasis> user
+cannot set negative priority values:
+</para>
+
+<screen>
+renice -5 5811
+renice: 5811: setpriority: Permission denied
+</screen>
+
+<note>
+<para>
+A normal user can not increase the priority of the process beyond the
+default priority of 0. Such facilities could be misused by careless
+users. After all, the command <command>nice</command> is derived from
+being nice to the other users on the system ;^).
+</para>
+</note>
+
+</sect2>
 </sect1>
-
-
 </chapter>

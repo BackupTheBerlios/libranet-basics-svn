@@ -1,4 +1,4 @@
-<!-- $Id: filesystem.xml,v 1.1 2004/04/22 05:34:02 danieldk Exp $ -->
+<!-- $Id: filesystem.xml,v 1.2 2004/07/03 22:44:53 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="filesystem.html"?>
 <title>Files and directories</title>
@@ -131,10 +131,70 @@ In this case you can make both directories with only one
 $ <command>mkdir -p test2/hello</command>
 </screen>
 
+<bridgehead>cp</bridgehead>
+
+<para>
+Files can be copied with the <command>cp</command>(1) command, the basic syntax
+is <command>cp source destination</command>. For example, suppose that we have 
+a file named <filename>memo</filename> which we would like to copy to the 
+<filename>writings</filename> directory. You can do this with the following
+command:
+</para>
+
+<screen>
+$ <command>cp memo writings/</command>
+</screen>
+
+<para>
+It is also possible to copy a file in the same directory. For example, if
+we would like to make a new memo based on <filename>memo</filename>, named
+<filename>memo2</filename>, we could execute the following command:
+</para>
+
+<screen>
+$ <command>cp memo memo2</command>
+</screen>
+
+<para>
+It is also possible to copy directories recursively, this can be done by
+adding the <emphasis>-r</emphasis>. The following command copies the
+<filename>memos</filename> directory, and all subdirectories, and (sub)files 
+to the <filename>writings</filename> directory:
+</para>
+
+<screen>
+$ <command>cp -r memos writings/</command>
+</screen>
+
+<bridgehead>mv</bridgehead>
+
+<para>
+The <command>mv</command>(1) command is comparable to <command>cp</command>, 
+but it is used to move files. Suppose that we have the same situation as in
+the first <command>cp</command> example, but you would rather like to move
+<filename>memo</filename> to the <filename>writings</filename> directory.
+The following command would do that:
+</para>
+
+<screen>
+$ <command>mv memo writings/</command>
+</screen>
+
+<para>
+It is also possible to move directories. But, <command>mv</command> always
+works recursively. For example, the following command will move the
+<filename>memos</filename> directory to the <filename>writings</filename>
+directory:
+</para>
+
+<screen>
+$ <command>mv memos writings/</command>
+</screen>
+
 <bridgehead>rm</bridgehead>
 
 <para>
-The <command>rm</command>(1) is used to remove files and directories.
+The <command>rm</command>(1) command is used to remove files and directories.
 Let's look at a simple example:
 </para>
 

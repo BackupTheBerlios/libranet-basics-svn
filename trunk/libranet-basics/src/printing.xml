@@ -1,4 +1,4 @@
-<!-- $Id: printing.xml,v 1.1 2004/04/22 05:34:03 danieldk Exp $ -->
+<!-- $Id: printing.xml,v 1.2 2004/05/09 14:48:06 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="printer.html"?>
 <title>Printer configuration</title>
@@ -49,7 +49,7 @@ Window showing the configured printers pops up (<xref linkend="printers"/>).
 <title>Configured printers</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/printer-printers.jpg" format="JPG" scale="60" />
+<imagedata fileref="../images/printer-printers.jpg" format="JPG" scale="50" />
 </imageobject>
 </mediaobject>
 </figure>
@@ -67,7 +67,7 @@ the computer.
 <title>Selecting the kind of printer you would like to add</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/printer-welcome.jpg" format="JPG" scale="60" />
+<imagedata fileref="../images/printer-welcome.jpg" format="JPG" scale="50" />
 </imageobject>
 </mediaobject>
 </figure>
@@ -86,7 +86,7 @@ select <quote>parallel port #1</quote> most of the times.
 <title>Selecting the printer you would like to configure</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/printer-select.jpg" format="JPG" scale="60" />
+<imagedata fileref="../images/printer-select.jpg" format="JPG" scale="50" />
 </imageobject>
 </mediaobject>
 </figure>
@@ -103,7 +103,7 @@ CUPS support your printer.
 <title>Configuring the printer manufacturer and model</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/printer-details.jpg" format="JPG" scale="60" />
+<imagedata fileref="../images/printer-details.jpg" format="JPG" scale="50" />
 </imageobject>
 </mediaobject>
 </figure>
@@ -120,7 +120,7 @@ A description for the printer is only optional.
 <title>Setting the printer name</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/printer-name.jpg" format="JPG" scale="60" />
+<imagedata fileref="../images/printer-name.jpg" format="JPG" scale="50" />
 </imageobject>
 </mediaobject>
 </figure>
@@ -135,7 +135,7 @@ printer should show up in printers window.
 <title>Finishing the printer configuration</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/printer-finish.jpg" format="JPG" scale="60" />
+<imagedata fileref="../images/printer-finish.jpg" format="JPG" scale="50" />
 </imageobject>
 </mediaobject>
 </figure>

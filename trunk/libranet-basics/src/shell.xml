@@ -1,4 +1,4 @@
-<!-- $Id: shell.xml,v 1.4 2004/08/02 19:19:43 danieldk Exp $ -->
+<!-- $Id: shell.xml,v 1.5 2004/08/02 20:31:00 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="shell.html"?>
 <title>The Bash shell</title>
@@ -343,7 +343,7 @@ you can now let these commands work together. Let's look at a quick example:
 </para>
 
 <screen>
-$ cat /usr/share/dict/american-english | grep "aba" | wc -l
+$ <command>cat /usr/share/dict/american-english | grep "aba" | wc -l</command>
 123
 </screen>
 

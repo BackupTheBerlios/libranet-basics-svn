@@ -158,7 +158,7 @@ ask for the new password. For example:
 </para>
 
 <screen>
-# passwd bob
+# <command>passwd bob</command>
 Enter new UNIX password: 
 Retype new UNIX password: 
 passwd: password updated successfully

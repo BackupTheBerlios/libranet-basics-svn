@@ -588,8 +588,8 @@ Let's look at an example:
 proc       /proc           proc     defaults                     0      0     
 /dev/fd0   /floppy         vfat,auto defaults,user,noauto        0      0     
 usbfs      /proc/bus/usb   usbfs    rw,devmode=0660,devgid=432   0      0     
-/dev/hdc  /cdrom  udf,iso9660  defaults,user,noauto,ro           0      0
-/dev/hdd  /cdrom1  udf,iso9660  defaults,user,noauto,ro          0      0
+/dev/hdc   /cdrom  udf,iso9660  defaults,user,noauto,ro           0      0
+/dev/hdd   /cdrom1  udf,iso9660  defaults,user,noauto,ro          0      0
 </screen>
 
 <para>

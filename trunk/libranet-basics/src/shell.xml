@@ -235,7 +235,7 @@ but not <filename>file1.txt</filename>.
 </sect3>
 </sect2>
 
-<sect2>
+<sect2 id="redirection-and-pipes">
 <title>Redirections and pipes</title>
 
 <para>

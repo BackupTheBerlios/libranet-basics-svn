@@ -1,4 +1,4 @@
-<!-- $Id: shell.xml,v 1.1 2004/04/22 05:34:03 danieldk Exp $ -->
+<!-- $Id: shell.xml,v 1.2 2004/05/09 17:04:42 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="shell.html"?>
 <title>The Bash shell</title>
@@ -36,7 +36,7 @@ shell comes up.
 
 <para>
 The shell might remind some people of MS-DOS. Be happy, it has nothing to
-do with DOS, the only similarity is that you can enter command ;).
+do with DOS, the only similarity is that you can enter commands ;).
 </para>
 </sect1>
 
@@ -137,7 +137,102 @@ empty files to practive with using the <command>touch</command> command.
 For example, to make a file named <filename>recipe3.txt</filename>,
 execute <command>touch recipe3.txt</command>.
 </para>
+</sect2>
 
+<sect2>
+<title>Wildcards</title>
+
+<para>
+Most shells, including Bash, support wildcards. Wildcards are special
+characters that can be used to do pattern matching. The table listed
+below displays some commonly used wildcards. We are going to look at
+several examples to give a general idea how wildcards work.
+</para>
+
+<table><title>Bash wildcards</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+<thead>
+<row>
+  <entry>Wildcard</entry>
+  <entry>Matches</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>*</entry>
+<entry>A string of characters</entry>
+</row>
+<row>
+<entry>?</entry>
+<entry>A single character</entry>
+</row>
+<row>
+<entry>[]</entry>
+<entry>A character in an array of characters</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+<sect3>
+<title>Matching a string of characters</title>
+
+<para>
+As you can see in the table above the <quote>*</quote> character matches
+a string of characters. For example, <emphasis>*.html</emphasis> matches
+everything ending with <emphasis>.html</emphasis>, <emphasis>d*.html</emphasis>
+matches everything starting with a <emphasis>d</emphasis> and ending with
+<emphasis>.html</emphasis>.
+</para>
+
+<para>
+Suppose that you would like to list all files in the current directory with
+the <emphasis>.html</emphasis> extention, the following command will do the
+job:
+</para>
+
+<screen>
+$ <command>ls *.html</command>
+book.html        installation.html     pkgmgmt.html  usermgmt.html
+filesystem.html  internet.html         printer.html  xfree86.html
+gfdl.html        introduction.html     proc.html
+help.html        libranet-basics.html  shell.html
+</screen>
+
+<para>
+Likewise we could remove all files starting with an <emphasis>in</emphasis>:
+</para>
+
+<screen>
+$ <command>rm in*</command>
+</screen>
+</sect3>
+
+<sect3>
+<title>Matching single characters</title>
+
+<para>
+The <quote>?</quote> wildcard works as the <quote>*</quote> wildcard, but
+matches single characters. Suppose that we have three files, 
+<filename>file1.txt</filename>, <filename>file2.txt</filename> and
+<filename>file3.txt</filename>. The string <emphasis>file?.txt</emphasis> 
+matches all three of these files, but it does not match 
+<filename>file10.txt</filename> (<quote>10</quote> are two characters).
+</para>
+</sect3>
+
+<sect3>
+<title>Matching characters from a set</title>
+
+<para>
+The <quote>[]</quote> wildcard matches every character between the brackets.
+Suppose we have the files from the previous example,
+<filename>file1.txt</filename>, <filename>file2.txt</filename> and
+<filename>file3.txt</filename>. The string <emphasis>file[23].txt</emphasis>
+matches <filename>file2.txt</filename> and <filename>file3.txt</filename>,
+but not <filename>file1.txt</filename>.
+</para>
+</sect3>
 </sect2>
 
 </sect1>

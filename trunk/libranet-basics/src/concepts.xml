@@ -1,4 +1,4 @@
-<!-- $Id: concepts.xml,v 1.5 2004/08/11 21:12:36 danieldk Exp $ -->
+<!-- $Id: concepts.xml,v 1.6 2004/09/10 15:47:41 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="concepts.html"?>
 <title>General concepts</title>
@@ -17,7 +17,7 @@ chapter are used in this book and in GNU/Linux.
 <title>Introduction</title>
 
 <para>
-one of Linux' strengths is multi-tasking. Multi-tasking means that multiple
+One of Linux' strengths is multi-tasking. Multi-tasking means that multiple
 processes can run at the same time. You might wonder why this is important
 to you, because most people are using one application at a time. Besides
 the more obvious reason that it is just handy to browse while you have a
@@ -40,7 +40,46 @@ CPU time between processes, giving the illusion that processes are
 running simultaneously.
 </para>
 </note>
+</sect2>
 
+<sect2>
+<title>Processes and threads</title>
+
+<para>
+Applications run as one or more processes. To see what a process
+actually is we need to know what it consists of. Every process
+basically has two areas; an area that is named
+<emphasis>text</emphasis> and an area that is named
+<emphasis>data</emphasis>.  The <emphasis>text</emphasis> area is the
+actual program code; it is used to tell the computer what to
+do. The <emphasis>data</emphasis> area is used to store information
+that the process has to keep. The operating system makes sure that
+every process gets its time to execute. New processes can be created
+by duplicating a running process with a system call named 
+<emphasis>fork</emphasis>. <xref linkend="fork" /> shows a fork in action
+schematically. The parent process issues a <emphasis>fork()</emphasis>
+call, and as a result a new process is created.
+</para>
+
+<figure id="fork">
+<title>Forking a process</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/fork.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+The problem with processes is that they can get quite large, and
+that is not very efficient for computers with more than one processor.
+This problem is solved by duplicating the <emphasis>text</emphasis> area
+of a process. So, a threaded process is basically a program that has
+multiple instances of its executing code running, but these instances
+share the data area of the process (unlike a fork). These threads can
+be divided over multiple CPUs, making it possible to run one process
+on more than one CPU simultaneously.
+</para>
 </sect2>
 
 </sect1>

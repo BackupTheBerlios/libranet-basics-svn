@@ -1,4 +1,4 @@
-<!-- $Id: libranet-basics.xml,v 1.6 2004/08/02 16:58:42 danieldk Exp $ -->
+<!-- $Id: libranet-basics.xml,v 1.7 2004/08/03 12:14:44 danieldk Exp $ -->
 
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd" [
 
@@ -11,6 +11,7 @@
 <!ENTITY Installation SYSTEM "installation.xml">
 
 <!ENTITY Internet SYSTEM "internet.xml">
+<!ENTITY OpenOffice SYSTEM "openoffice.xml">
 
 <!ENTITY Shell SYSTEM "shell.xml">
 <!ENTITY Proc SYSTEM "proc.xml">
@@ -80,6 +81,7 @@ Free Documentation License".
 <part> <?dbhtml filename="applications.html"?>
 <title>Getting your work done</title>
 &Internet;
+&OpenOffice;
 </part>
 
 <part> <?dbhtml filename="basics.html"?>

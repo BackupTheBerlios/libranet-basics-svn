@@ -1,0 +1,113 @@
+<!-- $Id: openoffice.xml,v 1.1 2004/08/03 12:14:44 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="openoffice.html"?>
+<title>The OpenOffice suite</title>
+
+<sect1>
+<title>Introduction</title>
+
+<para>
+This chapter gives a short introduction to the OpenOffice office suite
+(officially named OpenOffice.org). OpenOffice is a fairly complete replacement
+for other office suites, like Microsoft Office. It offers the most commonly
+used functionality, an can open most major word processing, presentation
+and spreadsheet formats. OpenOffice features the following functionality:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis role="bold">Writer</emphasis>: Word processor
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">Calc</emphasis>: Spreadsheet
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">Impress</emphasis>: Presentation software
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">Draw</emphasis>: Vector-based drawing program
+</para>
+</listitem>
+</itemizedlist>
+
+</sect1>
+
+<sect1>
+<title>OpenOffice Writer</title>
+
+<figure id="openoffice-writer">
+<title>The OpenOffice writer</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/openoffice-writer.png" format="PNG" scale="60"/>
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+As you can see in <xref linkend="openoffice-writer" />, the OpenOffice Writer
+actually looks a lot like other word processors. So, migrating to OpenOffice
+should not be too difficult for most users. Let's start to have a look at
+some GUI elements:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis>Working area</emphasis>
+</para>
+<para>
+The working area is where most of the action will take place. As you can
+see, the working area shows the paper you are virtually typing on, and
+the thin grey lines mark the border of the area you can add text to. When
+you type the text will be inserted at the point the blinking cursor was
+at, and the cursor will be moved forward as you type text, indicating the
+current typing position. You can also add other elements, such as images,
+to the working area. You probably have noticed that the working area
+is truly WYSIWYG (What You See Is What You Get).
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Format bar</emphasis>
+</para>
+<para>
+The format bar is used to change the appearance of your text, or parts of
+your texts. There are multiple buttons and other elements that you can select,
+you can see the meaning of each element by placing the mouse pointer on a
+specific element. After a short time a tip will show, with a description
+of the element. If you have no text selected the appearance will change
+for the text that you will type after making the change. You can also change
+the appearance of text that has already been typed, by selecting the text,
+and making the necessary changes. You will see that the text will be altered
+directly. Be aware that you can alway undo changes by using the &lt;Ctrl&gt;
++ &lt;z&gt; keys, or selecting the <emphasis>Edit -> Undo</emphasis>
+menu item.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Page zoom</emphasis>
+</para>
+<para>
+The page zoom indicator shows the zooming percentage of the document you
+are currently using. If you have trouble reading smaller fonts, you can zoom
+in to be able to read these fonts more comfortably. You can also zoom out
+to get a better overview of a page or multiple pages. Select the
+<emphasis>View -> Zoom...</emphasis> option to change the zooming percentage.
+There are also three special options, most notably 
+<emphasis>Optimal</emphasis>, which will zoom to an ideal percentage for
+editing. 
+</para>
+</listitem>
+</itemizedlist>
+</sect1>
+
+</chapter>

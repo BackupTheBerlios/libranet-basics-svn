@@ -1,5 +1,16 @@
-.TITLE		{ color: #990000 }
-.SUBTITLE	{ color: #000000 }
-H1,H2		{ color: #990000 }
-TT	 	{ color: #007a00 }
-.SCREEN		{ color: #000044; margin-left: 0.2in }
+h1 {
+	color: #990000;
+}
+
+tt {
+	color: #007a00;
+}
+
+.screen {
+	width: 90%;
+	border: 1px dashed #b0c4de;
+	background-color: f0f8ff;
+	color: #000000;
+	padding: 0.5em;
+	margin-bottom: 0.5em;
+}

@@ -1,4 +1,4 @@
-<!-- $Id: shell.xml,v 1.5 2004/08/02 20:31:00 danieldk Exp $ -->
+<!-- $Id: shell.xml,v 1.6 2004/08/02 22:21:32 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="shell.html"?>
 <title>The Bash shell</title>
@@ -131,7 +131,7 @@ commands are quite short, so it will not be of much use most of the time.
 </para>
 
 <para>
-It is a good idea to practice a bit with completion, it can safe alot
+It is a good idea to practice a bit with completion, it can save alot
 of keystrokes if you can handle completion well. You can make some
 empty files to practive with using the <command>touch</command> command.
 For example, to make a file named <filename>recipe3.txt</filename>,

@@ -1,4 +1,4 @@
-<!-- $Id: internet.xml,v 1.1 2004/04/22 05:34:03 danieldk Exp $ -->
+<!-- $Id: internet.xml,v 1.2 2004/07/19 22:28:58 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="internet.html"?>
 <title>Using the Internet with Libranet</title>
@@ -289,6 +289,29 @@ Jabber user-base is quite large and surpassed ICQ in user numbers. There
 are many Jabber clients available, for most commonly used platforms. Try
 to convince yourself and friends to switch to Jabber. More information
 about Jabber can be found at: <ulink url="http://www.jabber.org/" /> 
+</para>
+</sect2>
+
+<sect2>
+<title>Configuring accounts</title>
+
+<para>
+When you launch GAIM for the first time you can setup accounts using
+the accounts button. After you have installed GAIM you can setup accounts
+with the <emphasis>Tools -> Accounts</emphasis> menu item. This will present
+a window with the accounts that are currently configured. You can use
+the <emphasis>Online</emphasis> check-box next to an account name to go 
+online or off-line. If the <emphasis>Auto-login</emphasis> check-box is
+checked GAIM will automatically log in the next time GAIM is launched.
+Adding, modifying or deleting accounts is easy with the buttons on
+the bottom side of the window. Adding an account should be fairly
+straightforward, make sure you select the right protocol.
+</para>
+
+<para>
+If GAIM does not work (well) with a supported protocol, you should
+probably update your GAIM version. It often happens that the protocols
+are changed slightly, which breaks third party clients like GAIM.
 </para>
 </sect2>
 </sect1>

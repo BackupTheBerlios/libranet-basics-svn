@@ -1,4 +1,4 @@
-<!-- $Id: security.xml,v 1.2 2004/07/11 13:06:34 danieldk Exp $ -->
+<!-- $Id: security.xml,v 1.3 2004/07/13 16:06:54 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="security.html"?>
 <title>Security</title>
@@ -23,6 +23,106 @@ with dictionary attacks or brute force attacks against hosts or password
 hashes. Use long passwords, ideally eight characters or longer, consisting
 of random letters (including capitals) and numbers.
 </para>
+</sect1>
+
+<sect1>
+<title>E-Mail security</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+GNU/Linux supports two major of securing e-mails, but before we will look
+into these specifically we are going to look what e-mail security provides.
+There are two ways in which you can secure e-mails: signing e-mail and
+encrypting e-mail. Signing e-mail means that a special digital signature
+is added to the e-mail by the mail user agent. The recipient can use the
+signature to check whether an e-mail is really from the sender it claims
+to be from or not, and that the message is not in any way changed during
+the transmission. E-Mail encryption codes the e-mail in a way that
+only the intended recipient can decode it.
+</para>
+
+<para>
+This system relies on two keys: the private and the public key. Public
+keys are used to encrypt messages, and messages can only be decrypted
+with the private key. This means that one can sent his public key out to
+people. People can use this key to send encrypted e-mails, that only 
+the person with the private key can decode. Of course, this means that
+the security of this system depends on how well the private is kept
+secret.
+</para>
+
+<para>
+One might wonder why he or she should use one of these techniques. While
+most people do not feel the need to encrypt most of their e-mails, it
+generally is a good idea to sign your e-mails. There are, for example,
+a lot of viruses these days that use other people's e-mail addresses
+in the <emphasis>From:</emphasis> field of viruses. If the people who
+you are communicating with know that you sign your e-mails, they will
+not open fake e-mail from viruses. Besides that it looks much more
+professional if people can check your identity, especially in business
+transactions. For example, who would you rather trust, 
+<emphasis>vampire_boy93853@hotmail.com</emphasis>, or someone using
+a professional e-mail address with digitally signed e-mails?
+</para>
+
+<bridgehead>GnuPG or S/MIME</bridgehead>
+
+<para>
+At the moment there two major standards that are supported by GNU/Linux,
+the OpenPGP standard, by the GnuPG tool, and S/MIME. Both are about
+equally good concerning the strength of the used encryption algorithms.
+The big difference is that S/MIME relies on a certificate authority
+(CA), GnuPG does not. A certificate authority is an organization that
+is authorized to hand out keys. This means that the certificate authority
+validates that the e-mail address and/or name in the certificate is
+authentic. This means that either:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+The certificate (aka private and public key) belongs to the owner of
+the e-mail address. E-Mail verification is used by the certificate
+authority to check this.
+</para>
+</listitem>
+<listitem>
+<para>
+The certificate belongs to the owner of the e-mail address, and to the
+name in the certificate. This involves an extra step than e-mail verification.
+To have a certificate with a name, your identity has to be checked by
+the certificate authority.
+</para>
+</listitem>
+</itemizedlist>
+
+<para>
+As you can see this system is quite bullet-proof, and you can reasonably
+expect that a certificate is authentically representing the e-mail address
+and/or person. GnuPG does not use a certificate authority. This means that
+anybody can make a key with your name and e-mail address. Trust is established
+by signing keys. For example, person A verifies that person B's key really
+belongs to person B, by meeting him in real life, and he signs his key. The
+authenticity of a key is more certain if it is signed by people who you
+trust. As you can guess this system is not completely bullet proof, and it
+can take some time to get your key trusted by other people. Besides, if
+you use another e-mail address, ant want to use a new key you will have to
+start all over again. The advantage of this approach is that your private
+key is not known to a certificate authority.
+</para>
+
+<para>
+GnuPG used to be supported a lot better on GNU/Linux, but more and more
+e-mail clients support S/MIME these days. On Windows S/MIME is better
+supported, because Outlook Express and Mozilla Mail (two commonly used
+e-mail clients) both have S/MIME support. If you are communicating
+with many people that use Windows, it is a good choice to go for S/MIME,
+because it is worthless to use signed e-mails if the recipient can not
+verify them by default.
+</para>
+</sect2>
 </sect1>
 
 <sect1>

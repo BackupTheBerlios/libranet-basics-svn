@@ -54,6 +54,62 @@ network card is named <emphasis>eth0</emphasis>, the second
 <emphasis>eth1</emphasis>, etc.
 </para>
 
+<sect3>
+<title>Installing the network card drivers</title>
+
+<para>
+To install the drivers for the network adapters, select the
+<emphasis>modules</emphasis> option from the ethernet configuration
+menu described above. Adminmenu will then ask you whether you
+would like to let Adminmenu detect the network adapters automatically
+or not (<xref linkend="adminmenu-intdetect" />).
+</para>
+
+<figure id="adminmenu-intdetect">
+<title>Selecting automatic detection or manual configuration</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-intdetect.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+If you chose to let Adminmenu detect network adapters, Adminmenu will
+show a list of detected adapters when the detection is finished
+(<xref linkend="adminmenu-intdetected" />). Choose 
+<emphasis>auto</emphasis> if you would like Libranet to use the
+drivers shown. At this point you can still choose to select the
+drivers manually by selecting <emphasis>manual</emphasis>.
+</para>
+
+<figure id="adminmenu-intdetected">
+<title>Summary of detected network adapters</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-intdetected.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+If you chose to configure manually which drivers should be used,
+Adminmenu will show all available drivers 
+(<xref linkend="adminmenu-intmodselect" />). You can select or
+deselect drivers with the &lt;space&gt; key, and confirm your selection
+with the &lt;Enter&gt; key.
+</para>
+
+<figure id="adminmenu-intmodselect">
+<title>Summary of detected network adapters</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-intmodselect.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+</sect3>
+
 <sect3><title>Editing an interface</title>
 
 <para>

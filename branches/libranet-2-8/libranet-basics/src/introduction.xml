@@ -1,0 +1,112 @@
+<!-- $Id: introduction.xml,v 1.2 2004/08/05 14:00:34 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="introduction.html"?>
+<title>An introduction to Libranet GNU/Linux</title>
+
+<sect1>
+<title>What is Linux?</title>
+
+<para>
+Linux is a Unix-like kernel which is written by Linus Torvalds
+and other developers, who communicate using the Internet. Linux
+runs on many different architectures, for example on many IA32, IA64,
+AMD64, Alpha, m68k, SPARC and PowerPC machines. The latest kernel and
+more information can be found at:
+<ulink url="http://www.kernel.org">http://www.kernel.org</ulink>
+</para>
+
+<para>
+Linux is often confused with the GNU/Linux system. Linux is only a
+kernel, not a complete operating system. GNU/Linux consists of the
+GNU operating system with the Linux kernel. Please read the following
+section for a more detailed explanation of GNU/Linux.
+</para>
+
+</sect1>
+
+<sect1>
+<title>What is GNU/Linux?</title>
+
+<para>
+At the beginning of the eighties Richard Stallman started an ambitious
+project with the goal to write a free Unix-like operating system. The
+name of this system is GNU (GNU is Not Unix). At the beginning of the
+nineties most important components of the GNU operating system were
+written, except for the kernel, which is still under development under
+the name HURD. HURD consists of some servers which provide Unix-like
+kernel functionality. In turn these servers run under the Mach micro-kernel.
+At the beginning at the nineties the HURD team still had to wait till
+the Mach sources were released as free software. In the meanwhile Linus
+started filling the gap with the Linux kernel. GNU/Linux thus refers
+to the GNU system running on the Linux kernel. Right now the HURD
+kernel is also in a usable state and can be downloaded in the form
+of the GNU/HURD operating system. The
+<ulink url="http://www.debian.org/">Debian</ulink> project has even
+developed a version of the GNU operating system which works with the
+<ulink url="http://www.netbsd.org/">NetBSD</ulink> kernel. We should
+call "Linux distributions" "GNU/Linux distributions", because GNU
+is a substantial part of most distributions. 
+</para>
+</sect1>
+
+<sect1>
+<title>What is Libranet GNU/Linux?</title>
+
+<para>
+Libranet is a GNU/Linux distribution that is based on Debian GNU/Linux.
+Debian provides a huge package collection and an excellent package
+management tool named APT. Libranet builds on the reliable Debian base
+and adds an excellent installation program and a configuration tool
+named AdminMenu. Besides that Libranet includes a carefully selected
+collection of software. Distinguishing features that are often mentioned
+are:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+A user friendly installer.
+</para>
+</listitem>
+<listitem>
+<para>
+The AdminMenu configuration tool.
+</para>
+</listitem>
+<listitem>
+<para>
+A wide selection of packages.
+</para>
+</listitem>
+<listitem>
+<para>
+Good support.
+</para>
+</listitem>
+<listitem>
+<para>
+A friendly and helpful community.
+</para>
+</listitem>
+</itemizedlist>
+</sect1>
+
+<sect1>
+<title>Getting Libranet GNU/Linux</title>
+<para>
+Libranet can be purchased on the Libranet site as a download, or on
+CD-ROM. Besides that there are many software and Linux vendors around the
+world that provide Libranet on CD-ROM. The official Libranet site can
+be found at 
+<ulink url="http://www.libranet.com/">http://www.libranet.com/</ulink>
+</para>
+
+<para>
+Besides offering the latest Libranet version on CD-ROM or as a paid
+download, Libranet Computer Systems Ltd. also offers an older downloadable
+version for evaluating Libranet. Have a look at the Libranet site for
+more information.
+</para>
+</sect1>
+
+</chapter>

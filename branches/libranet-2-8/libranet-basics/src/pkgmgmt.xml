@@ -1,0 +1,478 @@
+<!-- $Id: pkgmgmt.xml,v 1.11 2004/09/07 16:20:17 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="pkgmgmt.html"?>
+<title>Package management</title>
+
+<sect1>
+<title>Introduction</title>
+
+<para>
+The Debian distribution has a package manager since the early day of the
+distribution. This made software easily distributable and manageable. However,
+one part was still missing, a tool that could fetch packages from different
+locations (e.g. from CD-ROM and FTP), and that could automatically solve and
+get dependencies. APT, the Advanced Packaging Tool, was written to fill
+this gap.
+</para>
+
+<para>
+Libranet has the advantage that it is based on Debian, so it inherited the
+APT tool. APT can be used on Libranet to get software from the Debian archives,
+or Libranet's own <quote>safe update archive</quote> 
+(see <xref linkend="safe-archive" />), a special archive with
+the goal of preventing breaking the system during updates or installation
+of new programs. This chapter gives a short introduction to the synaptic
+and aptitude package managers, and gives a short explanation about the 
+configuration and usage of APT. For an extensive introduction to APT, 
+read the 
+<ulink url="http://www.debian.org/doc/manuals/apt-howto/index.en.html">APT HOWTO</ulink>.
+</para>
+</sect1>
+
+
+<sect1 id="safe-archive">
+<title>The Libranet update-safe archive</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+On January 23, 2004 Libra Computer Systems Ltd. announced the <quote>Libranet
+update-safe archive</quote>. This special archive was introduced provide
+a safe upgrade method which is well-tested. Usage of the safe archive is
+free. Please note that somebody can still use the plain Debian archives
+if he or she wants. The Libranet archive just provides more safety,
+because it is a carefully selected collection of packages from all three
+Debian branches (plus some custom Libranet packages).
+</para>
+</sect2>
+
+<sect2>
+<title>Using the archive</title>
+
+<para>
+The update-safe archive was introduced after Libranet 2.8 and 2.8.1, so it
+is not used by default. Fortunately it is very easy to set up. Click 
+<quote>Update Adminmenu from the Internet</quote> on the 
+<quote>Packages</quote> tab in Libranet. This will update adminmenu.
+After updating adminmenu you will be asked whether you would like to use
+the update-safe archive or not. Choose <quote>yes</quote>, after that the
+update procedure installs a new <filename>sources.list</filename> file
+which uses the archive. After re-launching adminmenu the 
+<quote>Packages</quote> menu will show a new item, <quote>Upgrade system from 
+the Libranet Archive</quote>, which can be used to upgrade your system using 
+the update-safe archive.
+</para>
+</sect2>
+</sect1>
+
+<sect1>
+<title>Synaptic</title>
+
+<para>
+Synaptic is a graphical front-end for APT. It is included in Libranet,
+which can be launched using the Synaptic button which can be found
+on the <quote>Packages</quote> tab in Xadminmenu. It is very easy
+to use, and allows you to view detailed information about packages.
+</para>
+
+<figure id="synaptic">
+<title>Synaptic</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/synaptic.jpg" format="JPG" scale="60"/>
+</imageobject>
+</mediaobject>
+</figure>
+
+<sect2>
+<title>Updating the package indexes</title>
+
+<para>
+APT uses package indexes to keep track of which packages are available.
+You can update the package indexes by clicking on the 
+<quote>Update List</quote> button. A window will pop up, which shows
+the current progress in fetching the package indexes.
+</para>
+</sect2>
+
+<sect2>
+<title>Upgrading the system</title>
+
+<para>
+You can update your system after updating the package indexes by clicking
+the <quote>Upgrade System</quote> button. Synaptic will ask you whether
+you would like to upgrade the system with <quote>dist-upgrade</quote>
+or not. The difference between an <quote>upgrade</quote> and an
+<quote>dist-upgrade</quote> is explained in <xref linkend="apt" />.
+</para>
+</sect2>
+
+<sect2>
+<title>Installing packages</title>
+
+<para>
+By default the main screen lists all available packages in categories. 
+You can install packages by double clicking on a package. You can execute
+the installation by clicking the <quote>Execute</quote> button.
+</para>
+</sect2>
+
+<sect2>
+<title>Removing packages</title>
+
+<para>
+To remove packages it is a good idea to limit the listed packages
+to packages that are installed. This can be done by selecting
+<quote>Installed</quote> from the <quote>Show:</quote> drop-list.
+A package can be queued for removal by clicking on the package with
+the right mouse button, and selecting <quote>remove</quote>. This
+will not delete the configuration files of a program. You can remove
+these too, by selecting <quote>Remove Including Configuration</quote>
+instead. You can execute the removal of packages by clicking on
+the <quote>Execute</quote> button.
+</para>
+</sect2>
+</sect1>
+
+<sect1>
+<title>Aptitude</title>
+
+<para>
+Aptitude is a popular APT front-end with a textual interface. It can
+be a bit more difficult to use than Synaptic, but Aptitude is really
+powerful. Aptitude can be launched using Adminmenu, or the 
+<command>aptitude</command> command.
+</para>
+
+<figure id="aptitude">
+<title>Aptitude</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/aptitude.jpg" format="JPG"/>
+</imageobject>
+</mediaobject>
+</figure>
+
+<sect2>
+<title>Updating the package indexes</title>
+
+<para>
+The package indexes can be updated by pressing the <quote>u</quote> key, or
+by opening the menu with the F10 key, and selecting <quote>Update
+package lists</quote> from the <quote>Actions</quote> menu.
+</para>
+</sect2>
+
+<sect2>
+<title>Upgrading the system</title>
+
+<para>
+The system can be upgraded by selecting the <quote>Install/remove
+packages</quote> option from the <quote>Actions</quote> menu, after updating
+the package lists.
+</para>
+</sect2>
+
+<sect2>
+<title>Installing and removing packages</title>
+
+<para>
+Packages can be marked to be installed with the <quote>+</quote> key,
+the <quote>-</quote> key deselects a package, or selects it for removal.
+You can confirm your selection by using the <quote>Install/remove
+packages</quote> option from the <quote>Actions</quote> menu.
+</para>
+</sect2>
+
+</sect1>
+
+<sect1 id="apt">
+<title>Basic APT usage</title>
+
+<sect2>
+<title>The sources.list file</title>
+
+<para>
+The <filename>/etc/apt/sources.list</filename> is used to configure which
+package repositories should be used by APT. Each uncommented line specifies
+a repository, in the following form:
+</para>
+
+<screen>
+&lt;Archive type&gt; &lt;Archive URL&gt; &lt;Distribution&gt; &lt;Component&gt;
+</screen>
+
+<para>
+The archive type is either <emphasis>deb</emphasis> or 
+<emphasis>deb-src</emphasis>. The first type (<emphasis>deb</emphasis>) 
+specifies that the archive contains binary packages, the second type
+(<emphasis>deb-src</emphasis>) specifies that the archive contains
+sources. You will probably use <emphasis>deb</emphasis> most of the time,
+because it is rarely necessary to recompile packages. The archive URL
+(Universal Resource Locator, the standard which is also used in web
+browsers)
+specifies where the archive is located. The distribution parameter
+tells APT which distribution should be used from the archive, often
+this is one of the Debian distributions (for example 
+<emphasis>stable</emphasis>. The last parameter specifies which component
+should be used, for example <emphasis>main</emphasis> or 
+<emphasis>non-free</emphasis>. The naming conventions for distribution
+and component are fairly standard for most APT archives. Let's have
+a look at an example line:
+</para>
+
+<screen>
+deb ftp://ftp.nl.debian.org/debian woody main contrib non-free
+</screen>
+
+<para>
+This line specifies that APT may use the archive located at
+<emphasis>ftp://ftp.nl.debian.org/debian</emphasis> to get
+binary <emphasis>woody</emphasis> distribution packages from the
+<emphasis>main</emphasis>, <emphasis>contrib</emphasis> and
+<emphasis>non-free</emphasis> components.
+</para>
+</sect2>
+
+<sect2>
+<title>Updating the package index files</title>
+
+<para>
+APT uses package index files to know which packages are available. These
+indexes are fetched from the locations specified in the 
+<filename>/etc/apt/sources.list</filename> file. It is a good idea
+to update the package indexes regularly. This will allow you to upgrade
+installed packages and to install the latest available packages. Updating
+the package cache is very simple, the following command will do the job:
+</para>
+
+<screen>
+# <command>apt-get update</command>
+</screen>
+</sect2>
+
+<sect2>
+<title>Upgrading installed packages</title>
+
+<para>
+There are two methods for upgrading installed packages: the 
+<emphasis>upgrade</emphasis> and <emphasis>dist-upgrade</emphasis>
+methods. The <emphasis>upgrade</emphasis> will never remove installed
+packages, and it will not install packages that are not installed yet.
+This means that if an upgrade package is found for an installed package,
+but this upgrade depends on an package that is not installed, the package
+will not be upgraded. The <emphasis>dist-upgrade</emphasis> method
+removes and installs packages if necessary. This means it sometimes
+upgrades a package at the expense of a less important package. If you
+want to be on the safe side, use <emphasis>upgrade</emphasis>:
+</para>
+
+<screen>
+# <command>apt-get upgrade</command>
+</screen>
+
+<para>
+If you would rather like to upgrade your software as much as possible, use
+<emphasis>dist-upgrade</emphasis>:
+</para>
+
+<screen>
+# <command>apt-get dist-upgrade</command>
+</screen>
+</sect2>
+
+<sect2>
+<title>Installing packages</title>
+
+<para>
+Packages can be installed with the <emphasis>install</emphasis> parameter
+of <command>apt-get</command>. You can just specify the packages you
+would like to install after the <command>apt-get install</command>
+command. For example:
+</para>
+
+<screen>
+# <command>apt-get install gimp</command>           
+Reading Package Lists... Done
+Building Dependency Tree... Done
+The following extra packages will be installed:
+  aalib1 libgimp1.2 libgimpprint1 libgtkxmhtml1 libmpeg1
+Suggested packages:
+  gimp-nonfree freefont gimp-data-extras gimp-perl gimpprint-locales
+The following NEW packages will be installed:
+  aalib1 gimp libgimp1.2 libgimpprint1 libgtkxmhtml1 libmpeg1
+0 upgraded, 6 newly installed, 0 to remove and 1 not upgraded.
+Need to get 9204kB of archives.
+After unpacking 29.2MB of additional disk space will be used.
+Do you want to continue? [Y/n]
+</screen>
+
+<para>
+As you can see in this example, we are requesting APT to install the GIMP.
+If there are other dependencies that have to be installed (like in the
+example above) APT will ask you for a confirmation.
+</para>
+</sect2>
+
+<sect2>
+<title>Removing packages</title>
+
+<para>
+Removing packages is as easy as installing packages. The packages specified
+after the <command>apt-get remove</command> command will be removed. For
+example:
+</para>
+
+<screen>
+# <command>apt-get remove pppoe</command>
+Reading Package Lists... Done
+Building Dependency Tree... Done
+The following packages will be REMOVED:
+  pppoe pppoeconf
+0 upgraded, 0 newly installed, 2 to remove and 1 not upgraded.
+Need to get 0B of archives.
+After unpacking 367kB disk space will be freed.
+Do you want to continue? [Y/n]
+</screen>
+
+<para>
+Removing packages this way will remove the software, but will leave the
+configuration files around. Add the <emphasis>--purge</emphasis> 
+parameter to remove the configuration files too. For example:
+</para>
+
+<screen>
+# <command>apt-get --purge remove pppoe</command>
+Reading Package Lists... Done
+Building Dependency Tree... Done
+The following packages will be REMOVED:
+  pppoe* pppoeconf*
+0 upgraded, 0 newly installed, 2 to remove and 1 not upgraded.
+Need to get 0B of archives.
+After unpacking 367kB disk space will be freed.
+Do you want to continue? [Y/n]
+</screen>
+
+<para>
+As you can see a <quote>*</quote> is added to the package names, which
+means that the configuration files will be removed for these packages.
+</para>
+</sect2>
+
+<sect2>
+<title>Searching for packages</title>
+
+<para>
+Sometimes you might be looking for a program to do a certain task, but
+you do not know which programs can do the job. In this situation the
+<emphasis>search</emphasis> option of the <command>apt-cache</command> program
+can be of great help. The <command>apt-cache</command> utility can look
+for search terms in package descriptions. For example, suppose that
+you are looking for a program which can fetch mail for you from a HotMail
+account. Decide which keywords might be useful for the search, and
+add these keywords to the <command>apt-cache search</command> command.
+In this example the <quote>hotmail</quote> keyword might be specific enough.
+Let us have a look what results <command>apt-cache</command> gives: 
+</para>
+
+<screen>
+$ <command>apt-cache search hotmail</command>
+gotmail - Utility to download email from a Hotmail or MSN account
+hotway - POP3 to Hotmail (HTTPmail) gateway
+</screen>
+
+<para>
+Two packages are found with the keyword <quote>hotmail</quote>, and as
+you probably guessed the <quote>gotmail</quote> package will do the
+job.
+</para>
+</sect2>
+
+<sect2>
+<title>Showing information about a package</title>
+
+<para>
+The <command>apt-cache</command> can also be used to show information about
+a package. The <emphasis>show</emphasis> parameter will show the package 
+description, dependencies and other useful information. For example:
+</para>
+
+<screen>
+$ <command>apt-cache show beneath-a-steel-sky</command>
+Package: beneath-a-steel-sky
+Priority: optional
+Section: games
+Installed-Size: 70912
+Maintainer: Tore Anderson &lt;tore@debian.org&gt;
+Architecture: all
+Version: 0.0368-2
+Depends: scummvm (>= 0.5.1-1)
+Filename: pool/main/b/beneath-a-steel-sky/beneath-a-steel-sky_0.0368-2_all.deb
+Size: 69314378
+MD5sum: 675257f6721d8b2f172a82dca01b45ed
+Description: a science fiction adventure game
+ A science-fiction thriller set in a bleak post-apocalyptic vision
+ of the future, Beneath a Steel Sky revolves around "Union City",
+ where selfishness, rivalry, and corruption by its citizens seems to
+ be all too common, those who can afford it live underground, away
+ from the pollution and social problems which are plaguing the city.
+ .
+ You take on the role of Robert Foster, an outcast of sorts from the
+ city since a boy who was raised in a remote environment outside of
+ Union City simply termed "the gap".  Robert's mother took him away
+ from Union City as a child on their way to "Hobart" but the helicopter
+ crashed on its way, unfortunately Robert's mother dies, but he
+ survives and is left to be raised by a local tribe from the gap.
+ .
+ Years later, Union City security drops by and abducts Robert, killing
+ his tribe in the process; upon reaching the city the helicopter taking
+ him there crashes with him escaping, high upon a tower block in the
+ middle of the city he sets out to discover the truth about his past,
+ and to seek vengeance for the killing of his tribe.
+</screen>
+</sect2>
+</sect1>
+
+<sect1>
+<title>Useful tools</title>
+
+<sect2>
+<title>debfoster</title>
+
+<para>
+Debfoster is a useful tool that helps you to keep your system clean. After
+starting the <command>debfoster</command> it will ask you for each package
+that is not a dependency for another package whether you would like to keep
+it or not. For example:
+</para>
+
+<screen>
+# <command>debfoster</command> 
+
+gdm2 is keeping the following 25 packages installed:
+  bonobo-activation gconf2 gnome-mime-data libbonobo-activation4 libbonobo2-0
+  libbonobo2-common libbonoboui2-0 libbonoboui2-common libfam0c102
+  libgconf2-4 libgnome2-0 libgnome2-common libgnomecanvas2-0
+  libgnomecanvas2-common libgnomeui-0 libgnomeui-common libgnomevfs2-0
+  libgnomevfs2-common libgnutls5 libgsf-1 libidl0 liblinc1 libopencdk4
+  liborbit2 librsvg2-2
+Keep gdm2? [Ynpsiuqx?], [H]elp:
+</screen>
+
+<para>
+As you can see there are several option. <quote>y</quote> is the default
+option, and will keep a package installed. <quote>n</quote> will remove
+the package. Another useful choice is <quote>p</quote>, which will remove
+the package, and any dependencies that are not needed for other packages.
+</para>
+
+<para>
+Be sure to read the <command>debfoster</command>(8) manual page before
+you start using debfoster. It is a very powerful tool, but you can remove
+important packages if you do not understand its behavior.
+</para>
+</sect2>
+</sect1>
+
+</chapter>

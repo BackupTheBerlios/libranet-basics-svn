@@ -1,0 +1,169 @@
+<!-- $Id: netconfig.xml,v 1.4 2004/08/10 07:50:38 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="netconfig.html"?>
+<title>Network configuration</title>
+
+<sect1>
+<title>Adminmenu</title>
+
+<sect2>
+<title>Setting up ethernet cards</title>
+
+<para>
+Ethernet cards can be configured by selecting <quote>expert</quote> and
+then <quote>eth</quote> in the network configuration. The resulting screen
+(<xref linkend="adminmenu-ethconfig" />) provides several options:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis>modules</emphasis>: This option is used to load modules (drivers)
+for the network adapters that you want to use.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>edit</emphasis>: You can configure the settings for an network
+interface, like the IP address, and default route with this option.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>remove</emphasis>: The <emphasis>remove</emphasis> option
+is used to remove the configuration for an interface.
+</para>
+</listitem>
+</itemizedlist>
+
+<figure id="adminmenu-ethconfig">
+<title>Ethernet configuration menu</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-ethconfig.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+Interfaces are named in Linux, example names are <emphasis>eth2</emphasis>,
+<emphasis>lo</emphasis> and <emphasis>ppp0</emphasis>. Normal (ethernet)
+network interfaces are named <emphasis>ethn</emphasis>, in which 
+<emphasis>n</emphasis> is a number starting with 0. For example, the first
+network card is named <emphasis>eth0</emphasis>, the second
+<emphasis>eth1</emphasis>, etc.
+</para>
+
+<sect3><title>Editing an interface</title>
+
+<para>
+You can configure an interface by selecting the <emphasis>edit</emphasis>
+menu option described above. The next dialog will ask you which interface
+you would like to configure (<xref linkend="adminmenu-intselect" />. Select
+the interface you would like to configure to proceed.
+</para>
+
+<figure id="adminmenu-intselect">
+<title>Selecting an interface to configure</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-intselect.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+</sect3>
+
+</sect2>
+
+<sect2>
+<title>Configuring DNS</title>
+
+<para>
+DNS servers have a very special task in networking. They translate hostnames
+(for instance www.libranet.com) to IP addresses. To be able to use hostnames
+the system needs access to one or more DNS servers. Almost all Internet
+service providers provide DNS servers. DNS can be configured by selecting
+<quote>expert</quote> and then <quote>nameserver</quote> in the adminmenu
+network configuration. Adminmenu will then ask for the nameservers
+(<xref linkend="adminmenu-dns" />). You can enter the IP addresses in the
+input field, separating them with a space.
+</para>
+
+<figure id="adminmenu-dns">
+<title>Configuring DNS</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-dns.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+</sect2>
+</sect1>
+
+<sect1>
+<title>Manual configuration</title>
+
+<para>
+This chapter explains how some common network-related configuration files
+work. Most things can be configured with adminmenu, but more experienced
+users might prefer configuring things by editing the relevant configuration
+files.
+</para>
+
+<sect2>
+<title>Configuring nameservers</title>
+
+<para>
+The name resolver is configured using the <filename>/etc/resolv.conf</filename>
+file. Nameservers that should be used can be configured by adding a lines of
+the following form: <emphasis>nameserver &lt;IP address&gt;</emphasis>. For
+example:
+</para>
+
+<screen>
+nameserver 192.168.1.200
+nameserver 192.168.1.201
+</screen>
+</sect2>
+
+<sect2>
+<title>Local hosts</title>
+
+<para>
+Besides resolving using name servers specified in 
+<filename>/etc/resolv.conf</filename>, GNU/Linux can also resolve hosts
+that are specified in <filename>/etc/hosts</filename>. This file
+is handy for adding names to local hosts, without the hassle of
+configuring a local name server. Hosts are specified in the following
+form: <emphasis>&lt;IP address&gt; &lt;name1&gt; ... &lt;namen&gt;</emphasis>.
+This is an example of the <filename>/etc/hosts</filename> file:
+</para>
+
+<screen>
+127.0.0.1       localhost localhost.localdomain
+192.168.1.1     host1.example.net
+192.168.1.2	host2.example.net
+</screen>
+
+<para>
+Be sure that there is an entry for the host name that is used (you can
+display the host name with the <command>hostname</command> command). If the
+host name is not resolvable some programs refuse to work correctly.
+</para>
+
+<note>
+<para>
+If you want to use the same <filename>hosts</filename> file on a relatively
+large number of machines, it might we worth looking at the
+<emphasis>dnsmasq</emphasis> package. Dnsmasq can provide a
+<filename>hosts</filename> file on one host to a complete network through its 
+DNS server.
+</para>
+</note>
+
+</sect2>
+
+</sect1>
+
+</chapter>

@@ -1,0 +1,160 @@
+<!-- $Id: xfree86.xml,v 1.1 2004/04/22 05:34:04 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="xfree86.html"?>
+<title>XFree86</title>
+
+<sect1>
+<title>X Configuration</title>
+
+<para>
+The XFree86 configuration is stored in <filename>/etc/X11/XF86Config-4</filename>.
+XFree86 can be configured by hand by editing the
+<filename>XF86Config-4</filename> file. Fortunately Libranet provides some
+useful tools to configure XFree86.
+</para>
+
+<sect2>
+<title>Libranet Adminmenu</title>
+
+<para>
+Adminmenu provides an excellent X configuration tool. This tool can be
+started by executing <command>adminmenu</command> in a shell. Select
+"Configure X-windows", and "Configure X-windows" once more in the next
+screen. This will launch the X configuration tool. The first thing that
+will be asked is whether you want to set up XFree86 automatically or
+manually. Detecting hardware automatically works perfectly most of the
+time.
+</para>
+
+<sect3>
+<title>Automatic detection</title>
+
+<para>
+After selecting "auto" the X configuration tool will try to detect
+the display hardware, and will show the results afterward. If this is
+not correct, select "No", this will start the manual configuration.
+</para>
+</sect3>
+
+<sect3>
+<title>Manual configuration</title>
+
+<para>
+Select <quote>manual</quote> to start the manual configuration of X. The 
+configuration tool will start by asking which video driver should be used.
+Right of the name of the driver the vendor and/or chipset series are
+displayed. Select the driver that is appropriate. The next screen will
+ask you how much video memory the card has. Normally you can leave this
+blank and just press &lt;Enter&gt;. This will bring you to the mouse type
+screen, select the mouse type you have, press &lt;Enter&gt;, and select
+the mouse protocol that should be used. The next screen asks you what kind
+of monitor you have. It is a good idea to have a look at the manual of
+your monitor to find out what specifications your screen has. Selecting
+a refresh rate that is too high can damage the monitor. Then select the
+resolution you want to use. The resolutions you can use are dependent
+on your monitor and video card. After that you can set the number of dots
+per inch (DPI) for your monitor. Font sizes will be adjusted to the
+DPI value to make fonts readable. The easiest way to set the DPI is
+to select <quote>Set monitor DPI based on monitor size</quote>, which
+allows you to set the DPI by the size of your monitor. Finally you can
+set the color depth that should be used.
+</para>
+</sect3>
+</sect2>
+
+<sect2>
+<title>Automatical configuration</title>
+
+<para>
+The XFree86 server provides an option to automatically generate a
+configuration file. XFree86 will load all available driver modules,
+and will try to detect the hardware, and generate a configuration
+file. Execute the following command to generate a XFree86 configuration
+file: 
+</para>
+
+<screen>
+$ <command>XFree86 -configure</command>
+</screen>
+
+<para>
+If X does not output any errors, the generated configuration can be
+copied to the <filename>/etc/X11</filename> directory. And X can be
+started to test the configuration:
+</para>
+
+<screen>
+$ <command>cp /root/XF86Config /etc/X11/</command>
+$ <command>startx</command>
+</screen>
+</sect2>
+
+<sect2>
+<title>Interactive configuration</title>
+
+<para>
+XFree86 provides two tools for configuring X interactively,
+<command>xf86cfg</command> and <command>xf86config</command>.
+<command>xf86cfg</command> tries to detect the video card automatically,
+and starts an tool which can be used to tune the configuration.
+Sometimes <command>xf86cfg</command> switches to a video mode which
+is not supported by the monitor. In that case <command>xf86cfg</command>
+can also be used in text-mode, by starting it with
+<command>xf86cfg -textmode</command>.
+</para>  
+
+<para>
+<command>xf86config</command> differs from the tools described above,
+it does not detect hardware and will ask detailed questions about
+your hardware. If you only have little experience configuring XFree86
+it is a good idea to avoid <command>xf86config</command>.
+</para> 
+</sect2>
+</sect1>
+
+<sect1>
+<title>Window manager</title>
+
+<para>
+The "look and feel" of XFree86 is managed by a so-called window manager.
+Libranet GNU/Linux provides many window managers. The following window
+managers are widely used:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+WindowMaker: A relatively light window manager, which is part of the GNUStep
+project.
+</para>
+</listitem>
+<listitem>
+<para>
+BlackBlox: Light window manager, BlackBox has no dependencies except the
+X11 libraries.
+</para>
+</listitem>
+<listitem>
+<para>
+KDE: A complete desktop environment, including browser, e-mail program
+and an office suite (KOffice).
+</para>
+</listitem>
+<listitem>
+<para>
+GNOME: Like KDE a complete desktop environment. 
+</para>
+</listitem>
+</itemizedlist>
+
+<para>
+If you are used to a desktop environment, using KDE or GNOME is a logical
+choice. But it is a good idea to try some of the lighter
+window managers. They are faster, and consumer less memory, besides that
+most KDE and GNOME applications are perfectly usable under other window
+managers.
+</para>
+
+</sect1>
+
+</chapter>

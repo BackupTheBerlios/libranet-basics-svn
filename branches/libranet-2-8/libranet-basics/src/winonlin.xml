@@ -1,0 +1,246 @@
+<!-- $Id: winonlin.xml,v 1.2 2004/09/08 20:46:30 danieldk Exp $ -->
+
+<appendix> <?dbhtml filename="winonlin.html"?>
+<title>Running Windows programs on Libranet</title>
+
+<sect1>
+<title>Introduction</title>
+
+<para>
+For a few years there are a few solutions for running Windows on Linux 
+or running Linux programs under Linux. This article article describes 
+some of these solutions, and how well they run with Libranet GNU/Linux.
+</para>
+</sect1>
+
+<sect1>
+<title>CrossOver Office</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+CrossOver Office is a product based on Wine, which allows one to run
+some widely used Windows applications. It started as a product for
+running Microsoft Office under Linux, but nowadays it supports other
+applications as well. At the moment of writing supported applications
+include most Microsoft Office programs, Adobe Photoshop, Quicken and
+Lotus Notes. The CodeWeavers site has an application database with
+support ratings for many applications (gold, silver, etc.).  </para>
+</sect2>
+
+<sect2>
+<title>Facts</title>
+
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+<emphasis role="bold">Reviewed version:</emphasis> 3.0 </para>
+</listitem> <listitem> <para> <emphasis
+role="bold">Website:</emphasis> <ulink
+url="http://www.codeweavers.com/" /> </para> </listitem>
+</itemizedlist> </sect2> </sect1>
+
+<sect1>
+<title>VMWare</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+VMWare is a virtual machine, this means it emulates a PC on which
+different operating systems can be installed. Hardware access to the
+virtual machine is translated to instructions for the real
+machine. The  disadvantage of this approach is that it is slower than
+normal hardware  access, especially disk access is much slower. And be
+aware that the  hardware is emulated, so you are bound by the
+limitations of the  emulated hardware. Besides that VMWare is probably
+to expensive for most  home users.  </para>
+
+<para>
+The big advantage of this approach is that one can run multiple
+operating systems, even simultaneously. Officially supported guest
+operating systems include Windows 95/98/ME/2000/XP, Novel Netware,
+FreeBSD and Linux.  </para> </sect2>
+
+<sect2>
+<title>Facts</title>
+
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+<emphasis role="bold">Reviewed version:</emphasis> 4.0.5  </para>
+</listitem> <listitem> <para> <emphasis
+role="bold">Website:</emphasis> <ulink url="http://www.vmware.com/" />
+</para> </listitem> </itemizedlist> </sect2> </sect1>
+
+<sect1>
+<title>Serenity Virtual Station</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+Serenity Virtual Station (or SVista in short) is a virtual machine,
+much  like VMWare, that is currently being beta-tested. It targets a
+wider  selection of host operating systems, at the moment Linux,
+FreeBSD, OS/2  and Windows. Besides that it is less expensive than
+VMWare (the  guestimated retail price for one platform is $99, and
+$199 for all  platforms). The good support for OS/2 guests makes it a
+good migration  tool for OS/2 users.  </para> </sect2>
+
+<sect2>
+<title>Facts</title>
+
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+<emphasis role="bold">Reviewed version:</emphasis> open beta 3 </para>
+</listitem> <listitem> <para> <emphasis
+role="bold">Website:</emphasis> <ulink
+url="http://www.serenityvirtual.com/" /> </para> </listitem>
+</itemizedlist> </sect2> </sect1>
+
+<sect1>
+<title>Win4Lin</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+Win4Lin is a special piece of software that allows you to run Windows
+95/98/ME on Linux. Unlike VMWare it is not a virtual machine. It
+provides a special DOS environment in which Windows runs. At first
+Windows is loaded from CD-ROM to the hard disk, after that Windows can
+be installed per user. Win4Lin provides special hardware to Windows,
+which communicates with the Linux kernel. The Windows files are
+installed in the Linux filesystem (in contrast to most virtual
+machines,  which use a hard disk image). This results in a very fast
+way to run  Windows on GNU/Linux. On modern systems Windows boots in
+about five  seconds. Windows can be used in a Window on in X or
+full-screen (with  the <command>fwin</command> command). The fwin
+launches X with a Windows as a full screen  program.
+</para>
+
+<para>
+The biggest disadvantage is that Win4Lin requires kernel patches. These 
+can be applied to the vanilla Libranet Linux kernel and requires a 
+kernel recompile (which shouldn't be a problem for most users, thanks to 
+AdminMenu). People who do a lot of gaming might be disappointed by the 
+lack of Direct3D and OpenGL support (DirectDraw is partly supported). 
+But overall it is a very good and fast solution to be able to run a 
+large share of Windows programs.
+</para>
+</sect2>
+
+<sect2>
+<title>Facts</title>
+
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+<emphasis role="bold">Reviewed version:</emphasis> 5.1
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">Website:</emphasis> <ulink url="http://www.netraverse.com/" />
+</para>
+</listitem>
+</itemizedlist>
+</sect2>
+</sect1>
+
+<sect1>
+<title>Wine</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+Wine is free software that will run Windows 95/98/ME programs on Linux. 
+Wine's name is a recursive acronym: "Wine Is Not an Emulator": Wine does 
+not emulate the Intel x86 processor.  The goal of Wine is a full 
+re-implementation of the Windows API which will make Windows unnecessary.   
+Wine does not require Microsoft Windows, as it is a completely 
+alternative implementation consisting of 100% Microsoft-free code, but 
+it can optionally use native system DLLs if they are available. Well 
+written windows programs will run as fast or faster in wine than they 
+will in their native OS. 
+</para>
+
+<para>
+There are many wine packages:
+libwine (library) libwine-alsa (ALSA Sound Module) libwine-arts (aRts 
+Sound Module) libwine-capi(ISDN Module) libwine-dev (Development files) 
+libwinejack (JACK Sound Module) libwine-nas (NAS Sound Module) 
+libwine-print (Printing Module) libwine-twain (Scanner Module) wine 
+(Binary Emulator) wine-doc (Documentation) wine-utils (Utilities) 
+winesetuptk (Configuration and Setup Tool).
+At a minimum, you will need wine and libwine.  Winesetuptk is recomended 
+for easier configuration.
+</para>
+
+<para>
+The biggest disadvantages to using wine is having to do more work 
+installing seperate configuration packages and it may not have as many 
+recent APIs as some of the commercial programs.  The big advantage is 
+cost and custom configuration.
+</para>
+</sect2>
+
+<sect2>
+<title>Facts</title>
+
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+<emphasis role="bold">Reviewed version:</emphasis> 0.0.20040505-1
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">Website:</emphasis> <ulink url="http://winehq.org/" />
+</para>
+</listitem>
+</itemizedlist>
+</sect2>
+</sect1>
+
+<sect1>
+<title>Cedega</title>
+
+<sect2>
+<title>Introduction</title>
+
+<para>
+Cedega is a commercial version of WINE from Transgaming that implement 
+parts of the DirectX API. This makes it possible to run a selection of 
+Windows(tm) games on GNU/Linux. A slightly impaired version of Cedega is 
+available through the Transgaming CVS tree, this version misses some 
+crucial code to run some Windows games. Cedega is offered a 
+subscription, during the subscription period a subscriber can download 
+the latest version of Cedega, and subscribers can vote which games have 
+the highest priority to be supported in future versions.
+</para>
+</sect2>
+
+<sect2>
+<title>Facts</title>
+
+<itemizedlist spacing="compact">
+<listitem>
+<para>
+<emphasis role="bold">Reviewed version:</emphasis> 3.1
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">Website:</emphasis> <ulink url="http://www.transgaming.com/" />
+</para>
+</listitem>
+</itemizedlist>
+</sect2>
+</sect1>
+
+</appendix>

@@ -1,0 +1,110 @@
+<!-- $Id: libranet-basics.xml,v 1.7 2004/08/03 12:14:44 danieldk Exp $ -->
+
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd" [
+
+<!-- Chapters -->
+<!ENTITY Book SYSTEM "book.xml">
+<!ENTITY Introduction SYSTEM "introduction.xml">
+<!ENTITY Help SYSTEM "help.xml">
+<!ENTITY Concepts SYSTEM "concepts.xml">
+
+<!ENTITY Installation SYSTEM "installation.xml">
+
+<!ENTITY Internet SYSTEM "internet.xml">
+<!ENTITY OpenOffice SYSTEM "openoffice.xml">
+
+<!ENTITY Shell SYSTEM "shell.xml">
+<!ENTITY Proc SYSTEM "proc.xml">
+<!ENTITY UserMgmt SYSTEM "usermgmt.xml">
+
+<!ENTITY PkgMgmt SYSTEM "pkgmgmt.xml">
+
+<!ENTITY Netconfig SYSTEM "netconfig.xml">
+<!ENTITY Services SYSTEM "services.xml">
+
+<!ENTITY Filesystem SYSTEM "filesystem.xml">
+<!ENTITY Networking SYSTEM "networking.xml">
+
+<!ENTITY Printing SYSTEM "printing.xml">
+
+<!ENTITY Security SYSTEM "security.xml">
+
+<!ENTITY XFree86 SYSTEM "xfree86.xml">
+<!ENTITY Vi SYSTEM "vi.xml">
+
+<!-- Apendices -->
+<!ENTITY WinOnLin SYSTEM "winonlin.xml">
+<!ENTITY Gfdl SYSTEM "gfdl.xml">
+]>
+
+<book><?dbhtml filename="libranet-basics.html"?>
+
+<bookinfo>
+<title>Libranet Basics</title>
+<subtitle>Covers Libranet GNU/Linux 2.8.1</subtitle>
+
+<copyright>
+<year>2004</year>
+<holder>the individual authors.</holder>
+</copyright>
+
+<legalnotice>
+<para>
+This book is written by members of the Libranet community, 
+<xref linkend="authors"/> contains the list of authors. 
+</para>
+
+<para>
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
+</para>
+</legalnotice>
+
+</bookinfo>
+
+<toc></toc>
+
+<part> <?dbhtml filename="getstarted.html"?>
+<title>Getting started</title>
+&Book;
+&Introduction;
+&Help;
+&Concepts;
+
+&Installation;
+</part>
+
+<part> <?dbhtml filename="applications.html"?>
+<title>Getting your work done</title>
+&Internet;
+&OpenOffice;
+</part>
+
+<part> <?dbhtml filename="basics.html"?>
+<title>Linux Basics</title>
+&Shell;
+&Filesystem;
+&Proc;
+&UserMgmt;
+</part>
+
+<part> <?dbhtml filename="sysadmin.html"?>
+<title>System administration</title>
+&PkgMgmt;
+&Netconfig;
+&Printing;
+&XFree86;
+&Security;
+</part>
+
+<part> <?dbhtml filename="appendices.html"?>
+<title>Appendices</title>
+&WinOnLin;
+&Gfdl;
+</part>
+
+</book>

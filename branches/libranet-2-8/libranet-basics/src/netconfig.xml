@@ -72,6 +72,106 @@ the interface you would like to configure to proceed.
 </mediaobject>
 </figure>
 
+<para>
+The first step of the configuration of an interface is choosing whether
+you want to use a dynamic IP address or not. If you want to use a DHCP
+server on the network, select <emphasis>dynamic</emphasis>. The rest
+of this section is based on choosing <emphasis>static</emphasis>, because
+using a dynamic IP address does not require further configuration except
+for setting an optional hostname.
+</para>
+
+<figure id="adminmenu-intdhcp">
+<title>Using a dynamic or static IP address</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-intdhcp.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+After choosing to use a static IP you can set the IP address of the
+interface. If you have a home network you can safely use the
+<emphasis>192.168.1.xxx</emphasis> range (where xxx is a number from
+1 to 254). Please be aware that hosts on the same network should use
+the same IP range. If you are going to use Libranet in a company
+or institutional network, and you are not sure what IP address you
+should use, ask the network administrator.
+</para>
+
+<figure id="adminmenu-intaddr">
+<title>Setting the interface IP address</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-intaddr.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+The next step is to set the netmask that should be used. On most smaller
+networks this can be set to <emphasis>255.255.255.0</emphasis>, for
+instance when all hosts are in the <emphasis>192.168.1.xxx</emphasis>
+range. Ask your network administrator if you are not sure about what
+netmask you should use.
+</para>
+
+<figure id="adminmenu-intnetmask">
+<title>Setting the interface netmask</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-intnetmask.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+Adminmenu will also ask you to enter the broadcast address, aside from
+special situations you can leave this field blank. Linux will try to
+determine the broadcast address automatically.
+</para>
+
+<figure id="adminmenu-intbroadcast">
+<title>Setting the broadcast address</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-intbroadcast.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+Finally you can set the default gateway. This is a host on the network
+that routes traffic to other networks, for example the internet. This
+is often called the default route. If you are using Libranet on a network
+that is not connected to any other networks or the internet, you can
+leave this setting blank.
+</para>
+
+<figure id="adminmenu-gateway">
+<title>Setting the default gateway</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-gateway.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+At this point all settings for the interface are completed. Adminmenu
+will ask you for a final confirmation on the selected values.
+</para>
+
+<figure id="adminmenu-intconfirm">
+<title>Selecting an interface to configure</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-intconfirm.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
 </sect3>
 
 </sect2>

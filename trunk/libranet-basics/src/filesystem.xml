@@ -1,4 +1,4 @@
-<!-- $Id: filesystem.xml,v 1.2 2004/07/03 22:44:53 danieldk Exp $ -->
+<!-- $Id: filesystem.xml,v 1.3 2004/07/10 08:28:47 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="filesystem.html"?>
 <title>Files and directories</title>
@@ -502,10 +502,16 @@ example this can be: ext2, ext3, reiserfs, xfs, nfs, vfat, or ntfs.
 <title>fs_mntops</title>
 
 <para>
-The fs_mntops specifies which parameters should be used for mounting the
-filesystem. The <command>mount</command>(8) manual page has an extensive
-description of the available options. The <quote>noauto</quote> option
-is particularly interesting, because filesystems that are listed in
+The fs_mntops option specifies which parameters should be used for mounting
+the filesystem. The <command>mount</command>(8) manual page has an extensive
+description of the available options. These are the most interesting
+options:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis>noauto</emphasis>: filesystems that are listed in
 <filename>/etc/fstab</filename> are normally mounted automatically. When
 the <quote>noauto</quote> option is specified, the filesystem will not
 be mounted during the system boot, but only after issuing a 
@@ -513,6 +519,49 @@ be mounted during the system boot, but only after issuing a
 the mount point or device name has to be specified, for example:
 <command>mount /mnt/cdrom</command>
 </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>user</emphasis>: adding the <quote>user</quote> option will
+allow normal users to mount the filesystem (normally only the superuser
+is allowed to mount filesystems).
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>owner</emphasis>: the <quote>owner</quote> option will allow
+the owner of the specified device to mount the specified device. You can
+see the owner of a device using <command>ls</command>, e.g. 
+<command>ls -l /dev/cdrom</command>.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>noexec</emphasis>: with this option enabled users can not
+run files from the mounted filesystem. This can be used to provide
+more security.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>nosuid</emphasis>: this option is comparable to the 
+<quote>noexec</quote> option. With <quote>nosuid</quote> enabled SUID
+bits on files on the filesystem will not be allowed. SUID is used
+for certain binaries to provide a normal user to do something privileged.
+This is certainly a security threat, so this option should really be
+used for removable media, etc. A normal user mount will force the
+nosuid option, but a mount by the superuser will not!
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>unhide</emphasis>: this option is only relevant for normal
+CD-ROMs with the ISO9660 filesystem. If <quote>unhide</quote> is specified
+hidden files will also be visible.
+</para>
+</listitem>
+</itemizedlist>
+
 </sect3>
 
 <sect3>

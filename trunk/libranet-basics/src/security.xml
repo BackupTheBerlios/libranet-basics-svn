@@ -1,4 +1,4 @@
-<!-- $Id: security.xml,v 1.5 2004/07/20 22:01:19 danieldk Exp $ -->
+<!-- $Id: security.xml,v 1.6 2004/08/03 07:20:16 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="security.html"?>
 <title>Security</title>
@@ -147,6 +147,19 @@ that the maximum key length of DSA is 1024 bits, this is considered too
 short for the longer term. That is why it is a good idea to use 2048 bit
 RSA keys. This section describers how this can be done.
 </para>
+
+<note>
+<para>
+1024-bit keys were believed to be secure for a long time. But Bernstein's
+paper "Circuits for Integer Factorization: a Proposal" contests this, the
+bottom line is that it is quite feasible for national security agencies to
+produce hardware that can break keys in a relatively short amount of time.
+Besides that it has be shown that 512-bit RSA keys can be broken in a 
+relatively short time using common hardware. More information about these
+issues can by found in Lucky Green's e-mail to the cypherpunks list:
+<ulink url="http://lists.saigon.com/vault/security/encryption/rsa1024.html" />
+</para>
+</note>
 
 <para>
 We can generate a key by executing:

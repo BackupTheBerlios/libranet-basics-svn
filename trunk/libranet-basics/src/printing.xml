@@ -1,0 +1,203 @@
+<!-- $Id: printing.xml,v 1.1 2004/04/22 05:34:03 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="printer.html"?>
+<title>Printer configuration</title>
+
+<sect1>
+<title>Introduction</title>
+
+<para>
+GNU/Linux supports a large share of the available USB, parallel and
+network printers. Libranet GNU/Linux provides the CUPS printing system. 
+CUPS can be configured via adminmenu, as well as the CUPS web interface. 
+</para>
+</sect1>
+
+<sect1>
+<title>Adminmenu configuration</title>
+
+<para>
+Adminmenu provides a special <quote>Printer</quote> section. This section
+contains three buttons for configuring CUPS. The <quote>Detect
+printers</quote> button will install CUPS, and tries to detect the printer.
+<quote>Configure CUPS</quote> provides a X interface for configuring CUPS,
+the second <quote>Configure CUPS</quote> launches a browser that will load
+the CUPS web interface.
+</para>
+</sect1>
+
+<sect1>
+<title>Detect printers</title>
+
+<para>
+The <quote>Detect printers</quote> button launches a tool that tries
+to detect the printer, and configures CUPS automatically when a printer
+is found.
+</para>
+</sect1>
+
+<sect1>
+<title>Configure CUPS</title>
+
+<para>
+The <quote>Configure CUPS</quote> item in Xadminmenu provides a comfortable
+tool for configuring printers using CUPS. After launching this item a 
+Window showing the configured printers pops up (<xref linkend="printers"/>).
+</para>
+
+<figure id="printers">
+<title>Configured printers</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/printer-printers.jpg" format="JPG" scale="60" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+A new printer can be added by double-clicking the <quote>New Printer</quote>
+icon. This launches the printer configuration dialog (<xref
+linkend="printer-welcome"/>, which allows you to select whether you would
+like to configure a local printer or a network printer. In this section
+we are going to look at how you can configure a local printer attached to
+the computer.
+</para>
+
+<figure id="printer-welcome">
+<title>Selecting the kind of printer you would like to add</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/printer-welcome.jpg" format="JPG" scale="60" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+After specifying that you would like to setup a local printer, the dialog
+asks you to select which printer you would like to configure 
+(<xref linkend="printer-select"/>). If you have
+an USB printer that is turned on you can select it from the detected
+printers list. If the printer is not shown you can manually select the
+printer port manually. If you do not have an USB printer you should
+select <quote>parallel port #1</quote> most of the times.
+</para>
+
+<figure id="printer-select">
+<title>Selecting the printer you would like to configure</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/printer-select.jpg" format="JPG" scale="60" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+The next step is to specify the manufacturer and model of the printer
+(<xref linkend="printer-details"/>). If your printer is not yet supported,
+it is a good idea to upgrade your Libranet installation using the
+Libranet safe archive. There is a good chance that newer drivers for
+CUPS support your printer.
+</para>
+
+<figure id="printer-details">
+<title>Configuring the printer manufacturer and model</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/printer-details.jpg" format="JPG" scale="60" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+The next thing the printer needs is a name(<xref linkend="printer-name"/>). 
+The name and a description
+for the printer can be configured during the next step. The name of
+the printer is shown in many programs in the printer selection dialog.
+A description for the printer is only optional.
+</para>
+
+<figure id="printer-name">
+<title>Setting the printer name</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/printer-name.jpg" format="JPG" scale="60" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+The final step will ask you for a confirmation 
+(<xref linkend="printer-finish"/>). After confirming the settings the
+printer should show up in printers window.
+</para>
+
+<figure id="printer-finish">
+<title>Finishing the printer configuration</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/printer-finish.jpg" format="JPG" scale="60" />
+</imageobject>
+</mediaobject>
+</figure>
+</sect1>
+
+<sect1>
+<title>Web interface configuration</title>
+
+<para>
+CUPS can be configured via a web interface. The configuration interface
+can be accessed with a web browser at the following URL:
+<ulink url="http://localhost:631/">http://localhost:631/</ulink>.
+Some parts of the web interface require that you authenticate yourself.
+If an authentication window pops up you can enter <quote>root</quote>
+as the user name, and fill in the root account password.
+</para>
+
+<para>
+A printer can be added to the CUPS configuration by clicking on
+<quote>Administrate</quote>, and clicking on the <quote>Add Printer</quote>
+button after that. The web interface will ask for three options:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis>Name</emphasis> - the name of the printer. Use a simple
+name, for example <quote>epson</quote>.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Location</emphasis> - the physical location of the printer.
+This setting is not crucial, but handy for larger organizations.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Description</emphasis> - a description of the printer,
+for example <quote>Epson Stylus Color C42UX</quote>.
+</para>
+</listitem>
+</itemizedlist> 
+
+<para>
+You can proceed by clicking the <quote>Continue</quote> button. On
+the next page you can configure how the printer is connected. If you
+have an USB printer which is turned on, the web interface will show
+the name of the printer next to the USB port that is used. After
+configuring the printer port you can select the printer brand and
+model. After that the printer configuration is finished, and the
+printer will be added to the CUPS configuration.
+</para>
+
+<para>
+An overview of the configured printers can be found on the
+<quote>Printers</quote> page. On this page you can also do some
+printer operations. For example, <quote>Print Test Page</quote>
+can be used to check the printer configuration by printing a test
+page.
+</para>
+
+</sect1>
+
+</chapter>

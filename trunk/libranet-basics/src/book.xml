@@ -1,0 +1,52 @@
+<!-- $Id: book.xml,v 1.1 2004/04/22 05:34:01 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="book.html"?>
+<title>About this book</title>
+
+<sect1>
+<title>About this book</title>
+
+<para>
+This book aims to provide an introduction to Libranet GNU/Linux. It addresses
+people who have little or no GNU/Linux experience. It aims to cover the 
+Libranet GNU/Linux installation, basic GNU/Linux commands and the configuration
+of Libranet GNU/Linux. As you can see the book is still work in progress, but
+the first bits are released in the <quote>release early, release often</quote>
+spirit.
+</para>
+
+<para>
+This book is written and maintained by members of the Libranet community,
+and is available freely under the terms of the GNU Free
+Documentation License. It is continually under development,
+not just to keep up with the latest Libranet versions, but also
+to refine the documentation, and extend it where it is deemed
+necessary. The latest version can be found at
+<ulink url="http://daniel.slackfiles.net/libranet-basics/">http://daniel.slackfiles.net/libranet-basics/</ulink>
+</para>
+
+<para>
+We wish everybody a good time with Libranet Linux, and we hope
+this book is useful for you.
+</para>
+</sect1>
+
+<sect1 id="authors">
+<title>The authors</title>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis role="bold">Dani&euml;l de Kok</emphasis>
+&lt;daniel at slackfiles dot net&gt;
+</para>
+<para>
+Dani&euml;l coordinates the <quote>Libranet Basics</quote> book project,
+and wrote a large share of the chapters.
+</para>
+</listitem>
+</itemizedlist>
+
+</sect1>
+
+</chapter>

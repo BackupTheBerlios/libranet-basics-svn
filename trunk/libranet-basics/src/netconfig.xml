@@ -1,4 +1,4 @@
-<!-- $Id: netconfig.xml,v 1.1 2004/05/13 07:35:50 danieldk Exp $ -->
+<!-- $Id: netconfig.xml,v 1.2 2004/05/14 21:28:16 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="netconfig.html"?>
 <title>Network configuration</title>
@@ -7,17 +7,87 @@
 <title>Adminmenu</title>
 
 <sect2>
+<title>Setting up ethernet cards</title>
+
+<para>
+Ethernet cards can be configured by selecting <quote>expert</quote> and
+then <quote>eth</quote> in the network configuration. The resulting screen
+(<xref linkend="adminmenu-ethconfig" />) provides several options:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis>modules</emphasis>: This option is used to load modules (drivers)
+for the network adapters that you want to use.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>edit</emphasis>: You can configure the settings for an network
+interface, like the IP address, and default route with this option.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>remove</emphasis>: The <emphasis>remove</emphasis> option
+is used to remove the configuration for an interface.
+</para>
+</listitem>
+</itemizedlist>
+
+<figure id="adminmenu-ethconfig">
+<title>Ethernet configuration menu</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-ethconfig.jpg" format="JPG" scale="60" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+Interfaces are named in Linux, example names are <emphasis>eth2</emphasis>,
+<emphasis>lo</emphasis> and <emphasis>ppp0</emphasis>. Normal (ethernet)
+network interfaces are named <emphasis>ethn</emphasis>, in which 
+<emphasis>n</emphasis> is a number starting with 0. For example, the first
+network card is named <emphasis>eth0</emphasis>, the second
+<emphasis>eth1</emphasis>, etc.
+</para>
+
+<sect3><title>Editing an interface</title>
+
+<para>
+You can configure an interface by selecting the <emphasis>edit</emphasis>
+menu option described above. The next dialog will ask you which interface
+you would like to configure (<xref linkend="adminmenu-intselect" />. Select
+the interface you would like to configure to proceed.
+</para>
+
+<figure id="adminmenu-intselect">
+<title>Selecting an interface to configure</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu-intselect.jpg" format="JPG" scale="60" />
+</imageobject>
+</mediaobject>
+</figure>
+
+</sect3>
+
+</sect2>
+
+<sect2>
 <title>Configuring DNS</title>
 
 <para>
 DNS servers have a very special task in networking. They translate hostnames
 (for instance www.libranet.com) to IP addresses. To be able to use hostnames
-the system needs access to one or more DNS servers. Alsmost all internet
+the system needs access to one or more DNS servers. Almost all Internet
 service providers provide DNS servers. DNS can be configured by selecting
 <quote>expert</quote> and then <quote>nameserver</quote> in the adminmenu
 network configuration. Adminmenu will then ask for the nameservers
-(<xref linkend="adminmenu-dns" />). You can enter the IP adresses in the
-input field, seperating them with a space.
+(<xref linkend="adminmenu-dns" />). You can enter the IP addresses in the
+input field, separating them with a space.
 </para>
 
 <figure id="adminmenu-dns">
@@ -28,7 +98,33 @@ input field, seperating them with a space.
 </imageobject>
 </mediaobject>
 </figure>
+</sect2>
+</sect1>
 
+<sect1>
+<title>Manual configuration</title>
+
+<para>
+This chapter explains how some common network-related configuration files
+work. Most things can be configured with adminmenu, but more experienced
+users might prefer configuring things by editing the relevant configuration
+files.
+</para>
+
+<sect2>
+<title>Configuring DNS</title>
+
+<para>
+The name resolver is configured using the <filename>/etc/resolv.conf</filename>
+file. Nameservers that should be used can be configured by adding a lines of
+the following form: <emphasis>nameserver &lt;IP address&gt;</emphasis>. For
+example:
+</para>
+
+<screen>
+nameserver 192.168.1.200
+nameserver 192.168.1.201
+</screen>
 </sect2>
 
 </sect1>

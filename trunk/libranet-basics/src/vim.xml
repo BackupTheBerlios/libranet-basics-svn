@@ -5,17 +5,24 @@
 <title>Introduction</title>
 
 <para>
-Vi is the first full screen editor for computers. Vi is the standard
-editor that is installed by default on any UNIX system. Because it uses
-very little resources, it is very fast even on old computers and slow
-network connections.  Vi is very powerful, with  almost unlimited
-features.  You can use vi as an file editor by learning a few basic
-commands. Sooner or later, you may find yourself editing a file with vi.
+Vi was the first full-screen editor to be available for UNIX systems.
+These days it is still the editor that is installed by default on
+almost all UNIX(-like) operating systems. It uses very little
+resources, and it is very fast, even on older computers and slow
+network connections.
+</para>
+
+<para>
+Vi may seem to be a bit obscure at first, but we advise you to learn
+vi if you seriously want to learn the Unix and Linux basics.
+Vi is very powerful, with  almost unlimited features.
+You can use vi as an file editor by learning a few basic
+commands. Sooner or later, you may find yourself addicted to vi. 
 </para>
 
 <para>
 Libranet uses <ulink url="http://www.vim.org/">vim</ulink>, an extended version
-of vi, as the default vi editor.
+of vi written by Bram Molenaar, as the default vi editor.
 </para>
 </sect1>
 
@@ -23,7 +30,9 @@ of vi, as the default vi editor.
 <title>The basics</title>
 
 <para>
-Vi runs in two modes: command mode, and insert (edit) mode.
+Vi is used in two modes: command mode, and edit mode. The command
+mode is used to enter commands for, e.g. saving a file or searching
+a phrase. The edit mode is used for actually typing text.
 When vi starts, it is running in command mode.
 </para>
 
@@ -39,7 +48,7 @@ $ <command>vi</command>
 </screen>
 
 <para>
-or to use vi to edit an existing file:
+or to use vi to edit an existing, or new file:
 </para>
 
 <screen>
@@ -54,7 +63,8 @@ $ <command>vi filename</command>
 To begin inserting text in the command mode, press the &lt;i&gt; key, for 
 insert. Once you have pressed &lt;i&gt; you will see the cursor change and 
 you will see <emphasis>--INSERT--</emphasis> in the lower left corner of the 
-screen. You now can start inserting text.
+screen. This means that vi has switched to the edit mode. You now can start 
+inserting and/or editing text.
 </para>
 </sect2>
 
@@ -63,7 +73,7 @@ screen. You now can start inserting text.
 
 <para>
 To save changes you made to a file, you need to be in command mode.  To
-leave insert mode and enter command mode, you press the &lt;Esc&gt; key. The
+leave edit mode and enter command mode, you press the &lt;Esc&gt; key. The
 cursor will change again, indicating that you have now switched to
 command mode.  You can write (save changes) to the file that you were
 working on with:
@@ -74,7 +84,7 @@ working on with:
 </screen>
 
 <para>
-or to save the changes to a file name:
+or to save the changes to a file with a certain file name:
 </para>
 
 <screen>
@@ -86,7 +96,7 @@ or to save the changes to a file name:
 <title>Quitting vi</title>
 
 <para>
-To quit vi, you need to be in command mode. To leave insert mode and
+To quit vi, you need to be in command mode. To leave edit mode and
 enter command mode, you press the &lt;Esc&gt; key. The cursor will change
 again, indicating that you have now switched to command mode. You can quit vi
 with:
@@ -103,14 +113,24 @@ or You can quit without saving any changes with:
 <screen>
 <command>:q!</command>
 </screen>
+
+<para>
+It is also possible to combine some commands, for instance saving the
+file and quitting vi. The following combined command will do this:
+</para>
+
+<screen>
+<command>:wq</command>
+</screen>
+
 </sect2>
 
 <sect2>
 <title>Help</title>
 
 <para>
-To get when running vi, press the &lt;Esc&gt; key to enter command mode and
-then:
+To get help when running vi, press the &lt;Esc&gt; key to enter command mode 
+and then type:
 </para>
 
 <screen>
@@ -118,4 +138,55 @@ then:
 </screen>
 </sect2>
 </sect1>
+
+<sect1>
+<title>Searching and replacing</title>
+
+<sect2>
+<title>Searching a phrase</title>
+
+<para>
+You can search a certain phrase in a file using the search (/) command.
+Just add the phrase you want to look for after the <quote>/</quote>:
+</para>
+
+<screen>
+/cookies
+</screen>
+
+<para>
+In this example vi will display the first instance it can find of
+<emphasis>cookies</emphasis>, starting from the position the cursor
+was at when the search was started.
+</para>
+</sect2>
+
+<sect2>
+<title>Replacing phrases</title>
+
+<para>
+Phrases can be replaced one at a time with the following command:
+<command>:s/old/new/</command>. For example, to replace the first
+instance of <emphasis>cookies</emphasis> with <emphasis>cake</emphasis>
+starting from the cursor position, enter the command mode, and
+execute the following command:
+</para>
+
+<screen>
+<command>:s/cookies/cake/</command>
+</screen>
+
+<para>
+It is also possible to replace all instances, starting from the current
+cursor position by adding a <quote>g</quote>:
+</para>
+
+<screen>
+<command>:s/cookies/cake/g</command>
+</screen>
+
+</sect2>
+
+</sect1>
+
 </chapter>

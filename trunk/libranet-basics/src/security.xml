@@ -1,4 +1,4 @@
-<!-- $Id: security.xml,v 1.4 2004/07/16 13:12:08 danieldk Exp $ -->
+<!-- $Id: security.xml,v 1.5 2004/07/20 22:01:19 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="security.html"?>
 <title>Security</title>
@@ -316,7 +316,7 @@ Command&gt; <command>save</command>
 </screen>
 
 <para>
-Congratulation! You have now generated the necessary keys to encrypt
+Congratulations! You have now generated the necessary keys to encrypt
 and decrypt e-mails and files. You can now configure your e-mail client
 to use GnuPG. It is a good idea to store the contents of the
 <filename>.gnupg</filename> directory on some reliable medium, and store that
@@ -324,6 +324,97 @@ in a safe place! If your private key is lost you can't decrypt files and
 messages that were encrypted with your public key. If the private key, and your
 password are stolen, the security of this system is completely compromised.
 </para>
+</sect3>
+
+<sect3>
+<title>Exporting your public key</title>
+
+<para>
+To make GnuPG useful, you have to give your public key to people who send
+you files or e-mails. They can use your public key to encrypt files, or use
+it to verify whether a file has a correct signature or not. The key can
+be exported using the <emphasis>--export</emphasis> parameter. It is also
+a good idea to specify the <emphasis>--output</emphasis> parameter, this
+will save the key in a file. The following command would save the public
+key of <emphasis>John Doe</emphasis>, used in earlier examples, to
+the file <filename>key.gpg</filename>:
+</para>
+
+<screen>
+$ <command>gpg --output key.gpg --export john@doe.com</command>
+</screen>
+
+<para>
+This saves the key in binary format. Often it is more convenient to
+use the so-called <quote>ASCII armored output</quote>, which fits better 
+for adding the key to e-mails, or websites. You export an ASCII armored
+version of the key by adding the <emphasis>--armor</emphasis> parameter:
+</para>
+
+<screen>
+$ <command>gpg --armor --output key.gpg --export john@doe.com</command>
+</screen>
+
+<para>
+If you look at the <filename>key.gpg</filename> file you will notice that
+the ASCII armored key is a much more comfortable format.
+</para>
+</sect3>
+
+<sect3>
+<title>Signatures</title>
+
+<para>
+With GPG you can make a signature for a file. This signature is unique,
+because your signature can only be made with your private key. This means
+that other people can check whether the file was really sent by you, and
+whether it was in any way altered or not. Files can be signed with the
+<emphasis>--detach-sign</emphasis> parameter. Let us look at an example. This 
+command will make a signature for the <filename>memo.txt</filename> file. The 
+signature will be stored in <filename>memo.txt.sig</filename>.
+</para>
+
+<screen>
+$ <command>gpg --output memo.txt.sig --detach-sign memo.txt</command>
+
+You need a passphrase to unlock the secret key for
+user: "John Doe (Work) &lt;john@doe.com&gt;"
+2048-bit RSA key, ID 8D080768, created 2004-07-16
+
+Enter passphrase:
+</screen>
+
+<para>
+As you can see, GnuPG will ask you to enter the password for your
+private key. After you have entered the right key the signature file
+(<filename>memo.txt.sig</filename>) will be created.
+</para>
+
+<para>
+You can verify a file with its signature using the 
+<emphasis>--verify</emphasis> parameter. Specify the signature file
+as a parameter to the <emphasis>--verify parameter</emphasis>. The
+file that needs to be verified can be specified as the final parameter:
+</para>
+
+<screen>
+$ <command> gpg --verify memo.txt.sig memo.txt</command>
+gpg: Signature made Tue Jul 20 23:47:45 2004 CEST using RSA key ID 8D080768
+gpg: Good signature from "John Doe (Work) &lt;john@doe.com&gt;"
+</screen>
+
+<para>
+This will confirm that the file was indeed signed by <emphasis>John Doe (Work) 
+&lt;john@doe.com&gt;</emphasis>, with the key <emphasis>8D080768</emphasis>,
+and that the file is unchanged. Suppose the file was changed, GnuPG would
+have complained about it loudly:
+</para>
+
+<screen>
+$ <command>gpg --verify memo.txt.sig memo.txt</command>
+gpg: Signature made Tue Jul 20 23:47:45 2004 CEST using RSA key ID 8D080768
+gpg: BAD signature from "John Doe (Work) &lt;john@doe.com&gt;"
+</screen>
 </sect3>
 </sect2>
 </sect1>

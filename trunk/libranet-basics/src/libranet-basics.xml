@@ -1,4 +1,4 @@
-<!-- $Id: libranet-basics.xml,v 1.4 2004/07/10 15:42:52 danieldk Exp $ -->
+<!-- $Id: libranet-basics.xml,v 1.5 2004/08/02 07:42:15 danieldk Exp $ -->
 
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd" [
 
@@ -6,6 +6,7 @@
 <!ENTITY Book SYSTEM "book.xml">
 <!ENTITY Introduction SYSTEM "introduction.xml">
 <!ENTITY Help SYSTEM "help.xml">
+<!ENTITY Concepts SYSTEM "concepts.xml">
 
 <!ENTITY Installation SYSTEM "installation.xml">
 
@@ -69,6 +70,7 @@ Free Documentation License".
 &Book;
 &Introduction;
 &Help;
+&Concepts;
 
 &Installation;
 

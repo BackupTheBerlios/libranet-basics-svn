@@ -1,0 +1,183 @@
+<!-- $Id: concepts.xml,v 1.1 2004/08/02 07:42:15 danieldk Exp $ -->
+
+<chapter> <?dbhtml filename="concepts.html"?>
+<title>General concepts</title>
+
+<para>
+This chapter gives an introduction to some general Unix and GNU/Linux
+concepts. It is a good idea to read this chapter thoroughly if you
+do not have UNIX or GNU/Linux experience. Many concepts covered in this
+chapter are used in this book and in GNU/Linux.
+</para>
+
+<sect1>
+<title>Filesystem hierarchy</title>
+
+<sect2>
+<title>Structure</title>
+
+<para>
+Operating systems store data in filesystems. A filesystem is basically
+a collection of directories that hold files, like the operating system,
+user programs and user data. In GNU/Linux there is only one filesystem
+hierarchy, this means GNU/Linux doesn't have multiple drives (e.g. A:,
+C:, D:), like Windows. The filesystem looks like a tree, with a root
+directory (<filename>/</filename>) which has no parent directory, branches, 
+and leaves (directories with no subdirectories). Directories are separated
+using the <quote>/</quote> character.
+</para>
+
+<figure id="filesystem-structure">
+<title>The filesystem structure</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/fs-structure.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+<xref linkend="filesystem-structure"/> shows the structure of a filesystem.
+You can see that the root directory (<filename>/</filename>) has two child
+directories; <filename>bin</filename> and <filename>home</filename>. The
+<filename>home</filename> directory has two child directories, 
+<filename>joe</filename> and <filename>jack</filename>. The diagram shows
+the full pathname of each directory. The same notation is used for files.
+Suppose that there is a file named <filename>memo.txt</filename> in
+the <filename>/home/jack</filename> directory, the full path of the
+file is <filename>/home/jack/memo.txt</filename>.
+</para>
+
+<para>
+Each directory has to special entries, <quote><filename>.</filename></quote>,
+and <quote><filename>..</filename></quote>. 
+<quote><filename>.</filename></quote> refers to the same directory,
+<quote><filename>..</filename></quote> to the parent directory. These
+entries can be used for making relative paths. Suppose that you are working
+in the <filename>jack</filename> directory. From this directory you can
+reference to the <filename>joe</filename> directory with 
+<filename>../joe</filename>.
+</para>
+</sect2>
+
+<sect2>
+<title>Mounting</title>
+
+<para>
+You might have started to wonder how it is possible to access other devices
+or partitions than the hard disk partition which holds the root filesystem.
+Linux uses the same approach as UNIX for accessing other mediums. Linux
+allows the system administrator to connect a device to any directory in
+the filesystem structure. This process is named <quote>mounting</quote>.
+For example, one could mount the CD-ROM drive to the 
+<filename>/cdrom</filename> directory. If the mount was correct, the files
+on the CD-ROM can be accessed through this directory. The mounting
+process is described in detail in <xref linkend="mounting"/>.
+</para>
+</sect2>
+
+<sect2>
+<title>Common directories</title>
+
+<para>
+The Filesystem Hierarchy Standard Group has attempted to create a standard
+that describes which directories should be available on a GNU/Linux system.
+Nowadays most major distributions use the Filesystem Hierarchy Standard as a
+guideline. This section describes some mandatory directories on GNU/Linux
+systems.
+</para>
+
+<para>
+Please note that GNU/Linux does not have a separate directory for each
+application (like Windows), files are ordered by function and type. For
+example, the binaries for most common user programs are stored in
+<filename>/usr/bin</filename>, and their libraries in 
+<filename>/usr/lib</filename>. This is a short overview of important
+directories:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis role="bold">/bin</emphasis>: essential
+user binaries that should still be available in case the 
+<filename>/usr</filename> is not mounted.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/dev</emphasis>: device files.
+These are special files used to access certain devices.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/etc</emphasis>: the <filename>/etc</filename>
+directory contains all important configuration files.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/home</emphasis>: contains home directories for
+individual users.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/lib</emphasis>: essential system libraries (like glibc),
+and kernel modules.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/root</emphasis>: home directory for the 
+<emphasis>root</emphasis> user.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/sbin</emphasis>: essential binaries that are used for
+system administration.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/tmp</emphasis>: a world-writable directory for
+temporary files.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">X11R6</emphasis>: the X Window System.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/usr/bin</emphasis>: stores the majority of the
+user binaries.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/usr/lib</emphasis>: libraries that are not essential
+for the system to boot.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/usr/sbin</emphasis>: non-essential system administration
+binaries.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis role="bold">/var</emphasis>: variable data files, like logs.
+</para>
+</listitem>
+</itemizedlist>
+
+</sect2>
+
+</sect1>
+
+</chapter>

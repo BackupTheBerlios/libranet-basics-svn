@@ -1,4 +1,4 @@
-<!-- $Id: filesystem.xml,v 1.6 2004/07/19 22:15:13 danieldk Exp $ -->
+<!-- $Id: filesystem.xml,v 1.7 2004/08/02 07:42:15 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="filesystem.html"?>
 <title>Files and directories</title>
@@ -493,7 +493,7 @@ user.MD5="78be7a3148027ae7a897aad95e7d9c58"
 
 </sect1>
 
-<sect1><title>Mounting filesystems</title>
+<sect1 id="mounting"><title>Mounting filesystems</title>
 
 <sect2>
 <title>Introduction</title>

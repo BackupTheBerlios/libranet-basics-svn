@@ -16,9 +16,9 @@
 <!ENTITY Filesystem SYSTEM "filesystem.xml">
 <!ENTITY Textutils SYSTEM "textutils.xml">
 <!ENTITY Proc SYSTEM "proc.xml">
-<!ENTITY UserMgmt SYSTEM "usermgmt.xml">
 <!ENTITY Vim SYSTEM "vim.xml">
 
+<!ENTITY UserMgmt SYSTEM "usermgmt.xml">
 <!ENTITY PkgMgmt SYSTEM "pkgmgmt.xml">
 
 <!ENTITY Netconfig SYSTEM "netconfig.xml">
@@ -91,12 +91,12 @@ Free Documentation License".
 &Filesystem;
 &Textutils;
 &Proc;
-&UserMgmt;
 &Vim;
 </part>
 
 <part> <?dbhtml filename="sysadmin.html"?>
 <title>System administration</title>
+&UserMgmt;
 &PkgMgmt;
 &Netconfig;
 &Printing;

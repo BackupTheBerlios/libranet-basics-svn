@@ -59,7 +59,7 @@ network card is named <emphasis>eth0</emphasis>, the second
 <para>
 You can configure an interface by selecting the <emphasis>edit</emphasis>
 menu option described above. The next dialog will ask you which interface
-you would like to configure (<xref linkend="adminmenu-intselect" />. Select
+you would like to configure (<xref linkend="adminmenu-intselect" />). Select
 the interface you would like to configure to proceed.
 </para>
 

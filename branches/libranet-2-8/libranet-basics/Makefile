@@ -13,6 +13,7 @@ fmt-html:
 		src/libranet-basics.xml
 	mv *.html html/
 	cp src/normal.css html/
+		tidy -q -i -asxhtml -f err.out -m html/*.html
 
 fmt-tex:
 	jade -t tex -o tex/libranet-basics.tex \

@@ -14,3 +14,11 @@ tt {
 	padding: 0.5em;
 	margin-bottom: 0.5em;
 }
+
+table.note {
+        width: 90%;
+        border: 1px dashed #b0c4de;
+        background-color: f0f8ff;
+        color: #000000;
+        padding: 0.5em;
+}

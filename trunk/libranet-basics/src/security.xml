@@ -1,4 +1,4 @@
-<!-- $Id: security.xml,v 1.6 2004/08/03 07:20:16 danieldk Exp $ -->
+<!-- $Id: security.xml,v 1.7 2004/08/03 07:22:53 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="security.html"?>
 <title>Security</title>
@@ -156,7 +156,7 @@ bottom line is that it is quite feasible for national security agencies to
 produce hardware that can break keys in a relatively short amount of time.
 Besides that it has be shown that 512-bit RSA keys can be broken in a 
 relatively short time using common hardware. More information about these
-issues can by found in Lucky Green's e-mail to the cypherpunks list:
+issues can by found in this e-mail to the cypherpunks list:
 <ulink url="http://lists.saigon.com/vault/security/encryption/rsa1024.html" />
 </para>
 </note>

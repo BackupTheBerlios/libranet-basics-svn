@@ -1,4 +1,4 @@
-<!-- $Id: libranet-basics.xml,v 1.5 2004/08/02 07:42:15 danieldk Exp $ -->
+<!-- $Id: libranet-basics.xml,v 1.6 2004/08/02 16:58:42 danieldk Exp $ -->
 
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd" [
 
@@ -67,29 +67,42 @@ Free Documentation License".
 
 <toc></toc>
 
+<part> <?dbhtml filename="getstarted.html"?>
+<title>Getting started</title>
 &Book;
 &Introduction;
 &Help;
 &Concepts;
 
 &Installation;
+</part>
 
+<part> <?dbhtml filename="applications.html"?>
+<title>Getting your work done</title>
 &Internet;
+</part>
 
+<part> <?dbhtml filename="basics.html"?>
+<title>Linux Basics</title>
 &Shell;
 &Filesystem;
 &Proc;
 &UserMgmt;
+</part>
 
+<part> <?dbhtml filename="sysadmin.html"?>
+<title>System administration</title>
 &PkgMgmt;
-
 &Netconfig;
 &Printing;
 &XFree86;
-
 &Security;
+</part>
 
+<part> <?dbhtml filename="appendices.html"?>
+<title>Appendices</title>
 &WinOnLin;
 &Gfdl;
+</part>
 
 </book>

@@ -18,7 +18,7 @@
 	(normalize "setindex")
 	(normalize "reference")
 	(normalize "refentry")
-;;	(normalize "part")
+	(normalize "part")
 	(normalize "book") ;; just in case nothing else matches...
 	(normalize "set")  ;; sets are definitely chunks...
 	))

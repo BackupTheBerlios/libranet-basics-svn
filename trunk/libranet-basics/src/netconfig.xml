@@ -1,4 +1,4 @@
-<!-- $Id: netconfig.xml,v 1.2 2004/05/14 21:28:16 danieldk Exp $ -->
+<!-- $Id: netconfig.xml,v 1.3 2004/08/02 11:43:34 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="netconfig.html"?>
 <title>Network configuration</title>
@@ -40,7 +40,7 @@ is used to remove the configuration for an interface.
 <title>Ethernet configuration menu</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/adminmenu-ethconfig.jpg" format="JPG" scale="60" />
+<imagedata fileref="../images/adminmenu-ethconfig.jpg" format="JPG" />
 </imageobject>
 </mediaobject>
 </figure>
@@ -67,7 +67,7 @@ the interface you would like to configure to proceed.
 <title>Selecting an interface to configure</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/adminmenu-intselect.jpg" format="JPG" scale="60" />
+<imagedata fileref="../images/adminmenu-intselect.jpg" format="JPG" />
 </imageobject>
 </mediaobject>
 </figure>
@@ -94,7 +94,7 @@ input field, separating them with a space.
 <title>Configuring DNS</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/adminmenu-dns.jpg" format="JPG" scale="60" />
+<imagedata fileref="../images/adminmenu-dns.jpg" format="JPG" />
 </imageobject>
 </mediaobject>
 </figure>

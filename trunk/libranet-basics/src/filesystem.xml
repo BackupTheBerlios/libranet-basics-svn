@@ -1,4 +1,4 @@
-<!-- $Id: filesystem.xml,v 1.4 2004/07/10 09:08:38 danieldk Exp $ -->
+<!-- $Id: filesystem.xml,v 1.5 2004/07/19 18:41:45 danieldk Exp $ -->
 
 <chapter> <?dbhtml filename="filesystem.html"?>
 <title>Files and directories</title>
@@ -495,7 +495,7 @@ user.MD5="78be7a3148027ae7a897aad95e7d9c58"
 Like most Unices Linux uses a technique named <quote>mounting</quote> to
 access filesystems. Mounting means that a filesystem is connected to a
 directory in the root filesystem. One could for example mount a CD-ROM
-drive to the <filename>/mnt/cdrom</filename> directory. Linux supports
+drive to the <filename>/cdrom</filename> directory. Linux supports
 many kinds of filesystems, like Ext2, Ext3, ReiserFS, JFS, XFS, ISO9660
 (used for CD-ROMs), UDF (used on some DVDs) and DOS/Windows filesystems,
 like FAT, FAT32 and NTFS. These filesystems can reside on many kinds of
@@ -515,12 +515,12 @@ can be an arbitrary point in the root filesystem. Let's look at an example:
 </para>
 
 <screen>
-# <command>mount /dev/cdrom /mnt/cdrom</command>
+# <command>mount /dev/cdrom /cdrom</command>
 </screen>
 
 <para>
 This mounts the <filename>/dev/cdrom</filename> on the 
-<filename>/mnt/cdrom</filename> mountpoint. The <filename>/dev/cdrom</filename>
+<filename>/cdrom</filename> mountpoint. The <filename>/dev/cdrom</filename>
 device name is normally a link to the real CD-ROM device name (for example,
 <filename>/dev/hdc</filename>). As you can see, the concept is actually
 very simple, it just takes some time to learn the device names ;). Sometimes
@@ -529,12 +529,12 @@ The filesystem type can be specified by adding the <quote>-t</quote> parameter:
 </para>
 
 <screen>
-# <command>mount -t vfat /dev/sda1 /mnt/usbflash</command>
+# <command>mount -t vfat /dev/sda1 /flash</command>
 </screen>
 
 <para>
 This mounts the vfat filesystem on <filename>/dev/sda1</filename> to
-<filename>/mnt/usbflash</filename>.
+<filename>/flash</filename>.
 </para>
 </sect2>
 
@@ -548,13 +548,13 @@ or devices. For example:
 </para>
 
 <screen>
-# <command>umount /mnt/cdrom</command>
+# <command>umount /cdrom</command>
 # <command>umount /dev/sda1</command>
 </screen>
 
 <para>
 The first command unmounts the filesystem that was mounted on
-<filename>/mnt/cdrom</filename>, the second commands unmounts the
+<filename>/cdrom</filename>, the second commands unmounts the
 filesystem on <filename>/dev/sda1</filename>.
 </para>
 </sect2>
@@ -569,16 +569,18 @@ Let's look at an example:
 </para>
 
 <screen>
-/dev/hda10       swap             swap        defaults         0   0
-/dev/hda5        /                xfs         defaults         1   1
-/dev/hda6        /var             xfs         defaults         1   2
-/dev/hda7        /tmp             xfs         defaults         1   2
-/dev/hda8        /home            xfs         defaults         1   2
-/dev/hda9        /usr             xfs         defaults         1   2
-/dev/cdrom       /mnt/cdrom       iso9660     noauto,owner,ro  0   0
-/dev/fd0         /mnt/floppy      auto        noauto,owner     0   0
-devpts           /dev/pts         devpts      gid=5,mode=620   0   0
-proc             /proc            proc        defaults         0   0
+/dev/hda5  /               ext3     defaults,errors=remount-ro   0      1     
+/dev/hda8  /home           ext3     defaults,errors=remount-ro   0      2     
+/dev/hda7  /tmp            ext3     defaults,errors=remount-ro   0      2     
+/dev/hda9  /usr            ext3     defaults,errors=remount-ro   0      2     
+/dev/hda6  /var            ext3     defaults,errors=remount-ro   0      2     
+/dev/hda1  /windows        vfat     defaults,gid=windows,umask=002 0      0     
+/dev/hda10 none            swap     sw                           0      0     
+proc       /proc           proc     defaults                     0      0     
+/dev/fd0   /floppy         vfat,auto defaults,user,noauto        0      0     
+usbfs      /proc/bus/usb   usbfs    rw,devmode=0660,devgid=432   0      0     
+/dev/hdc  /cdrom  udf,iso9660  defaults,user,noauto,ro           0      0
+/dev/hdd  /cdrom1  udf,iso9660  defaults,user,noauto,ro          0      0
 </screen>
 
 <para>

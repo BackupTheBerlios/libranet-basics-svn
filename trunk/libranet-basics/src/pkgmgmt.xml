@@ -1,6 +1,6 @@
-<!-- $Id: pkgmgmt.xml,v 1.2 2004/04/22 05:59:22 danieldk Exp $ -->
+<!-- $Id: pkgmgmt.xml,v 1.3 2004/04/22 07:28:07 danieldk Exp $ -->
 
-<chapter> <?dbhtml filename="apt.html"?>
+<chapter> <?dbhtml filename="pkgmgmt.html"?>
 <title>Package management</title>
 
 <sect1>
@@ -18,15 +18,61 @@ this gap.
 <para>
 Libranet has the advantage that it is based on Debian, so it inherited the
 APT tool. APT can be used on Libranet to get software from the Debian archives,
-or Libranet's own <quote>safe update archive</quote>, a special archive with
+or Libranet's own <quote>safe update archive</quote> 
+(see <xref linkend="safe-archive" />), a special archive with
 the goal of preventing breaking the system during updates or installation
-of new programs. This chapter will give a short explanation about the 
-configuration and usage of APT. For an extensive introduction to APT, read
-the <ulink url="http://www.debian.org/doc/manuals/apt-howto/index.en.html">APT HOWTO</ulink>.
+of new programs. This chapter gives a short introduction to the synaptic
+and aptitude package managers, and gives a short explanation about the 
+configuration and usage of APT. For an extensive introduction to APT, 
+read the 
+<ulink url="http://www.debian.org/doc/manuals/apt-howto/index.en.html">APT HOWTO</ulink>.
 </para>
 </sect1>
 
 <sect1>
+<title>Synaptic</title>
+
+<para>
+Synaptic is a graphical frontend for APT. It is included in Libranet,
+which can be launched using the Synaptic button which can be found
+on the <quote>Packages</quote> tab in Xadminmenu. It is very easy
+to use, and allows you to view detailed information about packages.
+</para>
+
+<figure id="synaptic">
+<title>Synaptic</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/synaptic.jpg" format="JPG" scale="60"/>
+</imageobject>
+</mediaobject>
+</figure>
+
+<sect2>
+<title>Updating the package indexes</title>
+
+<para>
+APT uses package indexes to keep track of which packages are available.
+You can update the package indexes by clicking on the 
+<quote>Update List</quote> button. A window will pop up, which shows
+the current progress in fetching the package indexes.
+</para>
+</sect2>
+
+<sect2>
+<title>Upgrading the system</title>
+
+<para>
+You can update your system after updating the package indexes by clicking
+the <quote>Upgrade System</quote> button. Synaptic will ask you whether
+you would like to upgrade the system with <quote>dist-upgrade</quote>
+or not. The difference between an <quote>upgrade</quote> and an
+<quote>dist-upgrade</quote> is explained in <xref linkend="apt" />.
+</para>
+</sect2>
+</sect1>
+
+<sect1 id="apt">
 <title>Basic APT usage</title>
 
 <sect2>
@@ -229,7 +275,7 @@ Description: a science fiction adventure game
 
 </sect1>
 
-<sect1>
+<sect1 id="safe-archive">
 <title>The Libranet update-safe archive</title>
 
 <sect2>

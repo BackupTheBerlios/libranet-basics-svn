@@ -306,7 +306,7 @@ input to a command:
 </para>
 
 <screen>
-$ <command>md5sum < test1</command>
+$ <command>md5sum &lt; test1</command>
 6be249ef5cacb10014740f61793734a8  -
 </screen>
 

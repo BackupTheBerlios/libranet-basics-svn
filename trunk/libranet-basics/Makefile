@@ -1,8 +1,8 @@
-# $Id: Makefile,v 1.1 2004/04/22 05:33:51 danieldk Exp $
+# $Id: Makefile,v 1.2 2004/08/02 20:33:30 danieldk Exp $
 
 CURRENTDIR=`pwd`
 
-all:	fmt-html #fmt-pdf
+all:	fmt-html fmt-pdf
 
 fmt-html:
 	jade -t sgml -d src/myhtml.dsl \

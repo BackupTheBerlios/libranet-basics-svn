@@ -30,7 +30,7 @@
 
 <!ENTITY Security SYSTEM "security.xml">
 
-<!ENTITY XFree86 SYSTEM "xfree86.xml">
+<!ENTITY X11 SYSTEM "x11.xml">
 <!ENTITY Vi SYSTEM "vi.xml">
 
 <!-- Apendices -->
@@ -101,7 +101,7 @@ Free Documentation License".
 &PkgMgmt;
 &Netconfig;
 &Printing;
-&XFree86;
+&X11;
 &Security;
 </part>
 

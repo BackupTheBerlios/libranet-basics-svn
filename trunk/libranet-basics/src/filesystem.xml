@@ -293,7 +293,7 @@ the <command>chown</command>:
 </para>
 
 <screen>
-$ <command>chown danieldk logo2.jpg</command>
+# <command>chown danieldk logo2.jpg</command>
 </screen>
 
 <para>
@@ -302,10 +302,10 @@ is now <emphasis>danieldk</emphasis>:
 </para>
 
 <screen>
-$ <command>ls -l logo2.jpg</command> 
+# <command>ls -l logo2.jpg</command> 
 -rw-r--r--    1 root     root        9253 Dec 29 11:35 logo2.jpg
-$ <command>chown danieldk logo2.jpg</command>
-$ <command>ls -l logo2.jpg</command> 
+# <command>chown danieldk logo2.jpg</command>
+# <command>ls -l logo2.jpg</command> 
 -rw-r--r--    1 danieldk root        9253 Dec 29 11:35 logo2.jpg
 </screen>
 
@@ -313,13 +313,13 @@ $ <command>ls -l logo2.jpg</command>
 But group permissions still apply for the <emphasis>root</emphasis>
 group. This group can be changed by adding a dot after the owner,
 followed by the name of the group (in this example the group
-is nedslackers):
+is <emphasis>lnusers</emphasis>):
 </para>
 
 <screen>
-$ <command>chown danieldk.nedslackers logo2.jpg</command>
-$ <command>ls -l logo2.jpg</command>
--rw-r--r--    1 danieldk nedslackers        9253 Dec 29 11:35 logo2.jpg
+# <command>chown danieldk.lnusers logo2.jpg</command>
+# <command>ls -l logo2.jpg</command>
+-rw-r--r--    1 danieldk lnusers        9253 Dec 29 11:35 logo2.jpg
 </screen>
 
 <para>
@@ -328,7 +328,7 @@ done with the recursive (-R) parameter:
 </para>
 
 <screen>
-$ <command>chown -R danieldk.users oggs/</command>
+# <command>chown -R danieldk.lnusers oggs/</command>
 </screen>
 
 <bridgehead>chmod</bridgehead>
@@ -354,11 +354,11 @@ for the file owner and group:
 </para>
 
 <screen>
-$ <command>ls -l notes</command> 
+$ <command>ls -l memo</command> 
 -r--r--r--    1 daniel   users          12 Mar  9 16:28 memo 
 bash-2.05b$ <command>chmod ug+w memo</command>
-bash-2.05b$ <command>ls -l notes</command> 
--rw-rw-r--    1 daniel   users          12 Mar  9 16:28 momo 
+bash-2.05b$ <command>ls -l memo</command> 
+-rw-rw-r--    1 daniel   users          12 Mar  9 16:28 memo 
 </screen>
 
 <para>

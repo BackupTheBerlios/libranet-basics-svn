@@ -7,26 +7,25 @@
 <title>Browsing the web with Mozilla</title>
 
 <para>
-Mozilla is one of the most popular GNU/Linux browsers, and is rapidly gaining 
-market share on the Windows platform. Many browsers are based on the Mozilla
-rendering engine (named Gecko), for example FireFox, Epiphany and Galeon.
-Mozilla is a complete suite, containing a web browser, an e-mail program,
-a USENET client and a IRC client. This section is a short introduction to
-Mozilla, and provides some hints that might be helpful.
+Mozilla Firefox is one of the most popular GNU/Linux browsers, and is rapidly 
+gaining market share on the Windows platform. Many browsers are based on the
+same rendering engine that Firefox uses(Gecko), for example Epiphany and
+Galeon. This section is a short introduction to Mozilla Firefox, and provides
+some hints that might be helpful.
 </para>
 
 <para>
-Libranet includes Mozilla, and it can be installed via the conventional
-Libranet package management tools. Mozilla can be started by launching
-<quote>Apps/Net/Mozilla Navigator</quote>. The default Libranet graphical
-environment also includes a Mozilla launcher in the main menu.
+Libranet includes Firefox, and it can be installed via the conventional
+Libranet package management tools. Firefox can be started by launching
+<quote>Apps/Net/Mozilla Firefox</quote>. The default Libranet graphical
+environment also includes a Firefox launcher in the main menu.
 </para>
 
 <figure id="mozilla-browser">
 <title>The Mozilla browser</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/mozilla-browser.jpg" format="JPG" scale="60"/>
+<imagedata fileref="../images/firefox.jpg" format="JPG" scale="60"/>
 </imageobject>
 </mediaobject>
 </figure>
@@ -36,27 +35,34 @@ environment also includes a Mozilla launcher in the main menu.
 
 <para>
 Some sites require plugins like Flash or Java. Realplayer, Flash, Java
-and the MozPlugger plugins can be installed via AdminMenu. These options
-are available under the <quote>Browser Plugins</quote> tab in AdminMenu.
+and the MozPlugger plugins can be installed via from the Libranet archive
+or CDs as the following packages:
+<literallayout>
+realplayer
+macromedia-flashplayer
+sun-j2re1.5
+mozplugger
+</literallayout>
 </para>
+
 </sect2>
 
 <sect2>
 <title>Tabs</title>
 
-<figure id="mozilla-browser-tabs">
-<title>Mozilla browser tabs</title>
+<figure id="mozilla-firefox-tabs">
+<title>Mozilla Firefox browser tabs</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/mozilla-browser-tabs.jpg" format="JPG" scale="60"/>
+<imagedata fileref="../images/firefox-tabs.jpg" format="JPG" scale="60"/>
 </imageobject>
 </mediaobject>
 </figure>
 
 <para>
-Mozilla provides tabs, which means you do not have to open a new window
+Firefox provides tabs, which means you do not have to open a new window
 if you want to visit several sites simultaneously. You can just create
-multiple tabs within one channel, which have different active sites.
+multiple tabs within one window, which have different active sites.
 Try pressing the &lt;Ctrl&gt; + &lt;t&gt; keys, as you can see a new
 tab is opened in which you can start browsing. You can browse through
 the tags with the &lt;Ctrl&gt; + &lt;Page Up&gt; and &lt;Ctrl&gt; + 
@@ -71,20 +77,15 @@ clicking on the link with the right mouse button and selecting
 
 <para>
 Many Internet sites display popup ads, which can become a bit annoying,
-fortunately Mozilla has a function that blocks popup windows. This option
+fortunately Firefox has a function that blocks popup windows. This option
 can be found in the preferences window, which is accessible from the
 <quote>Edit</quote> menu. The popup window settings are located under
-the <quote>Privacy &amp; Security</quote> section.
+the <quote>Web features</quote> section. By default the <emphasis>Block
+Popup Windows</emphasis> option is enabled. You can allow popups for
+specific sites after clicking the <emphasis>Allowed sites</emphasis>
+button.
 </para>
 
-<para>
-Check the <quote>Block unrequested popup windows</quote> to block popup
-Windows by default. There might be some sites that you regularly visit,
-which have popup windows which you do not want to block. For these sites
-an exception can be made by clicking the <quote>Allowed Sites</quote>
-button. A new window will appear, which allows you to add sites that
-should be excluded from the popup killer.
-</para>
 </sect2>
 </sect1>
 

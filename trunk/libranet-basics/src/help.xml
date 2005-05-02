@@ -7,6 +7,36 @@
 <title>On your system</title>
 
 <sect2>
+<title>Libranet GNU/Linux Install Guide</title>
+
+<para>
+The installation guide that is available during the installation through
+the <emphasis>Help</emphasis> buttons is also available on an installed
+system (in HTML and PDF format):
+<literallayout>
+<ulink url="file:/usr/share/libranet-guide/install-guide.html">/usr/share/libranet-guide/install-guide.html</ulink>
+<ulink url="file:/usr/share/libranet-guide/install-guide.pdf">/usr/share/libranet-guide/install-guide.pdf</ulink>
+</literallayout>
+</para>
+</sect2>
+
+<sect2>
+<title>Libranet GNU/Linux Adminmenu Guide</title>
+
+<para>
+The documentation that is available through the <emphasis>Help</emphasis>
+buttons in Adminmenu is also available on an installed system:
+</para>
+
+<para>
+<literallayout>
+<ulink url="file:/usr/share/libranet/adminmenu-guide/adminmenu-guide.html">usr/share/libranet/adminmenu-guide/adminmenu-guide.html</ulink>
+<ulink url="file:/usr/share/libranet/adminmenu-guide/adminmenu-guide.pdf">usr/share/libranet/adminmenu-guide/adminmenu-guide.pdf</ulink>
+</literallayout>
+</para>
+</sect2>
+
+<sect2>
 <title>Linux HOWTO's</title>
 
 <para>
@@ -73,6 +103,16 @@ than commands. These sections of manual pages are available:
 <title>On the Internet</title>
 
 <sect2>
+<title>Libranet GNU/Linux Install Guide</title>
+
+<para>
+The installation guide that was mentioned earlier in this chapter, is
+also available from: <ulink url="http://www.libranet.com/guide" />
+</para>
+
+</sect2>
+
+<sect2>
 <title>The Libranet support solutions database</title>
 
 <para>
@@ -101,8 +141,8 @@ GNU/Linux. The Libranet forum can be found at:
 <para>
 The libranet-users mailinglist can be used to ask questions about
 Libranet. Information about subscribing to the list can be found
-on the Libranet support page at 
-<ulink url="http://www.libranet.com/support.html">http://www.libranet.com/support.html</ulink>
+on the Libranet community page at 
+<ulink url="http://libranet.com/community">http://libranet.com/community</ulink>
 </para>
 </sect2>
 

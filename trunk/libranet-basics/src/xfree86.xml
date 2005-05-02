@@ -1,16 +1,16 @@
 <!-- $Id: xfree86.xml,v 1.1 2004/04/22 05:34:04 danieldk Exp $ -->
 
-<chapter> <?dbhtml filename="xfree86.html"?>
-<title>XFree86</title>
+<chapter> <?dbhtml filename="x11.html"?>
+<title>X11</title>
 
 <sect1>
 <title>X Configuration</title>
 
 <para>
-The XFree86 configuration is stored in <filename>/etc/X11/XF86Config-4</filename>.
-XFree86 can be configured by hand by editing the
-<filename>XF86Config-4</filename> file. Fortunately Libranet provides some
-useful tools to configure XFree86.
+The X11 configuration is stored in <filename>/etc/X11/xorg.conf</filename>.
+X11 can be configured by hand by editing the
+<filename>xorg.conf</filename> file. Fortunately Libranet provides some
+useful tools to configure X11.
 </para>
 
 <sect2>
@@ -21,7 +21,7 @@ Adminmenu provides an excellent X configuration tool. This tool can be
 started by executing <command>adminmenu</command> in a shell. Select
 "Configure X-windows", and "Configure X-windows" once more in the next
 screen. This will launch the X configuration tool. The first thing that
-will be asked is whether you want to set up XFree86 automatically or
+will be asked is whether you want to set up X11 automatically or
 manually. Detecting hardware automatically works perfectly most of the
 time.
 </para>
@@ -66,15 +66,15 @@ set the color depth that should be used.
 <title>Automatical configuration</title>
 
 <para>
-The XFree86 server provides an option to automatically generate a
-configuration file. XFree86 will load all available driver modules,
+The X11 server provides an option to automatically generate a
+configuration file. X11 will load all available driver modules,
 and will try to detect the hardware, and generate a configuration
-file. Execute the following command to generate a XFree86 configuration
+file. Execute the following command to generate a X11 configuration
 file: 
 </para>
 
 <screen>
-$ <command>XFree86 -configure</command>
+$ <command>Xorg -configure</command>
 </screen>
 
 <para>
@@ -84,7 +84,7 @@ started to test the configuration:
 </para>
 
 <screen>
-$ <command>cp /root/XF86Config /etc/X11/</command>
+$ <command>cp /root/xorg.conf /etc/X11/</command>
 $ <command>startx</command>
 </screen>
 </sect2>
@@ -93,21 +93,21 @@ $ <command>startx</command>
 <title>Interactive configuration</title>
 
 <para>
-XFree86 provides two tools for configuring X interactively,
-<command>xf86cfg</command> and <command>xf86config</command>.
-<command>xf86cfg</command> tries to detect the video card automatically,
+X11 provides two tools for configuring X interactively,
+<command>xorgcfg</command> and <command>xorgconfig</command>.
+<command>xorgcfg</command> tries to detect the video card automatically,
 and starts an tool which can be used to tune the configuration.
-Sometimes <command>xf86cfg</command> switches to a video mode which
-is not supported by the monitor. In that case <command>xf86cfg</command>
+Sometimes <command>xorgcfg</command> switches to a video mode which
+is not supported by the monitor. In that case <command>xorgcfg</command>
 can also be used in text-mode, by starting it with
-<command>xf86cfg -textmode</command>.
+<command>xorgcfg -textmode</command>.
 </para>  
 
 <para>
-<command>xf86config</command> differs from the tools described above,
+<command>xorgconfig</command> differs from the tools described above,
 it does not detect hardware and will ask detailed questions about
-your hardware. If you only have little experience configuring XFree86
-it is a good idea to avoid <command>xf86config</command>.
+your hardware. If you only have little experience configuring X11
+it is a good idea to avoid <command>xorgconfig</command>.
 </para> 
 </sect2>
 </sect1>
@@ -116,7 +116,7 @@ it is a good idea to avoid <command>xf86config</command>.
 <title>Window manager</title>
 
 <para>
-The "look and feel" of XFree86 is managed by a so-called window manager.
+The "look and feel" of X11 is managed by a so-called window manager.
 Libranet GNU/Linux provides many window managers. The following window
 managers are widely used:
 </para>

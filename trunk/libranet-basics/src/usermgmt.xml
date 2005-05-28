@@ -40,36 +40,61 @@ chapter will describe some of these tools.
 <sect1>
 <title>Administrating users via adminmenu</title>
 
+<sect2>
+<title>Adding and removing users</title>
+
 <para>
 Adminmenu can be used to add and remove users, besides you can change
-a user password with adminmenu. These functions are located under the
-<quote>users</quote> section.
+a user password with adminmenu. These operations can be performed with
+the <quote>Manage users</quote> item that is available through the
+<quote>Users</quote> menu in Adminmenu.
 </para>
 
 <para>
-The <quote>Add a user to your system</quote> will start by asking a
-confirmation. After replying <quote>y</quote> you can enter the name
-of the user. Then you will be asked to enter the password for the
-account twice. Finally adminmenu will ask you whether you would like
-to add the user to the <emphasis>windows</emphasis> group or not.
-Adding a user to the <emphasis>windows</emphasis> groups will give
-the user access to Windows partitions.
+You can change settings for an existing user, by selecting the user
+with the <emphasis>Select User</emphasis> pull-down button. There
+are a few tabs that can be used to alter the settings for the user.
+The password for a user can be changed under the
+<emphasis>Password</emphasis> tab. The default shell can be set under
+the <emphasis>User preferences</emphasis> tab. You can also activate
+or deactivate an account from this tab. Some additional information
+about a user, like his/her full name can be entered under the
+<emphasis>User info</emphasis> tab. Finally, the <emphasis>Groups</emphasis>
+tab can be used to toggle to which user groups a user belongs to.
+Normally, it is not necessary to change the group sections, since the
+Adminmenu user management tool automatically adds new users the groups
+that a user needs to be member of to perform most tasks.
 </para>
 
 <para>
-The <quote>Change a user's password</quote> option is really simple.
-Just enter the name of the user whose password you would like to change.
-If the user was found on the system, you will be asked to type the
-new password twice.
+You can add a new user with the <emphasis>New user</emphasis> button.
+The user management tool will ask you to enter the name of the new user
+account. Afterwards, you can make the same settings as when you edit
+the settings for an existing user. The most important change to make
+is setting a password.
 </para>
 
 <para>
-The <quote>Remove a user from your system</quote> option will start with
-asking for a confirmation. If you answered <quote>y</quote> the name of
-the user to be removed will be asked. Finally you can choose to leave
-the home directory of the user around(<quote>n</quote>), or to remove
-it (<quote>y</quote>).
+The <quote>Remove User</quote> button removes the selected user. You
+will be asked to confirm the choice.
 </para>
+</sect2>
+
+<sect2>
+<title>Restoring the default user settings</title>
+
+<para>
+Libranet GNU/Linux 3.0 has a new item in Adminmenu, named <emphasis>Restore
+user settings</emphasis>, that is available under the
+<emphasis>Users</emphasis> tab. This item will reset the settings, e.g.
+the desktop configuration, to the default Libranet configuration. This
+is useful if the configuration of a user is messed up. This tool is very
+simple, you can select the user for which you would like to restore his or
+her settings from the <emphasis>User account</emphasis> dialog, and press
+the <emphasis>Restore</emphasis> button. You will be asked to confirm the
+operation before the change will be performed.
+</para>
+</sect2>
 </sect1>
 
 <sect1>

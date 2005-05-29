@@ -17,10 +17,10 @@ CUPS can be configured via adminmenu, as well as the CUPS web interface.
 <title>Adminmenu configuration</title>
 
 <para>
-Adminmenu provides a special <quote>Printer</quote> section. This section
-contains three buttons for configuring a printer. The <quote>Edit printer
-configuration</quote> provides a graphical printer configuration tool.
-<quote>Edit printer configuration (web interface)</quote> launches
+Adminmenu provides a special <emphasis>>Printer</emphasis> section. This
+section contains three buttons for configuring a printer. The <quote>Edit
+printer configuration</quote> provides a graphical printer configuration tool.
+<emphasis>Edit printer configuration (web interface)</emphasis> launches
 a browser, and will allow you to configure the CUPS printing system
 through the CUPS web configuration tool. Finally, the <emphasis>Turboprint
 setup</emphasis> item provides the Turboprint configuration tool. Turboprint
@@ -33,7 +33,7 @@ many printers.
 <title>Printer configuration</title>
 
 <para>
-The <emphasis>Printer configuration</quote> item in Adminmenu provides
+The <emphasis>Printer configuration</emphasis> item in Adminmenu provides
 a comfortable tool for configuring printers using CUPS. After launching
 this item a window showing printers that are configured pops up
 (<xref linkend="printers"/>).
@@ -49,8 +49,8 @@ this item a window showing printers that are configured pops up
 </figure>
 
 <para>
-A new printer can be added by double-clicking the <quote>New Printer</quote>
-icon. This launches the printer configuration dialog (<xref
+A new printer can be added by double-clicking the <emphasis>New
+Printer</emphasis> icon. This launches the printer configuration dialog (<xref
 linkend="printer-welcome"/>, which allows you to select whether you would
 like to configure a local printer or a network printer. In this section
 we are going to look at how you can configure a local printer attached to
@@ -73,7 +73,7 @@ asks you to select which printer you would like to configure
 an USB printer that is turned on you can select it from the detected
 printers list. If the printer is not shown you can manually select the
 printer port manually. If you do not have an USB printer you should
-select <quote>parallel port #1</quote> most of the times.
+select <emphasis>parallel port #1</emphasis> most of the times.
 </para>
 
 <figure id="printer-select">
@@ -145,21 +145,22 @@ interface)</emphasis> item in Adminmenu, or by visiting the following
 URL in a web browser:
 <ulink url="http://localhost:631/">http://localhost:631/</ulink>.
 Some parts of the web interface require that you authenticate yourself.
-If an authentication window pops up you can enter <quote>root</quote>
+If an authentication window pops up you can enter <emphasis>root</emphasis>
 as the user name, and fill in the root account password.
 </para>
 
 <para>
 A printer can be added to the CUPS configuration by clicking on
-<quote>Administrate</quote>, and clicking on the <quote>Add Printer</quote>
-button after that. The web interface will ask for three options:
+<emphasis>Administrate</emphasis>, and clicking on the <emphasis>Add
+Printer</emphasis> button after that. The web interface will ask for
+three options:
 </para>
 
 <itemizedlist>
 <listitem>
 <para>
 <emphasis>Name</emphasis> - the name of the printer. Use a simple
-name, for example <quote>epson</quote>.
+name, for example <emphasis>epson</emphasis>.
 </para>
 </listitem>
 <listitem>
@@ -171,13 +172,13 @@ This setting is not crucial, but handy for larger organizations.
 <listitem>
 <para>
 <emphasis>Description</emphasis> - a description of the printer,
-for example <quote>Epson Stylus Color C42UX</quote>.
+for example <emphasis>Epson Stylus Color C42UX</emphasis>.
 </para>
 </listitem>
 </itemizedlist> 
 
 <para>
-You can proceed by clicking the <quote>Continue</quote> button. On
+You can proceed by clicking the <emphasis>Continue</emphasis> button. On
 the next page you can configure how the printer is connected. If you
 have an USB printer which is turned on, the web interface will show
 the name of the printer next to the USB port that is used. After
@@ -188,8 +189,8 @@ printer will be added to the CUPS configuration.
 
 <para>
 An overview of the configured printers can be found on the
-<quote>Printers</quote> page. On this page you can also do some
-printer operations. For example, <quote>Print Test Page</quote>
+<emphasis>Printers</emphasis> page. On this page you can also do some
+printer operations. For example, <emphasis>Print Test Page</emphasis>
 can be used to check the printer configuration by printing a test
 page.
 </para>

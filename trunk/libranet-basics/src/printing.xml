@@ -18,31 +18,25 @@ CUPS can be configured via adminmenu, as well as the CUPS web interface.
 
 <para>
 Adminmenu provides a special <quote>Printer</quote> section. This section
-contains three buttons for configuring CUPS. The <quote>Detect
-printers</quote> button will install CUPS, and tries to detect the printer.
-<quote>Configure CUPS</quote> provides a X interface for configuring CUPS,
-the second <quote>Configure CUPS</quote> launches a browser that will load
-the CUPS web interface.
+contains three buttons for configuring a printer. The <quote>Edit printer
+configuration</quote> provides a graphical printer configuration tool.
+<quote>Edit printer configuration (web interface)</quote> launches
+a browser, and will allow you to configure the CUPS printing system
+through the CUPS web configuration tool. Finally, the <emphasis>Turboprint
+setup</emphasis> item provides the Turboprint configuration tool. Turboprint
+is a commercial printing solution that provides advanced support for
+many printers.
 </para>
 </sect1>
 
 <sect1>
-<title>Detect printers</title>
+<title>Printer configuration</title>
 
 <para>
-The <quote>Detect printers</quote> button launches a tool that tries
-to detect the printer, and configures CUPS automatically when a printer
-is found.
-</para>
-</sect1>
-
-<sect1>
-<title>Configure CUPS</title>
-
-<para>
-The <quote>Configure CUPS</quote> item in Xadminmenu provides a comfortable
-tool for configuring printers using CUPS. After launching this item a 
-Window showing the configured printers pops up (<xref linkend="printers"/>).
+The <emphasis>Printer configuration</quote> item in Adminmenu provides
+a comfortable tool for configuring printers using CUPS. After launching
+this item a window showing printers that are configured pops up
+(<xref linkend="printers"/>).
 </para>
 
 <figure id="printers">
@@ -142,11 +136,13 @@ printer should show up in printers window.
 </sect1>
 
 <sect1>
-<title>Web interface configuration</title>
+<title>Printer configuration (web interface)</title>
 
 <para>
 CUPS can be configured via a web interface. The configuration interface
-can be accessed with a web browser at the following URL:
+can be accessed through the <emphasis>Printer configuration (web
+interface)</emphasis> item in Adminmenu, or by visiting the following
+URL in a web browser:
 <ulink url="http://localhost:631/">http://localhost:631/</ulink>.
 Some parts of the web interface require that you authenticate yourself.
 If an authentication window pops up you can enter <quote>root</quote>

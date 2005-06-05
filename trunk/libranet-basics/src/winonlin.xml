@@ -27,6 +27,12 @@ applications as well. At the moment of writing supported applications
 include most Microsoft Office programs, Adobe Photoshop, Quicken and
 Lotus Notes. The CodeWeavers site has an application database with
 support ratings for many applications (gold, silver, etc.).  </para>
+
+<para>
+A demo of CrossOver Office 4.2 is included in Libranet 3.0, and
+is available through the <emphasis>Commercial software</emphasis>
+page in Adminmenu.
+</para>
 </sect2>
 
 <sect2>
@@ -35,7 +41,7 @@ support ratings for many applications (gold, silver, etc.).  </para>
 <itemizedlist spacing="compact">
 <listitem>
 <para>
-<emphasis role="bold">Reviewed version:</emphasis> 3.0 </para>
+<emphasis role="bold">Reviewed version:</emphasis> 4.2</para>
 </listitem> <listitem> <para> <emphasis
 role="bold">Website:</emphasis> <ulink
 url="http://www.codeweavers.com/" /> </para> </listitem>

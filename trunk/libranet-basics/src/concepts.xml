@@ -222,7 +222,7 @@ temporary files.
 </listitem>
 <listitem>
 <para>
-<emphasis role="bold">X11R6</emphasis>: the X Window System.
+<emphasis role="bold">/usr/X11R6</emphasis>: the X Window System.
 </para>
 </listitem>
 <listitem>

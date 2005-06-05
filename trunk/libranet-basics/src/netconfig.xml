@@ -6,6 +6,111 @@
 <sect1>
 <title>Adminmenu</title>
 
+<para>
+Most aspect of the Libranet network configuration can be configured through
+the <emphasis>Network &amp; Internet</emphasis> tab in Adminmenu.
+</para>
+
+<figure id="adminmenu-network">
+<title>The <emphasis>Network &amp; Internet</emphasis> page button</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/network/pagebutton.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+The <emphasis>Network &amp; Internet</emphasis> page contains these items:
+
+<itemizedlist>
+  <listitem>
+    <para>
+      <emphasis>Edit network configuration</emphasis>: This item is
+      used to configure various kinds of network interfaces, for example
+      LAN, DSL, Cable, PPPoE, Wireless and dial-up connections.
+    </para>
+  </listitem>
+  <listitem>
+    <para>
+      <emphasis>Network configuration wizard</emphasis>: This item
+      will try to configure network interfaces automatically.
+    </para>
+  </listitem>
+  <listitem>
+    <para>
+      <emphasis>Set hostname</emphasis>: With this item you can
+      set the system hostname.
+    </para>
+  </listitem>
+  <listitem>
+    <para>
+      <emphasis>Configure firewall</emphasis>: With this item you
+      can configure the Libranet firewall. A firewall is used to
+      block connections from or to a system that are not authorized,
+      and internet connection sharing (NAT) can be switched on
+      in the firewall configuration.
+    </para>
+  </listitem>
+  <listitem>
+    <para>
+      <emphasis>Configure NdisWrapper</emphasis>: You can install
+      Windows XP NDIS drivers for wireless cards with this item.
+    </para>
+  </listitem>
+</itemizedlist>
+</para>
+
+<sect2>
+<title>Setting the system hostname</title>
+
+<para>
+A hostname is a unique name that identifies the system. This can be
+any name that contains alphanumeric characters, for example:
+<emphasis>linux.home</emphasis>. If you are going to use the system
+as a server, you should use a fully qualified domain name (FQDN).
+This is a name that consists of a hostname part, a domain name, and
+a top-level domain. For example, <emphasis>mindbender.example.org</emphasis>
+is a FQDN, in which <emphasis>mindbender</emphasis> is the hostname,
+<emphasis>example</emphasis> is the domain name, and <emphasis>org</emphasis>
+is the top-level domain.
+</para>
+
+<para>
+You can change the current hostname of a machine with the
+<emphasis>Set hostname</emphasis> item in the <emphasis>Network
+&amp; Internet</emphasis> page in adminmenu.
+</para>
+
+<figure id="adminmenu-network-hostname-item">
+<title>The <emphasis>Set hostname</emphasis> item</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/network/hostname-item.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+After clicking on the <emphasis>Set hostname</emphasis> item, a dialog with
+the current hostname will appear (<xref
+linkend="adminmenu-network-hostname" />. You can change the hostname
+in the input field, and save the change by clicking on the <emphasis>Set
+Hostname</emphasis> button.
+</para>
+
+<figure id="adminmenu-network-hostname">
+<title>Setting a hostname</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/network/hostname.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+
+</sect2>
+
 <sect2>
 <title>Setting up ethernet cards</title>
 

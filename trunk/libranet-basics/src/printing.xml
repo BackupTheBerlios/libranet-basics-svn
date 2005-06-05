@@ -17,7 +17,7 @@ CUPS can be configured via adminmenu, as well as the CUPS web interface.
 <title>Adminmenu configuration</title>
 
 <para>
-Adminmenu provides a special <emphasis>>Printer</emphasis> section. This
+Adminmenu provides a special <emphasis>Printer</emphasis> section. This
 section contains three buttons for configuring a printer. The <quote>Edit
 printer configuration</quote> provides a graphical printer configuration tool.
 <emphasis>Edit printer configuration (web interface)</emphasis> launches
@@ -27,6 +27,17 @@ setup</emphasis> item provides the Turboprint configuration tool. Turboprint
 is a commercial printing solution that provides advanced support for
 many printers.
 </para>
+
+<figure id="adminmenu-printing">
+<title>The <emphasis>Printing</emphasis> page button</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/printing/pagebutton.jpg" format="JPG" scale="50" />
+</imageobject>
+</mediaobject>
+</figure>
+
+
 </sect1>
 
 <sect1>

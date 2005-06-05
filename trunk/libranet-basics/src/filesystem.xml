@@ -945,19 +945,6 @@ in which filesystems are checked during the system boot.
 </para>
 </sect3>
 </sect2>
-
-<sect2><title>xvmount</title>
-
-<para>
-Libranet has a nice tool named xvmount, which allows a user to mount and
-unmount filesystems using a X tool. Xvmount can be set up by launching
-AdminMenu and clicking the <quote>xvmount</quote> icon in the
-<quote>Disk/CD/Floppy</quote> menu. After setting up xvmount, launching
-the <command>xvmount</command> command will display a list of devices
-that can be mounted and unmounted.
-</para>
-</sect2>
-
 </sect1>
 
 </chapter>

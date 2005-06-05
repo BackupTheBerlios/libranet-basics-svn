@@ -109,6 +109,19 @@ $ <command>pwd</command>
 /home/danieldk
 </screen>
 
+<para>
+You can quickly go to your home directory, by executing <command>cd</command>
+without any extra parameters:
+</para>
+
+<screen>
+$ <command>pwd</command>
+/etc
+$ <command>cd</command>
+$ <command>pwd</command>
+/home/danieldk
+</screen>
+
 <bridgehead>mkdir</bridgehead>
 
 <para>
@@ -173,6 +186,28 @@ to the <filename>writings</filename> directory:
 $ <command>cp -r memos writings/</command>
 </screen>
 
+<para>
+Sometimes you may want to copy a file, and preserve the ownership and
+permissions. This can be done by adding the <emphasis>-p</emphasis>
+flag. For example:
+</para>
+
+<screen>
+# <command>cp -p /etc/shadow /backup</command>
+</screen>
+
+<para>
+You can see that the permissions were preserved with the <command>ls</command>
+command:
+</para>
+
+<screen>
+# <command>ls -l /etc/shadow</command>
+-rw-r-----  1 root shadow 965 May  9 15:15 /etc/shadow
+# <command>ls -l /backup/shadow</command>
+-rw-r-----  1 root shadow 965 May  9 15:15 /backup/shadow
+</screen>
+
 <bridgehead>mv</bridgehead>
 
 <para>
@@ -196,6 +231,16 @@ directory:
 
 <screen>
 $ <command>mv memos writings/</command>
+</screen>
+
+<para>
+<command>mv</command> is not only used to move files to other directories.
+You can also rename files with <command>mv</command>. For example, to rename
+<filename>memos</filename> to <filename>memos.txt</filename>, run:
+</para>
+
+<screen>
+$ <command>mv memos memos.txt</command>
 </screen>
 
 <bridgehead>rm</bridgehead>

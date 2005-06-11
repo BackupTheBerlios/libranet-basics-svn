@@ -1,10 +1,10 @@
-<!-- $Id: netconfig.xml,v 1.4 2004/08/10 07:50:38 danieldk Exp $ -->
+<!-- $Id$ -->
 
 <chapter> <?dbhtml filename="netconfig.html"?>
 <title>Network configuration</title>
 
 <sect1>
-<title>Adminmenu</title>
+<title>Introduction</title>
 
 <para>
 Most aspect of the Libranet network configuration can be configured through
@@ -60,8 +60,9 @@ The <emphasis>Network &amp; Internet</emphasis> page contains these items:
   </listitem>
 </itemizedlist>
 </para>
+</sect1>
 
-<sect2>
+<sect1>
 <title>Setting the system hostname</title>
 
 <para>
@@ -107,22 +108,167 @@ Hostname</emphasis> button.
 </imageobject>
 </mediaobject>
 </figure>
+</sect1>
 
-
-</sect2>
-
-<sect2>
-<title>Setting up ethernet cards</title>
+<sect1>
+<title>Configuring network interfaces</title>
 
 <para>
-Ethernet cards can be configured with the <emphasis>Edit network
-configuration</emphasis> item that is available through the
-<emphasis>Network &amp; Internet</emphasis> tab in Adminmenu.
+Various kinds of network interfaces can be configured through the
+<emphasis>Network Configuration</emphasis> item that is available
+on the <emphasis>Network &amp; Internet</emphasis> page in Adminmenu
+(<xref linkend="adminmenu-networkconfig-item" />).
+</para>
+
+<figure id="adminmenu-networkconfig-item">
+<title>The <emphasis>Network configuration</emphasis> item</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/network/networkconfig-item.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+After launching the network configuration item a list of detected
+network interfaces will be shown. The type of network interface
+is shown as an icon. These icons are listed below, for left to right
+the icons represent Ethernet/PPPoE, Wireless and PPP interfaces.
+</para>
+
+<figure id="adminmenu-networkconfig-ificons">
+<title>Network interface type icons</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/network/networkconfig-ificons.jpg" format="JPG" />
+</imageobject>
+</mediaobject> 
+</figure>
+
+<para>
+You can configure an interface by selecting the interface, and
+clicking the <emphasis>Add connection for selected card</emphasis>
+button. Interfaces connection settings can be edited by selecting
+the connection (the line below an interface entry), and clicking
+on the <emphasis>Edit connection properties</emphasis> button. A
+connection can be removed with the <emphasis>Remove connection</emphasis>
+button.
+</para>
+
+<figure id="adminmenu-networkconfig">
+<title>Overview of interfaces</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/network/networkconfig.jpg" format="JPG" />
+</imageobject>
+</mediaobject> 
+</figure>
+
+<para>
+When you add a connection, Adminmenu will ask you what kind of connection
+you would like to set up <xref linkend="adminmenu-networkconfig-add" />. The
+next sections describe the various connection types.
+</para>
+
+<figure id="adminmenu-networkconfig-add">
+<title>Setting the connection type for a new connection</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/network/networkconfig-add.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+
+
+<sect2>
+<title>Setting up an Ethernet connection</title>
+
+<para>
+Ethernet networks are the most common form of wired local area networks
+(LANs). If you choose to set up an ethernet connection, a dialog with
+various tabs will appear (<xref linkend="adminmenu-networkconfig-ethernet" />).
+</para>
+
+<figure id="adminmenu-networkconfig-ethernet">
+<title>Configuring an Ethernet connection</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/network/networkconfig-ethernet.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+The most important tab is the <emphasis>Network</emphasis> tab. This tab
+is used to assign an IP address to the interface, and for setting up
+various other parameters, like the gateway address. There two are ways of
+setting the IP address and related information, namely <emphasis>Dynamic
+assignment (DHCP)</emphasis> and <emphasis>Static assignment</emphasis>.
+You should use dynamic assignment if there is a DHCP server on the network,
+DHCP is a protocol for offering clients relevant IP information. If you
+use DHCP, you can just select <emphasis>Dynamic assignment (DHCP)</emphasis>
+from the <emphasis>IP Assignent</emphasis> pull-down button. This should
+automatically configure the necessary settings. In some cases it is also
+necessary to send a hostname to the DHCP server; you can do this by
+marking the <emphasis>Send Hostname</emphasis> check-box, and filling in
+the hostname.
+</para>
+
+<para>
+If you choose to manually assign an IP address, there are various settings
+that you have to fill in:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis>IP Address</emphasis>: This is the address of the interface,
+if you have a dedicated IP address, you can fill it in. If you are
+on a private network (e.g. a home network), you can just pick an address
+from a reserved private range, for example 192.168.1.x (replace
+<emphasis>x</emphasis> with a number that is in the 1-254 range).
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Netmask</emphasis>: The netmask is a network-specific mask,
+if you use a private address range, and only change the last digit
+(e.g. 192.168.1.x) you can fill in <emphasis>255.255.255.0</emphasis>.
+Otherwise you should use the netmask that applies to the address range
+that the address is in.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Broadcast</emphasis>: This is the address which is used
+for broadcasts. For example, a broadcast address of 192.168.1.255
+means that broadcasts are send to all hosts in the 192.168.1.x
+range. You can usually use the default broadcast address that
+Adminmenu suggests.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Default gateway:</emphasis> If there is a gateway on the
+network that connects to the Internet, you should also enter the
+address of this gateway if you want to be able to connect to the
+Internet.
+</para>
+</listitem>
+</itemizedlist>
+
+<para>
+If you do not know whether your network uses statis or dynamic assignments,
+or what the settings for static assignments are, consult your network
+administrator. The DNS tab is described in <xref linkend="netconfig-dns" />.
 </para>
 
 </sect2>
 
-<sect2>
+</sect1>
+
+<sect1 id="netconfig-dns">
 <title>Configuring DNS</title>
 
 <para>
@@ -147,7 +293,6 @@ settings are then available under the <emphasis>DNS</emphasis> tab
 </imageobject>
 </mediaobject>
 </figure>
-</sect2>
 </sect1>
 
 <sect1>

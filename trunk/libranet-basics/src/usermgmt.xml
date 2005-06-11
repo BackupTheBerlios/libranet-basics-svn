@@ -40,6 +40,40 @@ chapter will describe some of these tools.
 <sect1>
 <title>Administrating users via adminmenu</title>
 
+<para>
+Most tasks related to user management can be performed with the items
+that are available under the <emphasis>Users</emphasis> tab in Adminmenu.
+</para>
+
+<figure id="adminmenu-users">
+<title>The <emphasis>Users</emphasis> page button</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/users/pagebutton.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
+<para>
+The <emphasis>Users</emphasis> page offers two items:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<emphasis>Manage user accounts</emphasis>: with this item you can add,
+edit and remove user accounts, and change account passwords.
+</para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Restore user settings</emphasis>: this item can be user to
+restore the user settings to the original values from when the account
+was created.
+</para>
+</listitem>
+</itemizedlist>
+
 <sect2>
 <title>Adding and removing users</title>
 
@@ -50,10 +84,20 @@ the <quote>Manage users</quote> item that is available through the
 <quote>Users</quote> menu in Adminmenu.
 </para>
 
+<figure id="adminmenu-users-manageusers">
+<title>The <emphasis>Manage users</emphasis> item</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/users/manageusers.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
 <para>
 You can change settings for an existing user, by selecting the user
 with the <emphasis>Select User</emphasis> pull-down button. There
-are a few tabs that can be used to alter the settings for the user.
+are a few tabs that can be used to alter the settings for the user
+(<xref linkend="adminmenu-users-manageusers-edit" />).
 The password for a user can be changed under the
 <emphasis>Password</emphasis> tab. The default shell can be set under
 the <emphasis>User preferences</emphasis> tab. You can also activate
@@ -66,18 +110,47 @@ Adminmenu user management tool automatically adds new users the groups
 that a user needs to be member of to perform most tasks.
 </para>
 
+<figure id="adminmenu-users-manageusers-edit">
+<title>Editing a user account</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/users/manageusers-edit.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
 <para>
 You can add a new user with the <emphasis>New user</emphasis> button.
 The user management tool will ask you to enter the name of the new user
-account. Afterwards, you can make the same settings as when you edit
-the settings for an existing user. The most important change to make
-is setting a password.
+account (<xref linkend="adminmenu-users-manageusers-new" />). Afterwards,
+you can make the same settings as when you edit the settings for an
+existing user. The most important change to make is setting a password.
 </para>
+
+<figure id="adminmenu-users-manageusers-new">
+<title>Adding a new user account</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/users/manageusers-new.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
 
 <para>
 The <quote>Remove User</quote> button removes the selected user. You
-will be asked to confirm the choice.
+will be asked to confirm the choice (<xref
+linkend="adminmenu-users-manageusers-remove" />).
 </para>
+
+<figure id="adminmenu-users-manageusers-remove">
+<title>Removing a user account</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="../images/adminmenu/users/manageusers-remove.jpg" format="JPG" />
+</imageobject>
+</mediaobject>
+</figure>
+
 </sect2>
 
 <sect2>

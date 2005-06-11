@@ -30,8 +30,8 @@ buttons in Adminmenu is also available on an installed system:
 
 <para>
 <literallayout>
-<ulink url="file:/usr/share/libranet/adminmenu-guide/adminmenu-guide.html">usr/share/libranet/adminmenu-guide/adminmenu-guide.html</ulink>
-<ulink url="file:/usr/share/libranet/adminmenu-guide/adminmenu-guide.pdf">usr/share/libranet/adminmenu-guide/adminmenu-guide.pdf</ulink>
+<ulink url="file:/usr/share/libranet/adminmenu-guide/adminmenu-guide.html">/usr/share/libranet/adminmenu-guide/adminmenu-guide.html</ulink>
+<ulink url="file:/usr/share/libranet/adminmenu-guide/adminmenu-guide.pdf">/usr/share/libranet/adminmenu-guide/adminmenu-guide.pdf</ulink>
 </literallayout>
 </para>
 </sect2>

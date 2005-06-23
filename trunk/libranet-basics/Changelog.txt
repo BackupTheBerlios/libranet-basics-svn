@@ -1,0 +1,7 @@
+Thu Jun 23 13:49:42 CEST 2005
+- Remove the Evolution section, and replace it with a section about
+  Mozilla Thunderbird. The Evolution section still described Evolution
+  1.x. It seems that Thunderbird gained much in popularity, and it
+  requires relatively little dependencies.
+- Integrated the GnuPG sections in the "Files and directories" chapter,
+  and added more information about using GnuPG.

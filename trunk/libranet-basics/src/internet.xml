@@ -4,7 +4,7 @@
 <title>Using the Internet with Libranet</title>
 
 <sect1>
-<title>Browsing the web with Mozilla</title>
+<title>Browsing the web with Mozilla Firefox</title>
 
 <para>
 Mozilla Firefox is one of the most popular GNU/Linux browsers, and is rapidly 
@@ -90,7 +90,7 @@ button.
 </sect1>
 
 <sect1>
-<title>Mozilla Thunderbird</title>
+<title>Reading E-Mail with Mozilla Thunderbird</title>
 
 <para>
 Mozilla Thunderbird is the e-mail client that is developed by the Mozilla
@@ -173,7 +173,7 @@ IMAP leaves the messages on the server, and downloads the messages
 when that is demanded (e.g. when a message is selected from the message
 list). But in any case IMAP will keep the messages on the server. If
 you have a dial-up connection, it is usually best to use POP to avoid having
-to stay online to read e-mail, if you read e-mail from many different
+to stay on-line to read e-mail, if you read e-mail from many different
 locations IMAP is the obvious protocol choice. With both protocols you
 will have to fill in the name of the e-mail server in the <emphasis>Incoming
 Server</emphasis> input field. After you have chosen a protocol and filled
@@ -194,9 +194,49 @@ you have just made. You can confirm these settings with the
 
 <para>
 If this is the first account that you are setting up, Thunderbird will also
-ask you to specify a server and username for outgoing mail. This is the SMTP
+ask you to specify a server and user name for outgoing mail. This is the SMTP
 server that is provided by your ISP or E-Mail provider.
 </para>
+</sect2>
+
+<sect2>
+<title>Adding news feeds</title>
+
+<para>
+Thunderbird support newsfeeds that are in RSS format. Many sites provide
+such feeds of their headlines. To be able to add feeds to Thunderbird,
+you will first have to set up an account for retrieving feeds. You can
+do this using the <emphasis>Account Settings</emphasis> window, that
+is accessible via the <emphasis>Edit -> Properties</emphasis> menu item.
+Click on the <emphasis>Add Account...</emphasis> button, and choose to
+add an account of the <emphasis>RSS News &amp; Blogs</emphasis> type.
+After clicking <emphasis>Next</emphasis>, Thunderbird will ask you to
+give a name for this account. After giving the account a name (or keeping
+the default name), you can click <emphasis>Next</emphasis> one more time.
+Thunderbird will now show a confirmation, in which you can confirm adding
+this account by clicking on <emphasis>Finish</emphasis>. Now that you
+have created the account, you can leave the <emphasis>Account
+Settings</emphasis> window, by clicking on the <emphasis>OK</emphasis>
+button.
+</para>
+
+<para>
+The newly created account is added to the left pane that lists all
+account folders. You can add RSS feeds by clicking on the news account,
+and clicking on the <emphasis>Manage subscriptions</emphasis> item
+in the account overview. You will now be given the opportunity to add,
+edit and delete RSS feeds. Adding a RSS feed is simple - click on
+the <emphasis>Add</emphasis> button, and fill in the URL of the newsfeed
+in the <emphasis>Feed URL</emphasis> input field. Clicking on
+<emphasis>OK</emphasis> will add the feed.
+</para>
+
+<para>
+After you have added one or more feeds, you can view them as folders
+in the newsfeed account.
+</para>
+
+
 
 </sect2>
 
@@ -245,7 +285,7 @@ the accounts button. After you have installed GAIM you can setup accounts
 with the <emphasis>Tools -> Accounts</emphasis> menu item. This will present
 a window with the accounts that are currently configured. You can use
 the <emphasis>Online</emphasis> check-box next to an account name to go 
-online or off-line. If the <emphasis>Auto-login</emphasis> check-box is
+on-line or off-line. If the <emphasis>Auto-login</emphasis> check-box is
 checked GAIM will automatically log in the next time GAIM is launched.
 Adding, modifying or deleting accounts is easy with the buttons on
 the bottom side of the window. Adding an account should be fairly

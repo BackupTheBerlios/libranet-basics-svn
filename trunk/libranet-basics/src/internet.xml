@@ -90,182 +90,116 @@ button.
 </sect1>
 
 <sect1>
-<title>Ximian Evolution, the ultimate e-mail client</title>
+<title>Mozilla Thunderbird</title>
 
 <para>
-Ximian Evolution is an e-mail client that offers alot of personal information
-management (PIM) features, that is being developed by Novell. It features:
+Mozilla Thunderbird is the e-mail client that is developed by the Mozilla
+project. Together with Firefox, Thunderbird offers an excellent Internet
+application suite. Thunderbird features:
 </para>
 
 <itemizedlist spacing="compact">
 <listitem>
 <para>
-A summary page that can display the weather, newsfeeds, appointments,
-tasks and other information, a calendar, an addressbook and much more.
+An intelligent, integrated spam filter.
 </para>
 </listitem>
 <listitem>
 <para>
-A calendar, which can be used for appointments and other stuff.
+A built-in RSS newsfeed reader.
 </para>
 </listitem>
 <listitem>
 <para>
-An addressbook, which allows detailed configuration of contacts.
+An addressbook with LDAP support, which allows detailed configuration
+of contacts.
 </para>
 </listitem>
 <listitem>
 <para>
-PGP/GnuPG, SASL and SSL/TSL message encryption and/or signing.
+Support for SSL/TSL message encryption and/or signing, and support
+of GnuPG through the Enigmail extension.
 </para>
 </listitem>
 <listitem>
 <para>
-Support for LDAP directory servers.
-</para>
-</listitem>
-<listitem>
-<para>
-Much more.
+An extension architecture that will let you expand the functionality
+of Thunderbird easily.
 </para>
 </listitem>
 </itemizedlist>
 
-<figure id="evolution">
-<title>Ximian Evolution</title>
+<figure id="thunderbird">
+<title>Mozilla Thunderbird</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="../images/evolution.jpg" format="JPG" scale="60" />
+<imagedata fileref="../images/applications/internet/thunderbird.jpg" format="JPG" scale="60" />
 </imageobject>
 </mediaobject>
 </figure>
 
 <sect2>
-<title>The summary screen</title>
-
-<para>
-Evolution has a very nice summary screen, which can display the local
-weather, news feeds appointments and tasks. This screen is easily
-customizable. We will have a look at some options in this section.
-</para>
-
-<sect3>
-<title>My weather</title>
-
-<para>
-The <quote>My Weather</quote> functionality allows you to display
-information about the weather at one or more locations. To change
-the weather options, open up the settings dialog by clicking on the
-<quote>Tools -> Settings...</quote> menu item. Go to the
-<quote>Summary Preferences</quote>, and click on the <quote>Weather</quote>
-tab. The first list on the left shows all available locations for which
-weather information can be shown. The right list shows which for which
-locations weather is currently shown. You can add and remove locations
-using the <quote>Add</quote> and <quote>Remove</quote> buttons. After
-you have customized the <quote>Shown</quote> list you can choose to
-show the weather in Celsius instead of Fahrenheit, by activating the
-<quote>Celsius</quote> option. Click <quote>OK</quote> when you are
-finished, and the <quote>My weather</quote> overview will show the weather
-at the locations you selected.
-</para>
-</sect3>
-
-<sect3>
-<title>News feeds</title>
-
-<para>
-Evolution accepts news feeds in RSS or RDF formats. This is a standard for
-supplying news feeds, and many news sites provide a RSS or RDF news feed.
-The selection of news feeds can be customized in the settings dialog.
-Click on the <quote>Tools -> Settings...</quote> menu item to open the
-setting dialog. Select on the <quote>Summary Preferences</quote> icon,
-and click the <quote>News Feeds</quote> tab to open the news feeds tab.
-This tab works like the weather tab; a list of news feeds is listed
-on the left side, the right list shows which news feeds are currently
-displayed. You can remove or add items with the <quote>Add</quote>
-and <quote>Remove</quote> buttons. It is also possible to add an unlisted
-news feed, by clicking the <quote>New Feed</quote> button. Evolution will
-ask you to input the name of the news feed, and the URL where the RDF/RSS
-news feed can be found. Suppose that you would like to add the
-<ulink url="http://www.osnews.com/">OSNews</ulink> news feed, you could
-enter <emphasis>http://www.osnews.com/files/recent.rdf</emphasis> as the
-URL.
-</para>
-</sect3>
-</sect2>
-
-<sect2>
 <title>Setting up e-mail accounts</title>
 
 <para>
-The next thing you will probably want to do is to setup some e-mail accounts.
-The first time Evolution is started it will ask the user to setup an account,
-so there is a good change that you have already set up an e-mail account.
-The account settings are located under the <quote>Mail Accounts</quote>
-icon in the Evolution settings dialog, which can be launched by clicking
-the <quote>Tools -> Settings...</quote> menu item. In the account summary
-you can add, edit and remove accounts.
+The next thing you will probably want to do is to setup some E-Mail accounts.
+The first time Thunderbird is started it will ask the user to setup an account,
+so there is a good change that you have already set up an E-Mail account. The
+account settings window is available available through the <emphasis>Edit ->
+Properties</emphasis> menu item. In the account settings window you can add,
+edit and remove accounts.
 </para>
 
 <para>
-Click the <quote>Add</quote> button to add an e-mail account. This will
-launch an assistant that will help you setting up an account. Just
-click <quote>Forward</quote> at the welcome screen. The assistant will
-ask you for information about your identity. Here you can fill in the
-name and e-mail address that will displayed in the <quote>From</quote> 
-headers. If the address that users should apply to differs from the
-e-mail address, fill in the optional <quote>Reply-To</quote> field.
-If the reply address is identical to the e-mail address, this
-field can be ignored. Optionally you can fill in the 
-<quote>Organization</quote> field. Press <quote>Forward</quote> after
-completing this form.
+Click the "Add Account" button to add an e-mail account. This will launch
+an assistant that will help you setting up an account. Thunderbird will
+first ask you what kind of account you would like to set up. Select
+<emphasis>Email account</emphasis>, and click on the <emphasis>Next</emphasis>
+button.
 </para>
 
 <para>
-After setting the identity you can specify which mail server should
-be used for sending mail. The <quote>None</quote> option is useful
-if you just want to add an additional identity, but no other full
-blown e-mail account. Suppose that you have two e-mail addresses,
-<emphasis>sales@mycompany.com</emphasis> and 
-<emphasis>ceo@mycompany.com</emphasis>, and e-mails to both addresses
-are delivered to the same account. In this case you could set up
-an extra identity, which will allow you to choose the 
-appropriate <quote>From</quote> address. If you would like to receive
-e-mail using this account, there are several server types you can
-choose from. The most commonly used types are POP and IMAP. This
-information should be supplied when you registered your e-mail
-account. It is safe to test which works if you do not know which
-type of server is used. After selecting the IMAP or POP server
-types you can enter the name of the host or IP address of the
-e-mail server, and the user name for the account. If you would like
-to store the password for this account after the first time
-you entered it, check the <quote>Remember this password</quote>
-check-box. Clock <quote>Forward</quote> when you are finished.
-The assistant will then ask you to tune the settings a bit, for
-example, you can set your account up to check for new mail automatically.
-Click <quote>Forward</quote> to go to the <quote>Sending E-Mail</quote>
-configuration.
+The first step of setting up an e-mail account is filling in some identity
+information. You can fill your name in the <emphasis>Your Name</emphasis>
+input field, and the E-Mail address that is used for this account in the
+<emphasis>Email Address</emphasis> field.
 </para>
 
 <para>
-In the <quote>Sending E-Mail</quote> screen you can set up how
-Evolution can send mail. Unless you have set up a local mail server
-on the machine Evolution is worked on you should select <quote>SMTP</quote>
-as the server type. You should also fill in the name or IP address of
-the SMTP server. If your SMTP server requires authentication you
-can check the <quote>Server requires authentication</quote> check-box,
-and fill in the user name. Click <quote>Forward</quote> to continue.
+The next step is to choose what kind of E-Mail server you will be using.
+Most provides provide both POP and IMAP access to e-mail accounts. POP
+is an older protocol that downloads all messages from the e-mail server.
+IMAP leaves the messages on the server, and downloads the messages
+when that is demanded (e.g. when a message is selected from the message
+list). But in any case IMAP will keep the messages on the server. If
+you have a dial-up connection, it is usually best to use POP to avoid having
+to stay online to read e-mail, if you read e-mail from many different
+locations IMAP is the obvious protocol choice. With both protocols you
+will have to fill in the name of the e-mail server in the <emphasis>Incoming
+Server</emphasis> input field. After you have chosen a protocol and filled
+in the server name, you can click on <emphasis>Next</emphasis> to continue
+the configuration. The next step is still closely related to the previous
+step - Thunderbird will ask you to fill in the user name for the incoming
+server. Fill in this user name in the <emphasis>Incoming User Name</emphasis>
+field, and click the <emphasis>Next</emphasis> button.
 </para>
 
 <para>
-The final setup screen will ask you to supply the name of this e-mail
-account. You can fill in anything you like. Check the <quote>Make
-this my default account</quote> check-box if you would like to make
-this the default account. This means this account will be used by
-default when you compose a new e-mail. After clicking <quote>Forward</quote>
-the assistant will congratulate you with finishing the account configuration.
+Finally, Thunderbird will ask you to give a name for the account you have
+just set up. You can fill in this name, and click on <emphasis>Next</emphasis>
+to finish the configuration. Thunderbird will show the account settings
+you have just made. You can confirm these settings with the
+<emphasis>Finish</emphasis> button.
 </para>
+
+<para>
+If this is the first account that you are setting up, Thunderbird will also
+ask you to specify a server and username for outgoing mail. This is the SMTP
+server that is provided by your ISP or E-Mail provider.
+</para>
+
 </sect2>
+
 </sect1>
 
 <sect1>
